@@ -32,6 +32,7 @@ bspc rule -a Zathura state=tiled
 bspc rule -a mpv state=fullscreen
 bspc rule -a Pavucontrol state=pseudo_tiled
 bspc rule -a SimpleScreenRecorder state=pseudo_tiled
+bspc rule -a Blueman-manager state=floating
 bspc rule -a *:filechooser state=floating
 bspc rule -a *:imagepicker state=floating
 
@@ -51,6 +52,7 @@ wal -R
 # conky -c ~/.config/conky/conky-day &
 mpv --no-video ~/audio/SoundEffects/Computer_Magic-Microsift-1901299923.mp3 &
 nm-applet &
+blueman-applet &
 dunst -sep_color "$background" -frame_color "$color4" -nf "$foreground" -lf "$foreground" -cf "$foreground" &
 kdeconnect-indicator &
 picom --experimental-backend & # --shadow-color "$background" &

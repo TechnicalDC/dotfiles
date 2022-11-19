@@ -22,10 +22,12 @@
 - Urxvt (replaced with st terminal, still config file is there)
 - Xresources
 - Zathura
+- Zsh (replaced with fish shell, still config file is there)
 
 ## Programs with separate repository for configs
 
-- Neovim: configs are [here](https://github.com/TechnicalDC/NvConf)
+- [neovim](https://github.com/TechnicalDC/NvConf)
+- [st](https://github.com/TechnicalDC/st)
 
 ## Installation:
 

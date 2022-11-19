@@ -215,6 +215,7 @@ exec_always ./.config/polybar/launch.sh i3-bar &
 # exec conky -c ~/.config/conky/conky-day &
 exec mpv --no-video ~/audio/SoundEffects/Computer_Magic-Microsift-1901299923.mp3 &
 exec nm-applet &
+exec blueman-applet &
 exec kdeconnect-indicator &
 exec picom --experimental-backends &
 exec urxvtd -q -o -f &

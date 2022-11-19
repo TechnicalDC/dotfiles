@@ -3,7 +3,7 @@
 # |__     ||_   _||     ||    <|  _  |
 # |_______||__.__||__|__||__|__|_____|
 
-#  APPLICATION KEY BINDINGS  {{{
+# APPLICATION KEY BINDINGS  {{{
 
 # launch terminal
 super + Return
@@ -32,6 +32,10 @@ super + alt + m
 # launch ranger
 super + alt + r
 	st -e 'ranger'
+
+# launch telegram tui (arigram)
+super + alt + t
+	st -e 'arigram'
 
 # launch config file menu
 super + e
@@ -66,7 +70,7 @@ super + Prior
 
 # }}}
 
-#      BSPWM HOTKEYS	   {{{
+# BSPWM HOTKEYS	   {{{
 
 # restart bspwm
 super + shift + r
