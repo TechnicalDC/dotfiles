@@ -19,6 +19,7 @@
 - Rofi
 - Sxhkd
 - Sxiv (with key handler)
+- Tmux
 - Urxvt (replaced with st terminal, still config file is there)
 - Xresources
 - Zathura
