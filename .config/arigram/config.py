@@ -1,6 +1,6 @@
 import os
 
-PHONE = "+917030480631"
+PHONE = ""
 
 NOTIFY_CMD = "notify-send -a {title} {subtitle} {msg} -i {icon_path}"
 
