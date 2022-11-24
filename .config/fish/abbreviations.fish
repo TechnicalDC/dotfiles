@@ -11,7 +11,6 @@ abbr n "nvim"
 
 abbr all 'exa -al --color=always -h --icons --tree --level=1'
 abbr cat "batcat"
-abbr clear "clear && fm6000 -c blue"
 abbr cp 'cp -i'
 abbr exa "exa --color=always --icons"
 abbr tmux 'tmux -u'

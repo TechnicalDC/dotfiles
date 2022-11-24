@@ -9,6 +9,10 @@
 super + Return
 	st
 
+# launch terminal with tmux
+super + shift + Return
+	st -e tmux -u
+
 # launch rofi
 super + {d,w,r}
 	rofi -show {drun,window,run}
