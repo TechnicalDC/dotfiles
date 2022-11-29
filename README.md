@@ -43,7 +43,7 @@ cp -r .Xresources.d ~
 
 ## Screenshots:
 
-![screenshots](https://github.com/TechnicalDC/dotfiles/blob/main/res/desktop.gif)
+![screenshots](https://github.com/TechnicalDC/dotfiles/blob/main/res/setup.gif)
 
 ## TODO
 
