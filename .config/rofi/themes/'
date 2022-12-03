@@ -13,35 +13,35 @@
 }
 
 #window {
-	border:           0;
-	padding: 30px;
-	border-color:     @selected-urgent-background;
+	border      : 0;
+	padding     : 0px;
+	border-color: @selected-urgent-background;
 
 }
 
 #message {
-    border:       1px 0px 0px ;
+    border      : 1px 0px 0px ;
     border-color: @separatorcolor;
-    padding:      2px ;
+    padding     : 2px ;
 }
 
 #listview {
 	fixed-height: 0;
-	columns: 2;
-	spacing:      8px ;
-	scrollbar:    false;
-	padding:      20px 0px;
+	columns     : 2;
+	spacing     : 8px ;
+	scrollbar   : false;
+	padding     : 20px;
 }
 
 element, element-text, element-icon {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 element {
-  padding:        5px;
-  spacing:        15px;
-  orientation:    horizontal;
-  border-radius:  3px;
+	padding       : 10px 13px;
+	spacing       : 15px;
+	orientation   : horizontal;
+	border-radius : 3px;
 }
 
 element selected {
@@ -79,27 +79,31 @@ element-text selected {
     text-color:       @selected-normal-foreground;
 }
 #entry {
-	spacing:    0;
-	padding: 5px 0px 0px 0px;
-	text-color: @normal-foreground;
+	spacing         : 0;
+	border			 : 1px;
+	border-radius   : 8px;
+	border-color    : @foreground;
+	padding         : 10px 13px;
+	placeholder     : "Search";
+	text-color      : @normal-foreground;
 }
 #prompt {
-	spacing:    0;
-	padding: 5px 10px 0px 5px;
-	text-color: @normal-foreground;
-}
-#case-indicator {
-    spacing:    0;
-    padding: 	5px;
-    text-color: @normal-foreground;
+	spacing         : 0;
+	border			 : 1px;
+	border-radius   : 8px;
+	border-color    : @foreground;
+	text-align		 : center;
+	padding         : 10px 10px 0px 0px;
+	text-color      : @normal-foreground;
 }
 #inputbar {
-	children:   [ prompt,entry,case-indicator ];
-	padding: 3px;
-	spacing:    0;
-	border-radius: 0;
-	border: 0 0 2 0;
+	children        : [ prompt,entry ];
+	padding         : 30px;
+	spacing         : 8px;
+	border-radius   : 0;
+	border          : 0;
 	background-color: @background;
-	border-color: @selected-urgent-background;
-	text-color: @normal-foreground;
+	background-image: url("~/.cache/wal/wallpaper.jpg");
+	border-color    : @selected-urgent-background;
+	text-color      : @normal-foreground;
 }

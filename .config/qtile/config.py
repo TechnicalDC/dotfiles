@@ -10,7 +10,11 @@ from typing import List  # noqa: F401
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+# from libqtile.utils import guess_terminal
+
+# qtile extras
+# from qtile_extras import widget
+# from qtile_extras.widget.decorations import RectDecoration
 import os
 import subprocess
 
