@@ -25,9 +25,10 @@
 }
 
 #message {
-    border      : 1px 0px 0px ;
-    border-color: @separatorcolor;
-	padding      : 10px 13px;
+	border      : 0px 0px 0px 2px;
+	margin		: 8px 20px;
+	border-color: @selected-normal-background;
+	padding     : 10px;
 }
 
 #listview {
@@ -108,7 +109,7 @@ element-text selected {
 	border-radius   : 0;
 	border          : 0;
 	background-color: @background;
-	background-image: url("~/.cache/wal/wallpaper.jpg");
+	background-image: url("~/.cache/mantablockscreen/resize-blur.png");
 	border-color    : @selected-urgent-background;
 	text-color      : @normal-foreground;
 }
