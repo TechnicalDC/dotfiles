@@ -48,7 +48,7 @@ font-0 = Liberation Sans:style=Regular:size=8;0
 font-1 = FantasqueSansMono Nerd Font:style=Regular:size=10;1
 
 modules-center = date
-modules-right = pulseaudio cpu memory
+modules-right = filesystem pulseaudio cpu memory
 
 tray-position = right
 tray-padding = 4
@@ -73,6 +73,15 @@ override-redirect = true
 ; BSPWM-BAR {{{
 [bar/bspwm-bar]
 inherit = bar/base
+
+width = 90%
+height = 28
+offset-x = 5%
+offset-y = 0
+
+padding-left = 2
+padding-right = 2
+
 modules-left = bspwm 
 wm-restack = bspwm
 
@@ -244,8 +253,11 @@ format-mounted = <label-mounted>
 format-mounted-padding = 2
 format-mounted-background = ${colors.background}
 format-mounted-prefix = %{T3}%{T-}
+format-mounted-prefix-padding = 2
 format-mounted-prefix-foreground = ${colors.purple}
 label-mounted = "  %mountpoint% : %percentage_used%%"
+
+click-left = ncdu &
 
 ; }}}
 
