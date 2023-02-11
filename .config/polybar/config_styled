@@ -36,7 +36,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 border-size = 2
-border-color = ${colors.background}
+border-color = ${colors.purple}
 
 padding-left = 0
 padding-right = 0
@@ -77,7 +77,7 @@ inherit = bar/base
 width = 90%
 height = 28
 offset-x = 5%
-offset-y = 0
+offset-y = 1%
 
 padding-left = 2
 padding-right = 2
@@ -162,6 +162,7 @@ label-urgent-foreground = ${colors.red}
 label-urgent-background = ${colors.background}
 label-urgent-padding = 2
 
+; label-empty = ●
 label-empty = %name%
 label-empty-foreground = ${colors.foreground}
 label-empty-background = ${colors.background}

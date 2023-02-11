@@ -67,13 +67,6 @@ element-text selected {
   background-color: var(selected-active-background);
 }
 
-#mode-switcher{
-	padding: 3px;
-   spacing:    0;
-	border-radius: 5;
-	border: 1;
-	border-color: @active-background;
-}
 #button {
     spacing:    0;
 	border-radius: 5;
@@ -82,7 +75,16 @@ element-text selected {
 }
 #button.selected {
     background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    text-color:       @background;
+}
+
+#mode-switcher{
+	text-align		 : center;
+	spacing       : 0px;
+	border-radius: 5;
+	border: 1;
+	border-color: @active-background;
+	margin		: 2% 20%;
 }
 #entry {
 	spacing         : 0;

@@ -1,4 +1,5 @@
 abbr config 'git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+abbr hypr 'git --git-dir=$HOME/HyperDesk --work-tree=$HOME'
 
 abbr :q 'exit'
 abbr :wq 'exit'
