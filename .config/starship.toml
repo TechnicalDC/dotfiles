@@ -13,7 +13,7 @@ format = '$all'
 
 [custom.yazi]
 description = "Indicate the shell was launched by `yazi`"
-symbol = "  Yazi Terminal"
+symbol = "  Yazi Terminal "
 when = """ test -n "$YAZI_LEVEL" """
 
 [aws]
