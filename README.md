@@ -1,3 +1,3 @@
 # dotfiles
 
-![image](README.md)
+![image](https://github.com/TechnicalDC/dotfiles/blob/main/images/tmux.png)
