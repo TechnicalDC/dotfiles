@@ -7,7 +7,19 @@
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
   <property name="misc-copy-on-select" type="bool" value="false"/>
   <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
-  <property name="color-background" type="string" value="#272728282222"/>
-  <property name="color-foreground" type="string" value="#f8f8f8f8f2f2"/>
-  <property name="color-palette" type="string" value="rgb(39,40,34);rgb(249,38,114);rgb(0,170,0);rgb(170,85,0);rgb(0,0,170);rgb(170,0,170);rgb(0,170,170);rgb(170,170,170);rgb(85,85,85);rgb(255,85,85);rgb(85,255,85);rgb(255,255,85);rgb(85,85,255);rgb(255,85,255);rgb(85,255,255);rgb(255,255,255)"/>
+  <property name="color-background" type="string" value="#1e1e2e"/>
+  <property name="color-foreground" type="string" value="#cdd6f4"/>
+  <property name="color-palette" type="string" value="#45475a;#f38ba8;#a6e3a1;#f9e2af;#89b4fa;#f5c2e7;#94e2d5;#bac2de;#585b70;#f38ba8;#a6e3a1;#f9e2af;#89b4fa;#f5c2e7;#94e2d5;#a6adc8"/>
+  <property name="color-background-vary" type="bool" value="false"/>
+  <property name="color-cursor-foreground" type="string" value="#11111b"/>
+  <property name="color-cursor" type="string" value="#f5e0dc"/>
+  <property name="color-cursor-use-default" type="bool" value="false"/>
+  <property name="color-selection" type="string" value="#cdd6f4"/>
+  <property name="color-selection-background" type="string" value="#585b70"/>
+  <property name="color-selection-use-default" type="bool" value="false"/>
+  <property name="color-bold" type="string" value=""/>
+  <property name="color-bold-use-default" type="bool" value="true"/>
+  <property name="color-bold-is-bright" type="bool" value="true"/>
+  <property name="color-use-theme" type="bool" value="false"/>
+  <property name="tab-activity-color" type="string" value="#fab387"/>
 </channel>

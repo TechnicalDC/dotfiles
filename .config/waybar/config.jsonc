@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
+   "layer": "top", // Waybar at top layer
+   "position": "top", // Waybar position (top|bottom|left|right)
+   "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 5, // Gaps between modules (4px)
     "reload_style_on_change": true,
@@ -13,15 +13,10 @@
     "modules-center": [ ],
     "modules-right": [
        "tray",
-       "idle_inhibitor",
        "pulseaudio",
        "network",
        "power-profiles-daemon",
-       "cpu",
-       "memory",
-       "temperature",
        "backlight",
-       "sway/language",
        "battery",
        "clock"
     ],
