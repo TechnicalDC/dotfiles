@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+swww-daemon &
+wal -R &
+waybar &
+nm-applet &

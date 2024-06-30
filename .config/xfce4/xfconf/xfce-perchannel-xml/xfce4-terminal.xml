@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-terminal" version="1.0">
+  <property name="font-name" type="string" value="JetBrainsMonoNL Nerd Font 12"/>
+  <property name="cell-height-scale" type="double" value="1.2000000000000002"/>
+  <property name="misc-borders-default" type="bool" value="true"/>
+  <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
+  <property name="misc-copy-on-select" type="bool" value="false"/>
+  <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
+  <property name="color-background" type="string" value="#272728282222"/>
+  <property name="color-foreground" type="string" value="#f8f8f8f8f2f2"/>
+  <property name="color-palette" type="string" value="rgb(39,40,34);rgb(249,38,114);rgb(0,170,0);rgb(170,85,0);rgb(0,0,170);rgb(170,0,170);rgb(0,170,170);rgb(170,170,170);rgb(85,85,85);rgb(255,85,85);rgb(85,255,85);rgb(255,255,85);rgb(85,85,255);rgb(255,85,255);rgb(85,255,255);rgb(255,255,255)"/>
+</channel>
