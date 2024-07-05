@@ -15,8 +15,9 @@ palette = "catppuccin_macchiato"
 
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[[♥](green) ❯](maroon)"
-error_symbol = "[❯](red)"
+
+success_symbol = "[[](green) ❯](maroon)"
+error_symbol = "[[](red) ❯](maroon)"
 vimcmd_symbol = "[❮](green)"
 
 [palettes.catppuccin_macchiato]
@@ -68,9 +69,9 @@ symbol = " "
 symbol = " "
 
 [directory]
-home_symbol = " "
+home_symbol = " "
 read_only_style = 'red'
-read_only = " "
+read_only = "  "
 
 [docker_context]
 symbol = " "
@@ -109,13 +110,13 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = " "
 
 [meson]
 symbol = "喝 "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nix_shell]
 symbol = " "
@@ -135,10 +136,8 @@ Emscripten = " "
 EndeavourOS = " "
 Fedora = " "
 FreeBSD = " "
-Garuda = "﯑ "
+Garuda = " "
 Gentoo = " "
-HardenedBSD = "ﲊ "
-Illumos = " "
 Linux = " "
 Macos = " "
 Manjaro = " "
@@ -147,22 +146,20 @@ MidnightBSD = " "
 Mint = " "
 NetBSD = " "
 NixOS = " "
-OpenBSD = " "
 openSUSE = " "
-OracleLinux = " "
 Pop = " "
 Raspbian = " "
 Redhat = " "
 RedHatEnterprise = " "
 Redox = " "
-Solus = "ﴱ "
+Solus = " "
 SUSE = " "
 Ubuntu = " "
 Unknown = " "
 Windows = " "
 
 [package]
-symbol = " "
+symbol = " "
 
 [python]
 symbol = " "
