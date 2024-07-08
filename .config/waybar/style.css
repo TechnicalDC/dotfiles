@@ -1,4 +1,4 @@
-@import url("/home/dilip/.cache/wal/colors-waybar.css");
+@import url("/home/dilip/.config/waybar/macchiato.css");
 
 * {
     font-family: "JetBrainsMonoNL Nerd Font", 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
@@ -11,7 +11,7 @@ window#waybar {
 }
 
 #workspaces{
-    background-color: @background;
+    background-color: transparent;
     border-radius: 18px;
     padding: 2px;
     margin-top: 10px;
@@ -22,11 +22,12 @@ window#waybar {
 #workspaces button{
     box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
     background-color: #fff ;
-    border-radius: 15px;
-    margin-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 2px;
-    padding-right: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    /*margin-right: 10px;*/
+    /*padding-top: 4px;*/
+    /*padding-bottom: 2px;*/
+    /*padding-right: 10px;*/
     font-weight: bolder;
     color: 	#cba6f7 ;
 }
@@ -35,8 +36,6 @@ window#waybar {
     padding-right: 20px;
     box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
-    padding-left: 20px;
-    padding-bottom: 3px;
     background: rgb(202,158,230);
     background: linear-gradient(45deg, rgba(202,158,230,1) 0%, rgba(245,194,231,1) 43%, rgba(180,190,254,1) 80%, rgba(137,180,250,1) 100%);
     background-size: 300% 300%;
@@ -74,11 +73,12 @@ window#waybar {
 #custom-cycle_wall,
 #custom-ss,
 #custom-dynamic_pill,
+#power-profiles-daemon,
 #mpd {
-    padding: 0 10px;
-    border-radius: 15px;
-    background-color: #cdd6f4;
-    color: #516079;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: @base;
+    color: @text;
     box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -159,10 +159,6 @@ window#waybar {
     background-size: 300% 300%;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
     animation: gradient 20s ease infinite;
-    padding-top: 5px;
-    padding-right: 21px;
-    font-weight: bolder;
-    padding-left: 20px
 }
 
 #battery.charging, #battery.plugged {

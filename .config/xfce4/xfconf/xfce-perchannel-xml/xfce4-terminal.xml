@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-terminal" version="1.0">
-  <property name="font-name" type="string" value="JetBrainsMonoNL Nerd Font 12"/>
+  <property name="font-name" type="string" value="JetBrainsMonoNL Nerd Font 10"/>
   <property name="cell-height-scale" type="double" value="1.2000000000000002"/>
   <property name="misc-borders-default" type="bool" value="true"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>

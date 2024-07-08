@@ -158,6 +158,7 @@ wezterm.on('update-right-status', function(window, pane)
    })
 end)
 -- }}}
+
 -- CONFIG {{{
 local config = {}
 
@@ -167,6 +168,7 @@ if wezterm.config_builder then
    config = wezterm.config_builder()
 end
 
+config.enable_wayland                              = false
 config.default_prog                                = { 'fish' }
 config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
@@ -178,9 +180,10 @@ config.font                                        = wezterm.font "JetBrainsMono
 config.font_size                                   = 12
 config.default_cursor_style                        = 'SteadyBlock'
 config.line_height                                 = 1.4
-config.colors                                      = theme
-config.scrollback_lines                            = 10000
-config.detect_password_input                       = true
+-- config.colors                                      = theme
+config.color_scheme          = 'Catppuccin Macchiato'
+config.scrollback_lines      = 10000
+config.detect_password_input = true
 config.scroll_to_bottom_on_input                   = true
 config.show_update_window                          = true
 config.quote_dropped_files                         = "WindowsAlwaysQuoted"
