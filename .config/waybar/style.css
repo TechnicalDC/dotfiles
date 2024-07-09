@@ -2,59 +2,9 @@
 
 * {
     font-family: "JetBrainsMonoNL Nerd Font", 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
-    font-size: 13px;
+    font-size: 15px;
     color: @background;
 }
-
-window#waybar {
-    background-color: transparent;
-}
-
-#workspaces{
-    background-color: transparent;
-    border-radius: 18px;
-    padding: 2px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-left: 15px;
-}
-#workspaces button{
-    box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
-    background-color: #fff ;
-    padding: 10px 15px;
-    border-radius: 20px;
-    /*margin-right: 10px;*/
-    /*padding-top: 4px;*/
-    /*padding-bottom: 2px;*/
-    /*padding-right: 10px;*/
-    font-weight: bolder;
-    color: 	#cba6f7 ;
-}
-
-#workspaces button.active{
-    padding-right: 20px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
-    background: rgb(202,158,230);
-    background: linear-gradient(45deg, rgba(202,158,230,1) 0%, rgba(245,194,231,1) 43%, rgba(180,190,254,1) 80%, rgba(137,180,250,1) 100%);
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
-    color: #fff;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 
 #clock,
 #battery,
@@ -75,15 +25,58 @@ window#waybar {
 #custom-dynamic_pill,
 #power-profiles-daemon,
 #mpd {
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 0px 22px;
+    border-radius: 15px;
+    border: 2px solid @mauve;
     background-color: @base;
     color: @text;
     box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin-top: 15px;
+    margin-right: 8px;
 }
+
+window#waybar {
+    background-color: transparent;
+}
+
+#workspaces{
+    background-color: @base;;
+    box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
+    border-radius: 15px;
+    border: 2px solid @mauve;
+    padding: 6px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+#workspaces button{
+    box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
+    background-color: @base;;
+    padding: 0px 11px;
+    border-radius: 12px;
+    font-weight: bolder;
+    color: 	#cba6f7 ;
+}
+
+#workspaces button.active{
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+    background-color: @mauve;;
+    color: @base;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 
 #custom-dynamic_pill.low{
     background: rgb(148,226,213);
@@ -152,21 +145,18 @@ window#waybar {
 
 
 #clock {
-    background: rgb(245,194,231);
-    background: linear-gradient(45deg, rgba(245,194,231,1) 0%, rgba(203,166,247,1) 64%, rgba(202,158,230,1) 100%);
-    margin-right: 25px;
+    margin-right: 15px;
     color: #fff ;
     background-size: 300% 300%;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
-    animation: gradient 20s ease infinite;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #94e2d5 ;
+    /*background-color: #94e2d5 ;*/
 }
 
 #battery {
-    background-color: #fff;
+    /*background-color: #fff;*/
     color:#a6e3a1;
     font-weight: bolder;
     padding-left: 15px;
@@ -195,8 +185,8 @@ label:focus {
 }
 
 #cpu {
-    background: rgb(180,190,254);
-    background: linear-gradient(52deg, rgba(180,190,254,1) 0%, rgba(137,220,235,1) 32%, rgba(137,180,250,1) 72%, rgba(166,227,161,1) 100%);
+    /*background: rgb(180,190,254);*/
+    /*background: linear-gradient(52deg, rgba(180,190,254,1) 0%, rgba(137,220,235,1) 32%, rgba(137,180,250,1) 72%, rgba(166,227,161,1) 100%);*/
     background-size: 300% 300%;
     animation: gradient 20s ease infinite;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
@@ -219,7 +209,6 @@ label:focus {
 }
 
 #network{
-    color:#000;
 }
 
 #network.disabled{
@@ -227,8 +216,8 @@ label:focus {
 }
 
 #network.disconnected{
-    background: rgb(243,139,168);
-    background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%);
+    /*background: rgb(243,139,168);*/
+    /*background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%);*/
     color: #fff;
     font-weight: bolder;
     padding-top: 3px;
@@ -236,11 +225,11 @@ label:focus {
 }
 
 #network.linked, #network.wifi{
-    background-color: #a6e3a1 ;
+    /*background-color: #a6e3a1 ;*/
 }
 
 #network.ethernet{
-    background-color:#f9e2af ;
+    /*background-color:#f9e2af ;*/
 }
 
 #pulseaudio {
@@ -315,7 +304,7 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
+    /*background: #00b093;*/
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
@@ -323,7 +312,7 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
+    /*background: #97e1ad;*/
     color: #000000;
     padding: 0 0px;
     margin: 0 5px;
