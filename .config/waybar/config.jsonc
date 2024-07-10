@@ -8,6 +8,7 @@
    "reload_style_on_change": true,
    // Choose the order of the modules
    "modules-left": [
+      "custom/appmenuicon",
       "hyprland/workspaces",
    ],
    "modules-center": [ ],
@@ -38,6 +39,12 @@
             "HDMI-A-1": 3 // but only three on HDMI-A-1
          }
       }
+   },
+   // Rofi Application Launcher
+   "custom/appmenuicon": {
+      "format": "",
+      "on-click": "wofi --show drun",
+      "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
    },
    "keyboard-state": {
       "numlock": true,
