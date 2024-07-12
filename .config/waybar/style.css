@@ -25,6 +25,7 @@
 #custom-ss,
 #custom-dynamic_pill,
 #power-profiles-daemon,
+#group-group-power,
 #mpd {
     padding: 0px 22px;
     border-radius: 15px;
@@ -59,7 +60,6 @@ window#waybar {
     padding: 0px 11px;
     border-radius: 9px;
     font-weight: bolder;
-    color: 	#cba6f7 ;
 }
 
 #workspaces button.active{
@@ -136,36 +136,24 @@ window#waybar {
 
 #clock {
     margin-right: 15px;
-    color: #fff ;
     background-size: 300% 300%;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 
 #battery.charging, #battery.plugged {
-    /*background-color: #94e2d5 ;*/
+   color: @base;
+   border-color: @green;
+   background-color: @green;
 }
 
 #battery {
-    color: @text;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-@keyframes blink {
-    to {
-        background-color: #f9e2af;
-        color:#96804e;
-    }
-}
-
 #battery.critical:not(.charging) {
-    background-color:  #f38ba8;
-    color:#bf5673;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+   border-color: @red;
+   background-color: @red;
 }
 
 label:focus {
@@ -173,27 +161,20 @@ label:focus {
 }
 
 #cpu {
-    /*background: rgb(180,190,254);*/
-    /*background: linear-gradient(52deg, rgba(180,190,254,1) 0%, rgba(137,220,235,1) 32%, rgba(137,180,250,1) 72%, rgba(166,227,161,1) 100%);*/
     background-size: 300% 300%;
     animation: gradient 20s ease infinite;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
-    /* background-color: #b4befe; */
-    color: 	#fff;
 }
 
 #memory {
     background-color: #cba6f7;
-    color: 	#9a75c7;
     font-weight: bolder;
 }
 
 #disk {
-    color: #964B00;
 }
 
 #backlight {
-    color: @text;
 }
 
 #network{
@@ -204,51 +185,33 @@ label:focus {
 }
 
 #network.disconnected{
-    /*background: rgb(243,139,168);*/
-    /*background: linear-gradient(45deg, rgba(243,139,168,1) 0%, rgba(250,179,135,1) 100%);*/
-    color: #fff;
     font-weight: bolder;
     padding-top: 3px;
     padding-right: 11px;
 }
 
 #network.linked, #network.wifi{
-    /*background-color: #a6e3a1 ;*/
 }
 
 #network.ethernet{
-    /*background-color:#f9e2af ;*/
 }
 
 #pulseaudio {
-    color: @text;
     font-weight: bolder;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-}
-
-#custom-media {
-    color: #66cc99;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
+   border-color: @red;
+   background-color: @red;
 }
 
 #temperature {
     background-color: #f9e2af;
-    color:#96804e;
 }
 
 #temperature.critical {
     background-color: #f38ba8 ;
-    color:#bf5673;
+    color: @red;
 }
 
 #tray {
@@ -275,7 +238,6 @@ label:focus {
 
 #mpd {
     background-color: #66cc99;
-    color: #2a5c45;
 }
 
 #mpd.disconnected {
@@ -291,16 +253,12 @@ label:focus {
 }
 
 #language {
-    /*background: #00b093;*/
-    color: #740864;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    /*background: #97e1ad;*/
-    color: #000000;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -312,4 +270,12 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
+}
+
+#tooltip {
+  background: @surface0;
+  border: 2px solid @surface0;
+}
+#tooltip #label {
+  color: @text;
 }

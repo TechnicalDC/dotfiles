@@ -1,15 +1,33 @@
 * {
-    bg-col:  #24273a;
-    bg-col-light: #24273a;
-    border-col: #24273a;
-    selected-col: #24273a;
-    blue: #8aadf4;
-    fg-col: #cad3f5;
-    fg-col2: #ed8796;
-    grey: #6e738d;
+   rosewater : #f4dbd6;
+   flamingo : #f0c6c6;
+   pink : #f5bde6;
+   mauve : #c6a0f6;
+   red : #ed8796;
+   maroon : #ee99a0;
+   peach : #f5a97f;
+   yellow : #eed49f;
+   green : #a6da95;
+   teal : #8bd5ca;
+   sky : #91d7e3;
+   sapphire : #7dc4e4;
+   blue : #8aadf4;
+   lavender : #b7bdf8;
+   text : #cad3f5;
+   subtext1 : #b8c0e0;
+   subtext0 : #a5adcb;
+   overlay2 : #939ab7;
+   overlay1 : #8087a2;
+   overlay0 : #6e738d;
+   surface2 : #5b6078;
+   surface1 : #494d64;
+   surface0 : #363a4f;
+   base : #24273a;
+   mantle : #1e2030;
+   crust : #181926;
 
-    width: 600;
-    font: "JetBrainsMono Nerd Font 14";
+    width: 1000;
+    font: "JetBrainsMono Nerd Font 12";
 }
 
 element-text, element-icon , mode-switcher {
@@ -18,27 +36,29 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 360px;
-    border: 3px;
-    border-color: @border-col;
-    background-color: @bg-col;
+    height: 500px;
+    border: 2px;
+    border-color: @mauve;
+    border-radius: 15px;
+    background-color: @base;
+    padding: 10px;
 }
 
 mainbox {
-    background-color: @bg-col;
+    background-color: @base;
 }
 
 inputbar {
     children: [prompt,entry];
-    background-color: @bg-col;
+    background-color: @base;
     border-radius: 5px;
     padding: 2px;
 }
 
 prompt {
-    background-color: @blue;
+    background-color: @mauve;
     padding: 6px;
-    text-color: @bg-col;
+    text-color: @base;
     border-radius: 3px;
     margin: 20px 0px 0px 20px;
 }
@@ -51,8 +71,8 @@ textbox-prompt-colon {
 entry {
     padding: 6px;
     margin: 20px 0px 0px 10px;
-    text-color: @fg-col;
-    background-color: @bg-col;
+    text-color: @text;
+    background-color: @base;
 }
 
 listview {
@@ -61,13 +81,14 @@ listview {
     margin: 10px 0px 0px 20px;
     columns: 2;
     lines: 5;
-    background-color: @bg-col;
+    background-color: @base;
 }
 
 element {
-    padding: 5px;
-    background-color: @bg-col;
-    text-color: @fg-col  ;
+    padding: 10px;
+    border-radius: 9px;
+    background-color: @base;
+    text-color: @text;
 }
 
 element-icon {
@@ -75,29 +96,29 @@ element-icon {
 }
 
 element selected {
-    background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+    background-color:  @surface0;
+    text-color: @text;
 }
 
 mode-switcher {
     spacing: 0;
-  }
+}
 
 button {
     padding: 10px;
-    background-color: @bg-col-light;
-    text-color: @grey;
-    vertical-align: 0.5; 
+    background-color: @base;
+    text-color: @text;
+    vertical-align: 0.5;
     horizontal-align: 0.5;
 }
 
 button selected {
-  background-color: @bg-col;
+    background-color: @base;
   text-color: @blue;
 }
 
 message {
-    background-color: @bg-col-light;
+    background-color: @surface1;
     margin: 2px;
     padding: 2px;
     border-radius: 5px;
@@ -107,5 +128,5 @@ textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
     text-color: @blue;
-    background-color: @bg-col-light;
+    background-color: @surface1;
 }
