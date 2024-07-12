@@ -39,7 +39,7 @@ window {
     height: 500px;
     border: 2px;
     border-color: @mauve;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: @base;
     padding: 10px;
 }
@@ -59,7 +59,7 @@ prompt {
     background-color: @mauve;
     padding: 6px;
     text-color: @base;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 20px 0px 0px 20px;
 }
 
@@ -70,7 +70,7 @@ textbox-prompt-colon {
 
 entry {
     padding: 6px;
-    margin: 20px 0px 0px 10px;
+    margin: 20px 0px 0px 20px;
     text-color: @text;
     background-color: @base;
 }
@@ -78,7 +78,7 @@ entry {
 listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
+    margin: 10px 20px 0px 20px;
     columns: 2;
     lines: 5;
     background-color: @base;
@@ -86,7 +86,7 @@ listview {
 
 element {
     padding: 10px;
-    border-radius: 9px;
+    border-radius: 5px;
     background-color: @base;
     text-color: @text;
 }
@@ -110,11 +110,12 @@ button {
     text-color: @text;
     vertical-align: 0.5;
     horizontal-align: 0.5;
+    border-radius: 5px;
 }
 
 button selected {
-    background-color: @base;
-  text-color: @blue;
+   background-color: @surface0;
+   text-color: @text;
 }
 
 message {
