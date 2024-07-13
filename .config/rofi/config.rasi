@@ -12,4 +12,4 @@ configuration{
     display-Network: " 󰤨  Network";
     sidebar-mode: true;
 }
-@theme "/home/dilip/.config/rofi/themes/catppuccin-macchiato.rasi"
+@theme "/home/dilip/.config/rofi/themes/catppuccin-macchiato-launcher.rasi"

@@ -137,6 +137,7 @@ label:focus {
 #pulseaudio.muted {
    border-color: @red;
    background-color: @red;
+   color: @base;
 }
 
 #temperature {

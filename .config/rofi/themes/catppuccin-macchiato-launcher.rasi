@@ -36,7 +36,7 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 30%;
+    height: 500px;
     border: 2px;
     border-color: @mauve;
     border-radius: 10px;
@@ -77,10 +77,10 @@ entry {
 
 listview {
     border: 0px 0px 0px;
-    dynamic:                     true;
     padding: 6px 0px 0px;
     margin: 10px 20px 0px 20px;
-    columns: 1;
+    columns: 2;
+    lines: 5;
     background-color: @base;
 }
 
