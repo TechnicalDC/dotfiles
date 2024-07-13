@@ -20,7 +20,6 @@
       "backlight",
       "battery",
       "clock"
-      //"group/group-power"
    ],
    // Modules configuration
    "hyprland/workspaces": {
@@ -35,16 +34,13 @@
             "active": "",
             "default": ""
          },
-         "persistent-workspaces": {
-            "*": 5, // 5 workspaces by default on every monitor
-            "HDMI-A-1": 3 // but only three on HDMI-A-1
-         }
+         "all-outputs": true,
       }
    },
    // Rofi Application Launcher
    "custom/appmenuicon": {
       "format": "",
-      "on-click": "wofi --show drun",
+      "on-click": "rofi -show drun",
       "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
    },
    "keyboard-state": {

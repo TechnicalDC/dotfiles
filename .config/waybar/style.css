@@ -140,16 +140,15 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f9e2af;
 }
 
 #temperature.critical {
-    background-color: #f38ba8 ;
-    color: @red;
+    background-color: @red;
+    color: @text;
 }
 
 #tray {
-    background-color: @mauve;;
+    background-color: @mauve;
 }
 
 #tray > .passive {
@@ -158,7 +157,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @red;
 }
 
 #idle_inhibitor {

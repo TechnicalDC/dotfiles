@@ -9,6 +9,7 @@ set --export PATH  $PATH $HOME/.scripts/
 set --export PATH  $PATH $HOME/.local/bin/
 set --export PATH  $PATH $HOME/.cargo/bin/
 set --export PATH  $PATH $HOME/go/bin/
+set --export PATH  $PATH $HOME/.scripts/
 set --export FZF_DEFAULT_OPTS "--layout=reverse
 --preview='batcat {} --color always --style=plain'
 --margin=10%

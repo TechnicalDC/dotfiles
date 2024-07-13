@@ -169,6 +169,7 @@ if wezterm.config_builder then
 end
 
 config.enable_wayland                              = false
+-- config.default_prog                                = { 'tmux' }
 config.default_prog                                = { 'fish' }
 config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"

@@ -1,0 +1,158 @@
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+* {
+   rosewater : #f4dbd6;
+   flamingo : #f0c6c6;
+   pink : #f5bde6;
+   mauve : #c6a0f6;
+   red : #ed8796;
+   maroon : #ee99a0;
+   peach : #f5a97f;
+   yellow : #eed49f;
+   green : #a6da95;
+   teal : #8bd5ca;
+   sky : #91d7e3;
+   sapphire : #7dc4e4;
+   blue : #8aadf4;
+   lavender : #b7bdf8;
+   text : #cad3f5;
+   subtext1 : #b8c0e0;
+   subtext0 : #a5adcb;
+   overlay2 : #939ab7;
+   overlay1 : #8087a2;
+   overlay0 : #6e738d;
+   surface2 : #5b6078;
+   surface1 : #494d64;
+   surface0 : #363a4f;
+   base : #24273a;
+   mantle : #1e2030;
+   crust : #181926;
+
+    width: 900;
+    font: "JetBrainsMono Nerd Font 36";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    border: 2px;
+    border-color: @mauve;
+    border-radius: 10px;
+    background-color: @base;
+    padding: 10px;
+}
+
+mainbox {
+    background-color: @base;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @base;
+    border-radius: 5px;
+    padding: 2px;
+    enabled: false;
+}
+
+prompt {
+    background-color: @mauve;
+    padding: 6px;
+    text-color: @base;
+    border-radius: 5px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @text;
+    background-color: @base;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               true;
+
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @base;
+    background-color:            transparent;
+    text-color:                  @text;
+    cursor:                      "default";
+}
+
+element {
+/* b l */
+    padding: 10px 10px 10px 28px;
+    border-radius: 5px;
+    background-color: @base;
+    width: 100px;
+    text-color: @text;
+}
+
+element-text {
+   padding: 50px;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @surface0;
+    text-color: @text;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: @base;
+    text-color: @text;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    border-radius: 5px;
+}
+
+button selected {
+   background-color: @surface0;
+   text-color: @text;
+}
+
+message {
+    background-color: @surface1;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @surface1;
+}
