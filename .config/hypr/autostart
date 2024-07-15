@@ -4,3 +4,4 @@ swww-daemon &
 wal -R &
 waybar &
 nm-applet &
+swaync &

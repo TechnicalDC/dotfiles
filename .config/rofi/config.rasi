@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "drun,run";
     show-icons: true;
     terminal: "wezterm";
     drun-display-format: "{icon} {name}";
@@ -7,9 +7,10 @@ configuration{
     disable-history: false;
     hide-scrollbar: true;
     display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 󰕰  Window";
-    display-Network: " 󰤨  Network";
+    display-run: "   Commands ";
+    display-window: " 󰕰  Windows ";
+    display-ssh: "   SSH ";
+    display-filebrowser: "   File Browser ";
     sidebar-mode: true;
 }
 @theme "/home/dilip/.config/rofi/themes/catppuccin-macchiato-launcher.rasi"

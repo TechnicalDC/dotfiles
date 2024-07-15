@@ -13,13 +13,15 @@
    ],
    "modules-center": [ ],
    "modules-right": [
-      "tray",
+      "custom/notifications",
       "pulseaudio",
       "network",
       "power-profiles-daemon",
       "backlight",
       "battery",
-      "clock"
+      "tray",
+      "clock",
+      "custom/powermenuicon"
    ],
    // Modules configuration
    "hyprland/workspaces": {
@@ -41,7 +43,17 @@
    "custom/appmenuicon": {
       "format": "",
       "on-click": "rofi -show drun",
-      "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
+      "tooltip-format": "Open the application launcher"
+   },
+   "custom/powermenuicon": {
+      "format": "",
+      "on-click": "rofi-powermenu",
+      "tooltip-format": "Open the power menu"
+   },
+   "custom/notifications": {
+      "format": "",
+      "on-click": "swaync-client -t",
+      "tooltip-format": "Open the notifications center"
    },
    "keyboard-state": {
       "numlock": true,
@@ -181,39 +193,5 @@
           "default": [" ", " ", " "]
        },
        "on-click": "pavucontrol"
-   },
-   "group/group-power": {
-      "orientation": "horizontal",
-      "drawer": {
-         "transition-duration": 500,
-         "children-class": "not-power",
-         "transition-left-to-right": false,
-      },
-      "modules": [
-         "custom/power", // First element is the "group leader" and won't ever be hidden
-         "custom/quit",
-         "custom/lock",
-         "custom/reboot",
-      ]
-   },
-   "custom/quit": {
-      "format": "󰗼",
-      "tooltip": false,
-      "on-click": "hyprctl dispatch exit"
-   },
-   "custom/lock": {
-      "format": "󰍁",
-      "tooltip": false,
-      "on-click": "swaylock"
-   },
-   "custom/reboot": {
-      "format": "󰜉",
-      "tooltip": false,
-      "on-click": "reboot"
-   },
-   "custom/power": {
-      "format": "",
-      "tooltip": false,
-      "on-click": "shutdown now"
    }
 }

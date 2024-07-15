@@ -3,7 +3,7 @@ set --export SHELL /usr/bin/fish
 set --export ANDROID_HOME $XDG_DATA_HOME/android
 set --export EDITOR "nvim"
 set --export VISUAL "nvim"
-# set --export TERMINAL "st"
+set --export TERMINAL "wezterm"
 set --export PAGER "less"
 set --export PATH  $PATH $HOME/.scripts/
 set --export PATH  $PATH $HOME/.local/bin/
