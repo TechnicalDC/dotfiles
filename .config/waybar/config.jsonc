@@ -52,8 +52,9 @@
    },
    "custom/notifications": {
       "format": "",
-      "on-click": "swaync-client -t",
-      "tooltip-format": "Open the notifications center"
+      "on-click": "tray_waybar",
+      "on-click-right": "swaync-client -C",
+      "tooltip": false,
    },
    "keyboard-state": {
       "numlock": true,

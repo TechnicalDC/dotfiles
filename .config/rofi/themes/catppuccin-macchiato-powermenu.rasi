@@ -42,7 +42,7 @@ element-text, element-icon , mode-switcher {
 
 window {
     border: 2px;
-    border-color: @surface0;
+    border-color: @mauve;
     border-radius: 10px;
     background-color: @base;
     padding: 10px;

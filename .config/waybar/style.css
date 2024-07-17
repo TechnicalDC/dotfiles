@@ -30,7 +30,8 @@
 #mpd {
     padding: 0px 22px;
     border-radius: 10px;
-    border: 2px solid @surface0;
+    border: 2px solid @mauve;
+    /*border: 2px solid @surface0;*/
     background-color: @base;
     color: @text;
     margin-top: 15px;
@@ -60,7 +61,8 @@ window#waybar {
     background-color: @base;;
     box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
     border-radius: 10px;
-    border: 2px solid @surface0;
+    border: 2px solid @mauve;
+    /*border: 2px solid @surface0;*/
     padding: 6px;
     margin-top: 15px;
 }
