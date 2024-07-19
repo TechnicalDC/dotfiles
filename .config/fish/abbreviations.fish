@@ -23,7 +23,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias all='exa -al --color=always -h --icons --tree --level=1'
-alias cat="batcat"
+alias cat="bat"
 alias exa="exa --color=always --icons"
 alias la='exa -a --color=always --icons'
 alias ls="exa --color=always --icons"

@@ -1,0 +1,7 @@
+
+[Default Applications]
+image/*=vimiv.desktop
+image/png=vimiv.desktop
+image/jpeg=vimiv.desktop
+image/jpg=vimiv.desktop
+image/webp=vimiv.desktop
