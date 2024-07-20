@@ -31,7 +31,7 @@ configuration {
    mantle : #1e2030;
    crust : #181926;
 
-    width: 900;
+    width: 700;
     font: "JetBrainsMono Nerd Font 36";
 }
 
@@ -90,7 +90,7 @@ listview {
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                false;
-    fixed-columns:               true;
+    fixed-columns:               false;
 
     spacing:                     15px;
     margin:                      0px;
@@ -105,7 +105,7 @@ listview {
 
 element {
 /* b l */
-    padding: 10px 10px 10px 28px;
+    padding: 10px;
     border-radius: 5px;
     background-color: @base;
     width: 100px;
@@ -113,6 +113,7 @@ element {
 }
 
 element-text {
+   /* t r b l */
    padding: 50px 50px 50px 30px;
    vertical-align: 0.5;
    horizontal-align: 0.5;

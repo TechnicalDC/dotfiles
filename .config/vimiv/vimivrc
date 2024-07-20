@@ -9,7 +9,7 @@ shuffle: no
 display_bar: yes
 default_thumbsize: (128, 128)
 geometry: 800x600
-recursive: yes
+recursive: no
 rescale_svg: yes
 overzoom: 1
 search_case_sensitive: yes
