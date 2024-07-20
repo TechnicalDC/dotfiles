@@ -130,9 +130,12 @@ label:focus {
 }
 
 #network.disconnected{
-    font-weight: bolder;
-    padding-top: 3px;
-    padding-right: 11px;
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+   font-weight: bolder;
+   padding-top: 3px;
+   padding-right: 11px;
 }
 
 #network.linked, #network.wifi{
