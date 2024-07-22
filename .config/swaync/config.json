@@ -48,10 +48,10 @@
       }
    },
    "widgets": [
-      "mpris",
       "title",
       "dnd",
-      "notifications"
+      "notifications",
+      "mpris"
    ],
    "widget-config": {
       "title": {
@@ -67,8 +67,8 @@
          "text": "Label Text"
       },
       "mpris": {
-         "image-size": 96,
-         "image-radius": 12
+         "image-size": 90,
+         "image-radius": 8
       },
       "buttons-grid": {
          "actions": [

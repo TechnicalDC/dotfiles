@@ -1,4 +1,5 @@
 @import url("/home/dilip/.config/swaync/macchiato.css");
+@define-color bg-mpris rgba(255, 0, 0, 0.10);
 
 * {
   all: unset;
@@ -284,6 +285,9 @@ slider {
   border-radius: 8px;
 }
 
+.widget-title {
+}
+
 .widget-dnd {
   margin-top: 10px;
   font-size: 1.1rem;
@@ -306,9 +310,20 @@ slider {
   border: 2px solid @base;;
 }
 
+/* Mpris widget */
+.widget-mpris {
+  background-color: @surface0;
+   border-radius: 10px;
+   border: 2px solid @surface0;
+   padding: 7px;
+  margin-top: 10px;
+  /* The parent to all players */
+}
 .widget-mpris .widget-mpris-player {
-  background: #363a4f;
-  padding: 7px;
+  background-color: transparent;
+   /*border-radius: 10px;*/
+   /*border: 2px solid @surface0;*/
+   padding: 7px;
 }
 
 .widget-mpris .widget-mpris-title {

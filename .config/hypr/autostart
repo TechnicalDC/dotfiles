@@ -5,4 +5,4 @@ wal -R &
 waybar &
 nm-applet &
 swaync &
-kdeconnectd &
+kdeconnect-indicator &
