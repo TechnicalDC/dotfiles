@@ -42,3 +42,4 @@ source "$HOME/.config/fish/abbreviations.fish"
 # Custom header
 zoxide init fish | source
 starship init fish | source
+colorscript -e panes

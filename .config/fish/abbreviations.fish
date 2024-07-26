@@ -5,7 +5,9 @@ abbr :x 'exit'
 abbr vim 'nvim'
 abbr vi 'nvim'
 abbr v 'nvim'
-abbr n "nvim"
+abbr nv "nvim"
+abbr n "nextd"
+abbr p "prevd"
 
 abbr ga "git add"
 abbr gs "git stage"
