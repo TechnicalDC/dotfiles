@@ -18,7 +18,7 @@ palette = "catppuccin_macchiato"
 
 success_symbol = "[[](green) ❯](maroon)"
 error_symbol = "[[](red) ❯](maroon)"
-vimcmd_symbol = "[❮](green)"
+vimcmd_symbol = "[[](green) ❮](green)"
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"

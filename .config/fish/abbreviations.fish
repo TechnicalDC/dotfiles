@@ -25,10 +25,12 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias all='exa -al --color=always -h --icons --tree --level=1'
-alias cat="bat"
+alias bat="batcat"
+#alias cat="bat"
 alias exa="exa --color=always --icons"
 alias la='exa -a --color=always --icons'
 alias ls="exa --color=always --icons"
 alias ll='exa -l --color=always -h --icons --tree --level=1'
 alias ll2='exa -l --color=always -h --icons --tree --level=2'
 alias ll3='exa -l --color=always -h --icons --tree --level=3'
+alias zf='z $(fd -t d | fzf --preview "ls -l {}")'
