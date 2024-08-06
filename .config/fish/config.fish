@@ -12,7 +12,6 @@ set --export PATH  $PATH $HOME/go/bin/
 set --export PATH  $PATH $HOME/.scripts/
 set --export QT_QUICK_CONTROLS_STYLE Basic
 set --export FZF_DEFAULT_OPTS "--layout=reverse
---preview='batcat {} --color always --style=plain'
 --margin=10%
 --border=rounded
 --height=100%
