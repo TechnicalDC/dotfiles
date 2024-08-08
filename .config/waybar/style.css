@@ -58,7 +58,7 @@ window#waybar {
 }
 
 #workspaces{
-    background-color: @base;;
+    background-color: @base;
     box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
     border-radius: 10px;
     border: 2px solid @mauve;

@@ -25,14 +25,13 @@
 /* Notifications expanded-group */
 
 .notification-group {
-  margin: 2px 8px 2px 8px;
-
+  /*margin: 2px 8px 2px 8px;*/
 }
 .notification-group-headers {
   font-weight: bold;
   font-size: 1.25rem;
-  color: @red;
   letter-spacing: 2px;
+  color: @red;
 }
 
 .notification-group-icon {
@@ -41,16 +40,18 @@
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-  background: transparent;
+   border-radius: 10px;
+   border: 2px solid @surface0;
+   background: @surface0;
   color: @text;
   margin: 4px;
-  border-radius: 6px;
   padding: 4px;
 }
 
 .notification-group-collapse-button:hover,
 .notification-group-close-all-button:hover {
-  background: @hover;
+   background: @surface1;
+   border: 2px solid @surface1;
 }
 
 trough highlight {
@@ -72,7 +73,7 @@ slider {
   border-radius: 10px;
   margin: 15px 15px 0px 0px;
   background-color: @base;
-  border: 2 solid @mauve;
+  border: 2 solid @maroon;
   padding: 0;
 }
 
@@ -145,7 +146,7 @@ slider {
 .control-center {
   border-radius: 10px;
   margin: 15px;
-  border: 2 solid @mauve;
+  border: 2 solid @maroon;
   background-color: @base;
   color: @text;
   padding: 20px;
@@ -300,8 +301,8 @@ slider {
 }
 
 .widget-dnd > switch:checked {
-  background: @mauve;
-  border: 2px solid @mauve;
+  background: @green;
+  border: 2px solid @green;
 }
 
 .widget-dnd > switch slider {
@@ -362,8 +363,12 @@ slider {
   font-size: 2.5rem;
 }
 
-.widget-volume {
-  padding-top: 1rem;
+.widget-volume, .widget-backlight {
+  background-color: @surface0;
+   border-radius: 10px;
+   border: 2px solid @surface0;
+   padding: 7px 14px;
+  margin-top: 10px;
 }
 
 .widget-volume label {
@@ -371,17 +376,10 @@ slider {
   color: #7dc4e4;
 }
 
-.widget-volume trough highlight {
-  background: #7dc4e4;
-}
-
+.widget-volume trough highligh,
 .widget-backlight trough highlight {
-  background: #eed49f;
-}
-
-.widget-backlight label {
-  font-size: 1.5rem;
-  color: #eed49f;
+  background: @green;
+  border-radius: 5px;
 }
 
 .widget-backlight .KB {
