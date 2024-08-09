@@ -84,6 +84,8 @@ window#waybar {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
     background-color: @mauve;
     color: @base;
+    padding: 6px 20px;
+    padding-right: 25px;
 }
 
 #clock {
