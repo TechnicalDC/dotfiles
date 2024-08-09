@@ -2,6 +2,7 @@
 
 swww-daemon &
 wal -R &
+mpd &
 waybar &
 nm-applet &
 swaync &
