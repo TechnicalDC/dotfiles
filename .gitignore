@@ -2,3 +2,5 @@
 .config/dconf
 .config/ncmpcpp/error.log
 .config/qt5ct/qt5ct.conf
+.config/QtProject.conf
+.config/kdeglobals
