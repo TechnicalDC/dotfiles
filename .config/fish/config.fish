@@ -13,7 +13,6 @@ set --export PATH  $PATH $HOME/.scripts/
 set --export QT_QUICK_CONTROLS_STYLE Basic
 set --export FZF_DEFAULT_OPTS "--layout=reverse
 --margin=10%
---border=rounded
 --height=100%
 --prompt=' '
 --pointer='>>'
@@ -23,7 +22,6 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 
 set --export _ZO_FZF_OPTS "--layout=reverse
 --margin=10%
---border=rounded
 --height=100%
 --prompt=' '
 --pointer='>>'
