@@ -42,9 +42,9 @@
             "default": ""
          },
          "all-outputs": true,
-         "persistent-workspaces": {
-            "eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
-         }
+         //"persistent-workspaces": {
+         //   "eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
+         //}
    },
    // Rofi Application Launcher
    "custom/appmenuicon": {
