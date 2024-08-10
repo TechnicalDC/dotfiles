@@ -29,6 +29,7 @@
 #power-profiles-daemon,
 #mpd {
     padding: 0px 22px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
     border-radius: 10px;
     border: 2px solid @mauve;
     /*border: 2px solid @surface0;*/
@@ -70,6 +71,7 @@ window#waybar {
     background: transparent;
 }
 #workspaces button{
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
     border-radius: 10px;
     border: 2px solid @mauve;
     /*border: 2px solid @surface0;*/
@@ -85,7 +87,6 @@ window#waybar {
 }
 
 #workspaces button.active{
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
     background-color: @mauve;
     color: @base;
     padding: 6px 20px;

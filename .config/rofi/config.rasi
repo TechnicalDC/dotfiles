@@ -6,11 +6,11 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Commands ";
-    display-window: " 󰕰  Windows ";
-    display-ssh: "   SSH ";
-    display-filebrowser: "   File Browser ";
+    display-drun: " Apps ";
+    display-run: " Commands ";
+    display-window: " Windows ";
+    display-ssh: " SSH ";
+    display-filebrowser: " File Browser ";
     sidebar-mode: true;
 }
 @theme "/home/dilip/.config/rofi/themes/catppuccin-macchiato-launcher.rasi"

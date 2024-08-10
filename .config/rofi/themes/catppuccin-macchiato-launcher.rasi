@@ -36,7 +36,6 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 500px;
     border: 2px;
     border-color: @mauve;
     border-radius: 10px;
@@ -49,38 +48,49 @@ mainbox {
 }
 
 inputbar {
-    children: [prompt,entry];
-    background-color: @base;
+    children: [textbox-prompt-colon,prompt,entry];
+    background-color:            transparent;
+    background-image:            url("~/.config/rofi/themes/catppuccin.png", width);
     border-radius: 5px;
-    padding: 2px;
+    padding: 50px 200px 20px 50px;
 }
 
 prompt {
     background-color: @mauve;
-    padding: 6px;
+    padding: 10px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
     text-color: @base;
     border-radius: 5px;
-    margin: 20px 0px 0px 20px;
+    margin: 100px 0px 0px 20px;
 }
 
 textbox-prompt-colon {
     expand: false;
-    str: ":";
+    enabled: true;
+    str: "󰘳";
+    background-color: @green;
+    padding: 10px 16px;
+    border-radius: 5px;
+    width: 65px;
+    text-color: @base;
+    margin: 100px 0px 0px 20px;
 }
 
 entry {
-    padding: 6px;
-    margin: 20px 0px 0px 20px;
+    padding: 10px;
+    margin: 100px 100px 0px 20px;
     text-color: @text;
+    vertical-align: 0.5;
+    border-radius: 5px;
     background-color: @base;
 }
 
 listview {
     border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 20px 0px 20px;
+    margin: 10px 0px;
     columns: 2;
-    lines: 5;
+    lines: 8;
     background-color: @base;
 }
 
@@ -102,7 +112,7 @@ element selected {
 
 mode-switcher {
     spacing: 0;
-    margin: 0px 20px 20px 20px;
+    margin: 0px;
 }
 
 button {
