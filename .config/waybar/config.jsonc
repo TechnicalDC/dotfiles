@@ -9,7 +9,7 @@
    // Choose the order of the modules
    "modules-left": [
       "custom/appmenuicon",
-      "hyprland/workspaces",
+      "hyprland/workspaces"
    ],
    "modules-center": [
       "mpd"
@@ -88,6 +88,7 @@
       "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon} ::   Stopped",
       "unknown-tag": "N/A",
       "interval": 5,
+      "on-click": "rofi-mpc",
       "consume-icons": {
          "off": "<span color=\"#5b6078\"> </span> ",
          "on": "<span color=\"#24273a\"> </span> "

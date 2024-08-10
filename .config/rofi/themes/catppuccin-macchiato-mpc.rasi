@@ -31,7 +31,7 @@ configuration {
    mantle : #1e2030;
    crust : #181926;
 
-    width: 550;
+    width: 1000;
     font: "JetBrainsMono Nerd Font 12";
 }
 
@@ -67,25 +67,25 @@ prompt {
     horizontal-align: 0.5;
     text-color: @base;
     border-radius: 5px;
-    margin: 80px 0px 0px 20px;
+    margin: 100px 0px 0px 20px;
 }
 
 textbox-prompt-colon {
     expand: false;
     enabled: true;
-    str: "";
+    str: "";
     background-color: @green;
     padding: 10px 16px;
     border-radius: 5px;
     width: 65px;
     text-color: @base;
-    margin: 80px 0px 0px 20px;
+    margin: 100px 0px 0px 20px;
 }
 
 entry {
     enabled: false;
     padding: 10px;
-    margin: 80px 0px 0px 20px;
+    margin: 100px 100px 0px 20px;
     text-color: @text;
     vertical-align: 0.5;
     border-radius: 5px;
@@ -94,7 +94,7 @@ entry {
 
 listview {
     enabled:                     true;
-    columns:                     3;
+    columns:                     6;
     lines:                       1;
     cycle:                       true;
     dynamic:                     true;

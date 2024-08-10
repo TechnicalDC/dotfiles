@@ -31,7 +31,7 @@ configuration {
    mantle : #1e2030;
    crust : #181926;
 
-    width: 900;
+    width: 750;
     font: "JetBrainsMono Nerd Font 12";
 }
 
@@ -126,7 +126,7 @@ element {
 
 element-text {
     font: "JetBrainsMono Nerd Font 36";
-   padding: 50px 50px 50px 30px;
+   padding: 30px 30px 30px 10px;
    vertical-align: 0.5;
    horizontal-align: 0.5;
 }
