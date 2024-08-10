@@ -1,0 +1,147 @@
+* {
+   rosewater : #f4dbd6;
+   flamingo : #f0c6c6;
+   pink : #f5bde6;
+   mauve : #c6a0f6;
+   red : #ed8796;
+   maroon : #ee99a0;
+   peach : #f5a97f;
+   yellow : #eed49f;
+   green : #a6da95;
+   teal : #8bd5ca;
+   sky : #91d7e3;
+   sapphire : #7dc4e4;
+   blue : #8aadf4;
+   lavender : #b7bdf8;
+   text : #cad3f5;
+   subtext1 : #b8c0e0;
+   subtext0 : #a5adcb;
+   overlay2 : #939ab7;
+   overlay1 : #8087a2;
+   overlay0 : #6e738d;
+   surface2 : #5b6078;
+   surface1 : #494d64;
+   surface0 : #363a4f;
+   base : #24273a;
+   mantle : #1e2030;
+   crust : #181926;
+
+    width: 500;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    border: 2px;
+    border-color: @mauve;
+    border-radius: 10px;
+    background-color: @base;
+    padding: 10px;
+}
+
+mainbox {
+    background-color: @base;
+}
+
+inputbar {
+    children: [textbox-prompt-colon,prompt];
+    background-color:            transparent;
+    background-image:            url("~/.config/rofi/themes/catppuccin.png", width);
+    border-radius: 5px;
+    padding: 50px 100px 20px 50px;
+}
+
+prompt {
+    background-color: @mauve;
+    padding: 10px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-color: @base;
+    border-radius: 5px;
+    margin: 60px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    enabled: true;
+    str: "󰘳";
+    background-color: @green;
+    padding: 10px 16px;
+    border-radius: 5px;
+    width: 65px;
+    text-color: @base;
+    margin: 60px 0px 0px 20px;
+}
+
+entry {
+    padding: 10px;
+    margin: 60px 0px 0px 20px;
+    text-color: @text;
+    vertical-align: 0.5;
+    border-radius: 5px;
+    background-color: @base;
+}
+
+listview {
+    border: 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
+    columns: 2;
+    lines: 1;
+    background-color: @base;
+}
+
+element {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: @base;
+    text-color: @text;
+}
+
+element-text {
+    horizontal-align: 0.5;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @surface0;
+    text-color: @text;
+}
+
+mode-switcher {
+    spacing: 0;
+    margin: 0px;
+}
+
+button {
+    padding: 10px;
+    background-color: @base;
+    text-color: @text;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    border-radius: 5px;
+}
+
+button selected {
+   background-color: @surface0;
+   text-color: @text;
+}
+
+message {
+    background-color: @surface1;
+    margin: 10px 20px 0px 20px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    text-color: @blue;
+    background-color: @surface1;
+}
