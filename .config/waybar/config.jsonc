@@ -30,21 +30,21 @@
          "format": "{icon}",
          "format-icons": {
             "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
             "7": "",
             "8": "",
-            "9": "",
-            "active": "",
-            "default": ""
+            "9": "",
+            //"active": "",
+            //"default": ""
          },
          "all-outputs": true,
-         //"persistent-workspaces": {
-         //   "eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
-         //}
+         "persistent-workspaces": {
+            "eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
+         }
    },
    // Rofi Application Launcher
    "custom/appmenuicon": {
@@ -83,27 +83,30 @@
       "tooltip-format": "{app}: {title}"
    },
    "mpd": {
-      "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} ::   {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
+      "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon} ::   {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
       "format-disconnected": "Disconnected ",
-      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon} ::   Stopped",
       "unknown-tag": "N/A",
       "interval": 5,
       "consume-icons": {
-         "on": " "
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
       },
       "random-icons": {
-         "off": "<span color=\"#f53c3c\"></span> ",
-         "on": " "
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
       },
       "repeat-icons": {
-         "on": " "
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
       },
       "single-icons": {
-         "on": "1 "
+         "on": "1 ",
+         "off": "1 "
       },
       "state-icons": {
-         "paused": "",
-         "playing": ""
+         "paused": " ",
+         "playing": " "
       },
       "tooltip-format": "MPD (connected)",
       "tooltip-format-disconnected": "MPD (disconnected)"

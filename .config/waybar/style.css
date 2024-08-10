@@ -72,12 +72,16 @@ window#waybar {
 #workspaces button{
     border-radius: 10px;
     border: 2px solid @mauve;
-    background-color: @base;
     /*border: 2px solid @surface0;*/
+    background-color: @surface1;
     padding: 6px 12px;
     padding-right: 17px;
     margin-top: 15px;
     margin-right: 8px;
+}
+
+#workspaces button.empty{
+    background-color: @base;
 }
 
 #workspaces button.active{
