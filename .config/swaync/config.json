@@ -55,6 +55,15 @@
       "backlight"
    ],
    "widget-config": {
+      "volume": {
+         "label": " "
+      },
+      "backlight": {
+         "label": "󰃠 ",
+         "device": "intel_backlight",
+         "subsystem": ["backlight", "leds"],
+         "min": 0
+      },
       "title": {
          "text": "Notifications",
          "clear-all-button": true,

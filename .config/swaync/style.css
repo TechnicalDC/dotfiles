@@ -9,11 +9,21 @@
   color: @text;
 }
 
+.widget-title,
+.widget-dnd,
+.widget-volume,
+.widget-backlight {
+  background-color: @surface0;
+   border-radius: 10px;
+   border: 2px solid @surface0;
+   padding: 7px 14px;
+}
+
 .control-center .widget-title button,
 .widget-dnd > switch
 {
-   border-radius: 10px;
-   border: 2px solid @surface0;
+   border-radius: 8px;
+   border: 2px solid @base;
    color: @text;
    background: @surface0;
 }
@@ -73,7 +83,7 @@ slider {
   border-radius: 10px;
   margin: 15px 15px 0px 0px;
   background-color: @base;
-  border: 2 solid @maroon;
+  border: 2 solid @mauve;
   padding: 0;
 }
 
@@ -82,6 +92,7 @@ slider {
   border-radius: 10px;
 }
 
+/*.floating-notifications.background .notification-row .notification-background,*/
 .floating-notifications.background .notification-row .notification-background .notification.critical {
    border: 2 solid @red;
 }
@@ -146,7 +157,7 @@ slider {
 .control-center {
   border-radius: 10px;
   margin: 15px;
-  border: 2 solid @maroon;
+  border: 2 solid @mauve;
   background-color: @base;
   color: @text;
   padding: 20px;
@@ -286,9 +297,6 @@ slider {
   border-radius: 8px;
 }
 
-.widget-title {
-}
-
 .widget-dnd {
   margin-top: 10px;
   font-size: 1.1rem;
@@ -364,19 +372,21 @@ slider {
 }
 
 .widget-volume, .widget-backlight {
-  background-color: @surface0;
-   border-radius: 10px;
-   border: 2px solid @surface0;
-   padding: 7px 14px;
   margin-top: 10px;
 }
 
-.widget-volume label {
+.widget-volume label,
+.widget-backlight label {
   font-size: 1.5rem;
   color: #7dc4e4;
 }
+.widget-volume trough,
+.widget-backlight trough {
+  background: @surface1;
+  border-radius: 5px;
+}
 
-.widget-volume trough highligh,
+.widget-volume trough highlight,
 .widget-backlight trough highlight {
   background: @green;
   border-radius: 5px;
