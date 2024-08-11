@@ -87,7 +87,11 @@ window#waybar {
 }
 
 #workspaces button.active{
-    background-color: @mauve;
+    /*background-color: @mauve;*/
+    background: rgb(205,214,244);
+    background: linear-gradient(118deg, @green 5%, @mauve 5%, @mauve 20%, @green 20%, @green 40%, @mauve 40%, @mauve 40%);
+    background-size: 200% 300%;
+    animation: gradient_f_nh 4s linear infinite;
     color: @base;
     padding: 6px 20px;
     padding-right: 25px;
@@ -206,7 +210,7 @@ label:focus {
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    background-color: @red;
 }
 
 #mpd.playing {
