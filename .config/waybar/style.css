@@ -89,7 +89,7 @@ window#waybar {
 #workspaces button.active{
     /*background-color: @mauve;*/
     background: rgb(205,214,244);
-    background: linear-gradient(118deg, @pink 5%, @mauve 5%, @mauve 20%, @pink 20%, @pink 40%, @mauve 40%, @mauve 40%);
+    background: linear-gradient(118deg, @yellow 5%, @mauve 5%, @mauve 20%, @yellow 20%, @yellow 40%, @mauve 40%, @mauve 60%, @yellow 60%, @yellow 80%, @mauve 80%, @mauve 95%, @yellow 95%);
     background-size: 200% 300%;
     animation: gradient_f_nh 4s linear infinite;
     color: @base;

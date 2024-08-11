@@ -49,7 +49,7 @@ bind-key x pb-delete
 
 # COLORS
 # color background          white   red
-color listnormal        white   default
+color listnormal        color8   default
 color listfocus         color0  color15 bold
 color listnormal_unread white default bold
 color listfocus_unread  color0  color15 bold
