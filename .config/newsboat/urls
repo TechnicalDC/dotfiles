@@ -1,3 +1,9 @@
-https://lukesmith.xyz/rss "~Luke Smith (Blog)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~DistroTube (YouTube)"
+"query:Unread:unread = \"yes\"" meta
+
+https://lukesmith.xyz/index.xml "~Luke Smith (Blog)"  blog
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)" youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ youtube
+https://www.reddit.com/r/unixporn/new.rss reddit
+https://www.reddit.com/r/commandline/new.rss reddit
