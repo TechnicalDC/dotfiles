@@ -1,4 +1,4 @@
-browser sensible-browser
+browser "w3m %u"
 html-renderer "internal"
 ignore-mode "download"
 notify-always no
@@ -10,24 +10,27 @@ player ""
 searchresult-title-format "%N %V - Search results for '%s' (%u unread, %t total)%?F? matching filter '%F'&?"
 selectfilter-title-format "%N %V - Select Filter"
 selecttag-format "%4i  %T (%u)"
-selecttag-title-format "%N %V - Select Tag"
+selecttag-title-format "Select Tag"
 show-keymap-hint yes
 show-read-articles yes
 show-read-feeds yes
 show-title-bar yes
 urls-source "local"
-urlview-title-format "%N %V - URLs"
+urlview-title-format "URLs"
 
 articlelist-title-format  "Articles in feed '%T' (%u unread, %t total)%?F? matching filter '%F'&? - %U"
 articlelist-format "%4i %f %D %6L • %?T?|%-17T|  &?%t"
 feedlist-format "%4i %n %11u • %t"
 feedlist-title-format "%?F?Feeds&Your feeds? (%u unread, %t total)%?F? matching filter '%F'&?%?T? - tag '%T'&?"
-filebrowser-title-format "%N %V - %?O?Open File&Save File? - %f"
-help-title-format "%N %V - Help"
+filebrowser-title-format "%?O?Open File&Save File? - %f"
+help-title-format "Help"
 itemview-title-format "%N %V - Article '%T' (%u unread, %t total)"
 podlist-format "%4i [%6dMB/%6tMB] [%5p %%] [%12K] %-20S %u -> %F"
-
 auto-reload yes
+
+macro w set browser "mpv %u" ; open-in-browser ; set browser "w3m %u"
+
+bind-key ; macro-prefix
 bind-key j down
 bind-key k up
 bind-key j next articlelist
@@ -49,12 +52,12 @@ bind-key x pb-delete
 
 # COLORS
 # color background          white   red
-color listnormal        color8   default
-color listfocus         color0  color15 bold
-color listnormal_unread white default bold
-color listfocus_unread  color0  color15 bold
-color info              color0  color4  bold
-color article           white   default
+color listnormal        color8 default
+color listfocus         color0 color15 bold
+color listnormal_unread white  default bold
+color listfocus_unread  color0 color15 bold
+color info              color0 color4  bold
+color article           white  default
 
 # HIGHLIGHTS
 # highlight all "---.*---" yellow
