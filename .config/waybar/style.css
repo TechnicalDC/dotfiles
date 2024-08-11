@@ -32,7 +32,6 @@
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
     border-radius: 10px;
     border: 2px solid @mauve;
-    /*border: 2px solid @surface0;*/
     background-color: @base;
     color: @text;
     margin-top: 15px;
