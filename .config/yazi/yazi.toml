@@ -42,6 +42,8 @@ reveal = [
 	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 extract = [
+   { run = 'unzip "$1" -d $(basename repayslip.zip ".zip")', desc = "Extract into directory", for = "unix" },
+   { run = 'unzip "$1"', desc = "Extract here", for = "unix" },
 	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },
 	{ run = 'unar "%1"', desc = "Extract here", for = "windows" },
 ]
