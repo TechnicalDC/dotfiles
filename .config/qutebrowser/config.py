@@ -69,8 +69,8 @@ c.url.searchengines = {
         'yt': 'https://www.youtube.com/results?search_query={}',
         'amz':'https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={}'
 }
-# c.url.default_page = '/home/dilip/.cache/StartTree/index.html'
-# c.url.start_pages = '/home/dilip/.cache/StartTree/index.html'
+c.url.default_page = '/home/dilip/.config/qutebrowser/fluidity/index.html'
+c.url.start_pages = '/home/dilip/.config/qutebrowser/fluidity/index.html'
 c.content.images = True
 c.content.javascript.enabled = True
 c.content.autoplay = False
@@ -132,7 +132,7 @@ c.statusbar.padding = {"bottom":1, "left":1, "right":1, "top":1}
 # --- Webpages ---
 c.colors.webpage.bg = catppuccin_colors["base"]
 
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = False
 
 # --- Context menu ---
 c.colors.contextmenu.menu.bg = catppuccin_colors["base"]
@@ -167,10 +167,10 @@ c.colors.hints.fg = catppuccin_colors["base"]
 c.colors.hints.match.fg = catppuccin_colors["red"]
 
 # --- Messages ---
-c.colors.messages.info.bg = catppuccin_colors["surface0"]
-c.colors.messages.info.fg = catppuccin_colors["base"]
+c.colors.messages.info.bg = catppuccin_colors["surface1"]
+c.colors.messages.info.fg = catppuccin_colors["text"]
 c.colors.messages.error.bg = catppuccin_colors["red"]
-c.colors.messages.error.fg = catppuccin_colors["text"]
+c.colors.messages.error.fg = catppuccin_colors["base"]
 c.colors.messages.warning.bg = catppuccin_colors["peach"]
 c.colors.messages.warning.fg = catppuccin_colors["base"]
 

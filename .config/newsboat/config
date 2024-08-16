@@ -1,4 +1,5 @@
-browser "w3m %u"
+browser linkhandler
+external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 html-renderer "internal"
 ignore-mode "download"
 notify-always no
