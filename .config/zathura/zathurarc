@@ -1,41 +1,33 @@
-set default-fg              rgba(202,211,245,1)
-set default-bg              rgba(36,39,58,1)
-
-set completion-bg           rgba(54,58,79,1)
-set completion-fg           rgba(202,211,245,1)
-set completion-highlight-bg rgba(87,82,104,1)
-set completion-highlight-fg rgba(202,211,245,1)
-set completion-group-bg     rgba(54,58,79,1)
-set completion-group-fg     rgba(138,173,244,1)
-
-set statusbar-fg            rgba(202,211,245,1)
-set statusbar-bg            rgba(54,58,79,1)
-
-set notification-bg         rgba(54,58,79,1)
-set notification-fg         rgba(202,211,245,1)
-set notification-error-bg   rgba(54,58,79,1)
-set notification-error-fg   rgba(237,135,150,1)
-set notification-warning-bg rgba(54,58,79,1)
-set notification-warning-fg rgba(250,227,176,1)
-
-set inputbar-fg             rgba(202,211,245,1)
-set inputbar-bg             rgba(54,58,79,1)
-
+set default-fg              "#cad3f5"
+set default-bg              "#24273a"
+set completion-bg           "#363a4f"
+set completion-fg           "#cad3f5"
+set completion-highlight-bg "#5b6078"
+set completion-highlight-fg "#cad3f5"
+set completion-group-bg     "#363a4f"
+set completion-group-fg     "#8aadf4"
+set statusbar-fg            "#cad3f5"
+set statusbar-bg            "#363a4f"
+set notification-bg         "#363a4f"
+set notification-fg         "#cad3f5"
+set notification-error-bg   "#363a4f"
+set notification-error-fg   "#ed8796"
+set notification-warning-bg "#363a4f"
+set notification-warning-fg "#f5a97f"
+set inputbar-fg             "#cad3f5"
+set inputbar-bg             "#363a4f"
 set recolor                 "true"
-set recolor-lightcolor      rgba(36,39,58,1)
-set recolor-darkcolor       rgba(202,211,245,1)
-
-set index-fg                rgba(202,211,245,1)
-set index-bg                rgba(36,39,58,1)
-set index-active-fg         rgba(202,211,245,1)
-set index-active-bg         rgba(54,58,79,1)
-
-set render-loading-bg       rgba(36,39,58,1)
-set render-loading-fg       rgba(202,211,245,1)
-
-set highlight-color         rgba(87,82,104,0.5)
-set highlight-fg            rgba(245,189,230,0.5)
-set highlight-active-color  rgba(245,189,230,0.5)
+set recolor-lightcolor      "#24273a"
+set recolor-darkcolor       "#cad3f5"
+set index-fg                "#cad3f5"
+set index-bg                "#24273a"
+set index-active-fg         "#cad3f5"
+set index-active-bg         "#363a4f"
+set render-loading-bg       "#24273a"
+set render-loading-fg       "#cad3f5"
+# set highlight-color         "#a6da95"
+# set highlight-fg            "#cad3f5"
+# set highlight-active-color  "#5b6078"
 
 set font "JetBrainsMonoNL Nerd Font 12"
 
@@ -43,14 +35,18 @@ set font "JetBrainsMonoNL Nerd Font 12"
 set window-height         700
 set window-width          500
 set adjust-open           width
-set page-padding          8
+set page-padding          15
 set show-hidden           true
 set statusbar-basename    true
 set statusbar-home-tilde  true
 set page-right-to-left    true
 set recolor               true
-set recolor-reverse-video true
+set recolor-reverse-video false
 set selection-clipboard   clipboard
+set zoom-center           true
+set show-recent           10
+set show-directories      true
+set incremental-search    true
 
 # remove default key bindings
 unmap <C-n>
