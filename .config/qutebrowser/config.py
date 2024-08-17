@@ -38,16 +38,6 @@ catppuccin_colors = {
    "crust"     : "#181926"
 }
 
-# Quick hack to theme duckduckgo pages
-ddg_theme = 'https://duckduckgo.com/?q={}' # &kj=' + xresources["*.color4"]      # catppuccin_colors["mauve"] color
-# ddg_theme = ddg_theme + '&k7=' + xresources["*.catppuccin_colors["base"]"]                  # Hover color
-# ddg_theme = ddg_theme + '&k21=' + xresources["*.catppuccin_colors["base"]"]                 # Background color
-# ddg_theme = ddg_theme + '&kx=' + xresources["*.color5"]                      # URL color
-# ddg_theme = ddg_theme + '&k8=' + xresources["*.color5"]                      # Snippet color
-# ddg_theme = ddg_theme + '&k9=' + xresources["*.color2"]                      # Link color
-# ddg_theme = ddg_theme + '&kaa=' + xresources["*.color2"]                     # Visited link color
-# ddg_theme = ddg_theme + '&ko=s'                                              # catppuccin_colors["mauve"] setting
-
 #################
 # MAIN SETTINGS #
 #################
@@ -58,12 +48,12 @@ config.load_autoconfig()
 # set the flavor you'd like to use
 # valid options are 'mocha', 'macchiato', 'frappe', and 'latte'
 # last argument (optional, default is False): enable the plain look for the menu rows
-catppuccin.setup(c, 'macchiato', True)
+catppuccin.setup(c, 'macchiato', False)
 
 c.aliases = {'q': 'quit', 'w': 'session-save', 'wq': 'quit --save', 'r': 'restart'}
 c.downloads.location.directory = '/home/dilip/Downloads'
 c.url.searchengines = {
-        'DEFAULT': ddg_theme,
+        'DEFAULT': 'https://duckduckgo.com/?q={}',
         'wk':'https://en.wikipedia.org/wiki/{}',
         'rd':'https://www.reddit.com/search/?q={}',
         'yt': 'https://www.youtube.com/results?search_query={}',
@@ -138,7 +128,7 @@ c.colors.webpage.darkmode.enabled = False
 c.colors.contextmenu.menu.bg = catppuccin_colors["base"]
 c.colors.contextmenu.menu.fg = catppuccin_colors["text"]
 c.colors.contextmenu.selected.bg = catppuccin_colors["surface0"]
-c.colors.contextmenu.selected.fg = catppuccin_colors["base"]
+c.colors.contextmenu.selected.fg = catppuccin_colors["text"]
 
 # --- Completions ---
 c.colors.completion.fg = catppuccin_colors["text"]
@@ -206,11 +196,9 @@ c.colors.tabs.pinned.even.bg = catppuccin_colors["base"]
 c.colors.tabs.pinned.selected.odd.bg = catppuccin_colors["surface0"]
 c.colors.tabs.pinned.selected.even.bg = catppuccin_colors["surface0"]
 
-
 ################
 # FONT SETTING #
 ################
-
 c.fonts.default_family = '14px "JetBrainsMonoNL Nerd Font"'
 c.fonts.default_size = '14px'
 c.fonts.contextmenu = '14px "JetBrainsMonoNL Nerd Font"'
@@ -237,6 +225,7 @@ config.bind(';i', 'set downloads.location.directory ~/Pictures ;; hint links dow
 config.bind(';I', 'set downloads.location.directory ~/Pictures ;; hint images download')
 config.bind(';D', 'set downloads.location.directory ~/Documents ;; hint links download')
 config.bind(';d', 'set downloads.location.directory ~/Downloads ;; hint links download')
+config.bind(';x', 'set downloads.location.directory ~/Downloads/.cache ;; hint links download')
 config.bind(';v', 'set downloads.location.directory ~/Videos ;; hint links download')
 
 config.bind('xb', 'config-cycle statusbar.show always never')
