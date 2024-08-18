@@ -5,6 +5,7 @@ set --export EDITOR "nvim"
 set --export VISUAL "nvim"
 set --export TERMINAL "wezterm"
 set --export PAGER "less"
+set --export BROWSER "qutebrowser"
 set --export PATH  $PATH $HOME/.scripts/
 set --export PATH  $PATH $HOME/.local/bin/
 set --export PATH  $PATH $HOME/.cargo/bin/
