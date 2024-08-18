@@ -225,8 +225,8 @@ config.bind(';i', 'set downloads.location.directory ~/Pictures ;; hint links dow
 config.bind(';I', 'set downloads.location.directory ~/Pictures ;; hint images download')
 config.bind(';D', 'set downloads.location.directory ~/Documents ;; hint links download')
 config.bind(';d', 'set downloads.location.directory ~/Downloads ;; hint links download')
-config.bind(';x', 'set downloads.location.directory ~/Downloads/.cache ;; hint links download')
-config.bind(';X', 'set downloads.location.directory ~/Downloads/.cache ;; hint images download')
+# config.bind(';x', 'set downloads.location.directory ~/Downloads/.cache ;; hint links download')
+# config.bind(';X', 'set downloads.location.directory ~/Downloads/.cache ;; hint images download')
 config.bind(';v', 'set downloads.location.directory ~/Videos ;; hint links download')
 
 config.bind('xb', 'config-cycle statusbar.show always never')
