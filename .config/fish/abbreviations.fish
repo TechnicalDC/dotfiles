@@ -8,6 +8,7 @@ abbr v 'nvim'
 abbr nv "nvim"
 abbr n "nextd"
 abbr p "prevd"
+abbr lg "lazygit"
 
 abbr ga "git add"
 abbr gs "git stage"
