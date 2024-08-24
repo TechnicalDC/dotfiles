@@ -1,5 +1,6 @@
 "query:Unread:unread = \"yes\"" meta
 
+https://technicaldc.github.io/blogs/index.xml "~technicaldc" blog
 https://lukesmith.xyz/index.xml "~Luke Smith (Blog)"  blog
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)" youtube
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg youtube
