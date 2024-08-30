@@ -86,16 +86,6 @@
          "unlocked": ""
       }
    },
-   "sway/mode": {
-      "format": "<span style=\"italic\">{}</span>"
-   },
-   "sway/scratchpad": {
-      "format": "{icon} {count}",
-      "show-empty": false,
-      "format-icons": ["", ""],
-      "tooltip": true,
-      "tooltip-format": "{app}: {title}"
-   },
    "mpd": {
       "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon} ::   {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
       "format-disconnected": "Disconnected ",
@@ -144,7 +134,7 @@
        "format" : "{:%d %b | %H:%M}"
    },
    "cpu": {
-      "format": "{usage}% ",
+      "format": "   {usage}%",
       "tooltip": false
    },
    "memory": {
@@ -175,7 +165,6 @@
       "format-plugged": " {capacity}%",
       "format-alt": "{time} {icon}",
        // "format-good": "", // An empty format will hide the module
-       // "format-full": "",
        "format-icons": [" ", " ", " ", " ", " "]
    },
    "battery#bat2": {
