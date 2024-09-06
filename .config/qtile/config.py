@@ -125,10 +125,10 @@ layouts = [
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
+    layout.Bsp(),
     # layout.Matrix(),
-    # layout.MonadTall(),
-    # layout.MonadWide(),
+    layout.MonadTall(),
+    layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),
@@ -137,7 +137,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="JetBrainsMono Nerd Font",
     fontsize=12,
     padding=3,
 )
