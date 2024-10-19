@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 swww-daemon &
+waybar --config ~/.config/waybar/themes/popos/config.jsonc -s ~/.config/waybar/themes/popos/style.css &
 wal -R &
-mpd &
-waybar &
+# mpd &
 nm-applet &
-swaync &
+swaync --config ~/.config/swaync/themes/popos/config.json --style ~/.config/swaync/themes/popos/style.css &
 kdeconnect-indicator &

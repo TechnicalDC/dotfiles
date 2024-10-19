@@ -1,0 +1,181 @@
+@import url("/home/dilip/.config/waybar/themes/popos/mocha.css");
+
+* {
+    font-family: "JetBrainsMonoNL Nerd Font", 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 15px;
+    color: @background;
+}
+
+#custom-appmenuicon,
+#custom-notifications,
+#custom-powermenuicon,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-expand,
+#custom-cycle_wall,
+#custom-ss,
+#custom-dynamic_pill,
+#power-profiles-daemon,
+#mpd {
+    padding: 0px 10px;
+    color: @text;
+}
+
+@keyframes gradient_f_nh {
+	0% {
+		background-position: 0% 200%;
+	}
+	100% {
+		background-position: 200% 200%;
+	}
+}
+
+#custom-appmenuicon {
+}
+#custom-powermenuicon {
+    padding-right: 15px;
+}
+#custom-notifications {
+}
+
+window#waybar {
+    background-color: @base;
+}
+
+#workspaces button{
+    background-color: @base;
+    padding: 6px 12px;
+    border-radius: 0px;
+}
+
+#workspaces button.empty{
+    background-color: @base;
+}
+
+#workspaces button.active{
+    background-color: @accent;
+    color: @base;
+}
+
+#clock {
+    background-size: 300% 300%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#battery.charging, #battery.plugged {
+}
+
+#battery {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#battery.critical:not(.charging) {
+   border-color: @red;
+   background-color: @red;
+}
+
+label:focus {
+
+}
+
+#cpu {
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#memory {
+    background-color: #cba6f7;
+    font-weight: bolder;
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network{
+}
+
+#network.disabled{
+    background-color: #45475a;
+}
+
+#network.disconnected{
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+   font-weight: bolder;
+   padding-top: 3px;
+   padding-right: 11px;
+}
+
+#network.linked, #network.wifi{
+}
+
+#network.ethernet{
+}
+
+#pulseaudio {
+    font-weight: bolder;
+}
+
+#pulseaudio.muted {
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+}
+
+#temperature {
+}
+
+#temperature.critical {
+    background-color: @red;
+    color: @text;
+}
+
+#tray {
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd.disconnected {
+    color: @red;
+}
+
+#tooltip {
+  background: @surface0;
+  border: 2px solid @surface0;
+}
+#tooltip #label {
+  color: @text;
+}

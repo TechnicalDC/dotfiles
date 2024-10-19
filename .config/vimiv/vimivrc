@@ -21,10 +21,10 @@ completion_height: 200
 play_animations: yes
 
 [LIBRARY] ######################################################################
-start_show_library: yes
+start_show_library: no
 library_width: 300
-expand_lib: yes
-border_width: 0
+expand_lib: no
+border_width: 2
 markup: <span foreground="#875FFF">
 show_hidden: no
 # desktop_start_dir: .

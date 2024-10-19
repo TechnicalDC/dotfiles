@@ -1,0 +1,210 @@
+// -*- mode: jsonc -*-
+{
+   "layer": "top", // Waybar at top layer
+   "position": "top", // Waybar position (top|bottom|left|right)
+   "height": 15, // Waybar height (to be removed for auto height)
+   // "width": 1280, // Waybar width
+   "spacing": 5, // Gaps between modules (4px)
+   "reload_style_on_change": true,
+   // Choose the order of the modules
+   "modules-left": [
+      "hyprland/workspaces"
+   ],
+   "modules-center": [
+      "clock"
+   ],
+   "modules-right": [
+      "tray",
+      "custom/notifications",
+      //"pulseaudio",
+      //"network",
+      "power-profiles-daemon",
+      //"backlight",
+      "battery",
+      "custom/powermenuicon"
+   ],
+   // Modules configuration
+   "hyprland/workspaces": {
+         "format": "{name}",
+         "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            //"active": "",
+            //"default": ""
+         },
+         "all-outputs": true,
+         "persistent-workspaces": {
+            //"eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
+         }
+   },
+   // Rofi Application Launcher
+   "custom/appmenuicon": {
+      "format": "",
+      "on-click": "rofi -show drun",
+      "tooltip-format": "Open the application launcher"
+   },
+   "custom/powermenuicon": {
+      "format": "",
+      "on-click": "rofi-powermenu",
+      "tooltip-format": "Open the power menu"
+   },
+   "custom/notifications": {
+      "format": "{icon}",
+      "format-icons": {
+         "notification": "<span foreground='#ed8796'></span>",
+         "none": "",
+         "dnd-notification": "<span foreground='#ed8796'></span>",
+         "dnd-none": "",
+         "inhibited-notification": "<span foreground='#ed8796'></span>",
+         "inhibited-none": "",
+         "dnd-inhibited-notification": "<span foreground='#ed8796'></span>",
+         "dnd-inhibited-none": ""
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true,
+      "tooltip": false
+   },
+   "keyboard-state": {
+      "numlock": true,
+      "capslock": true,
+      "format": "{name} {icon}",
+      "format-icons": {
+         "locked": "",
+         "unlocked": ""
+      }
+   },
+   "mpd": {
+      "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon} ::   {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
+      "format-disconnected": "Disconnected ",
+      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon} ::   Stopped",
+      "unknown-tag": "N/A",
+      "interval": 5,
+      "on-click": "rofi-mpc",
+      "consume-icons": {
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
+      },
+      "random-icons": {
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
+      },
+      "repeat-icons": {
+         "off": "<span color=\"#5b6078\"> </span> ",
+         "on": "<span color=\"#24273a\"> </span> "
+      },
+      "single-icons": {
+         "on": "1 ",
+         "off": "1 "
+      },
+      "state-icons": {
+         "paused": " ",
+         "playing": " "
+      },
+      "tooltip-format": "MPD (connected)",
+      "tooltip-format-disconnected": "MPD (disconnected)"
+   },
+   "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+         "activated": "",
+         "deactivated": ""
+      }
+   },
+   "tray": {
+       // "icon-size": 21,
+       "spacing": 10
+   },
+   "clock": {
+       // "timezone": "America/New_York",
+       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+       "format-alt": "  {:%Y-%m-%d}",
+       "format" : "{:%d %b | %H:%M}"
+   },
+   "cpu": {
+      "format": "   {usage}%",
+      "tooltip": false
+   },
+   "memory": {
+      "format": "  {}%"
+   },
+   "temperature": {
+       // "thermal-zone": 2,
+       // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+       "critical-threshold": 80,
+       // "format-critical": "{temperatureC}°C {icon}",
+       "format": "{temperatureC}°C {icon}",
+       "format-icons": ["", "", ""]
+   },
+   "backlight": {
+       // "device": "acpi_video1",
+       "format": "{icon} {percent}%",
+       "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+   },
+   "battery": {
+      "states": {
+           // "good": 95,
+           "warning": 30,
+           "critical": 15
+      },
+      "format": "{icon} {capacity}%",
+      "format-full": "{icon} {capacity}%",
+      "format-charging": "  {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-alt": "{time} {icon}",
+       // "format-good": "", // An empty format will hide the module
+       "format-icons": [" ", " ", " ", " ", " "]
+   },
+   "battery#bat2": {
+      "bat": "BAT2"
+   },
+   "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+         "default": " ",
+         "performance": " ",
+         "balanced": " ",
+         "power-saver": " "
+      }
+   },
+   "network": {
+       // "interface": "wlp2*", // (Optional) To force the use of this interface
+       "format-wifi": "a {essid} ({signalStrength}%)",
+       "format-ethernet": "{ipaddr}/{cidr} ",
+       "tooltip-format": "{ifname} via {gwaddr}",
+       "format-linked": "  {ifname} (No IP)",
+       "format-disconnected": "  Disconnected",
+       "format-alt": "{ifname}: {ipaddr}/{cidr}"
+   },
+   "pulseaudio": {
+       // "scroll-step": 1, // %, can be a float
+       "format": "{volume}% {icon} {format_source}",
+       "format-bluetooth": "{volume}% {icon} {format_source}",
+       "format-bluetooth-muted": " {icon} {format_source}",
+       "format-muted": " {format_source}",
+       "format-source": "{volume}%  ",
+       "format-source-muted": " ",
+       "format-icons": {
+          "headphone": " ",
+          "hands-free": "",
+          "headset": " ",
+          "phone": " ",
+          "portable": " ",
+          "car": " ",
+          "default": [" ", " ", " "]
+       },
+       "on-click": "pavucontrol"
+   }
+}

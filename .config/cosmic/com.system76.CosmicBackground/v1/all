@@ -1,0 +1,9 @@
+(
+    output: "all",
+    source: Path("/home/dilip/Pictures/wallpapers/kate-hazen-unleash-your-robot-blue.png"),
+    filter_by_theme: true,
+    rotation_frequency: 3600,
+    filter_method: Lanczos,
+    scaling_mode: Zoom,
+    sampling_method: Alphanumeric,
+)

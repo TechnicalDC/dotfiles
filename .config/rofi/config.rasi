@@ -3,14 +3,13 @@ configuration{
     show-icons: true;
     terminal: "wezterm";
     drun-display-format: "{icon} {name}";
-    location: 0;
+    location: 2;
     disable-history: false;
-    hide-scrollbar: true;
     display-drun: " Apps ";
     display-run: " Commands ";
     display-window: " Windows ";
     display-ssh: " SSH ";
     display-filebrowser: " File Browser ";
-    sidebar-mode: true;
+    sidebar-mode: false;
 }
-@theme "/home/dilip/.config/rofi/themes/catppuccin-macchiato-launcher.rasi"
+@theme "/home/dilip/.config/rofi/themes/popos/catppuccin-mocha-launcher.rasi"

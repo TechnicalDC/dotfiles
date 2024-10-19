@@ -1,0 +1,256 @@
+@import url("/home/dilip/.config/waybar/mocha.css");
+
+* {
+    font-family: "JetBrainsMonoNL Nerd Font", 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 15px;
+    color: @background;
+}
+
+#custom-appmenuicon,
+#custom-notifications,
+#custom-powermenuicon,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-expand,
+#custom-cycle_wall,
+#custom-ss,
+#custom-dynamic_pill,
+#power-profiles-daemon,
+#mpd {
+    padding: 0px 22px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+    border-radius: 10px;
+    border: 2px solid @mauve;
+    background-color: @base;
+    color: @text;
+    margin-top: 15px;
+    margin-right: 8px;
+}
+
+@keyframes gradient_f_nh {
+	0% {
+		background-position: 0% 200%;
+	}
+	100% {
+		background-position: 200% 200%;
+	}
+}
+
+#custom-appmenuicon {
+    padding: 6px 12px;
+    padding-right: 17px;
+    margin-left: 15px;
+}
+#custom-powermenuicon {
+    padding: 6px 12px;
+    padding-right: 17px;
+    margin-right: 15px;
+}
+#custom-notifications {
+    padding: 6px 12px;
+    padding-right: 17px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#workspaces{
+    background: transparent;
+}
+#workspaces button{
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+    border-radius: 10px;
+    border: 2px solid @mauve;
+    /*border: 2px solid @surface0;*/
+    background-color: @surface1;
+    padding: 6px 12px;
+    padding-right: 17px;
+    margin-top: 15px;
+    margin-right: 8px;
+}
+
+#workspaces button.empty{
+    background-color: @base;
+}
+
+#workspaces button.active{
+    /*background-color: @mauve;*/
+    background: rgb(205,214,244);
+    background: linear-gradient(118deg, @yellow 5%, @mauve 5%, @mauve 20%, @yellow 20%, @yellow 40%, @mauve 40%, @mauve 60%, @yellow 60%, @yellow 80%, @mauve 80%, @mauve 95%, @yellow 95%);
+    background-size: 200% 300%;
+    animation: gradient_f_nh 4s linear infinite;
+    color: @base;
+    padding: 6px 20px;
+    padding-right: 25px;
+}
+
+#clock {
+    background-size: 300% 300%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#battery.charging, #battery.plugged {
+    background: rgb(205,214,244);
+    background: linear-gradient(118deg, @maroon 5%, @mauve 5%, @mauve 20%, @maroon 20%, @maroon 40%, @mauve 40%, @mauve 60%, @maroon 60%, @maroon 80%, @mauve 80%, @mauve 95%, @maroon 95%);
+    background-size: 200% 300%;
+    color: @base;
+    animation: gradient_f_nh 4s linear infinite;
+}
+
+#battery {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#battery.critical:not(.charging) {
+   border-color: @red;
+   background-color: @red;
+}
+
+label:focus {
+
+}
+
+#cpu {
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#memory {
+    background-color: #cba6f7;
+    font-weight: bolder;
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network{
+}
+
+#network.disabled{
+    background-color: #45475a;
+}
+
+#network.disconnected{
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+   font-weight: bolder;
+   padding-top: 3px;
+   padding-right: 11px;
+}
+
+#network.linked, #network.wifi{
+}
+
+#network.ethernet{
+}
+
+#pulseaudio {
+    font-weight: bolder;
+}
+
+#pulseaudio.muted {
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+}
+
+#temperature {
+}
+
+#temperature.critical {
+    background-color: @red;
+    color: @text;
+}
+
+#tray {
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd {
+    background: rgb(205,214,244);
+    background: linear-gradient(118deg, @green 5%, @mauve 5%, @mauve 20%, @green 20%, @green 40%, @mauve 40%, @mauve 60%, @green 60%, @green 80%, @mauve 80%, @mauve 95%, @green 95%);
+    background-size: 200% 300%;
+    color: @base;
+}
+
+#mpd.disconnected {
+    background-color: @red;
+}
+
+#mpd.playing {
+    background: rgb(205,214,244);
+    background: linear-gradient(118deg, @green 5%, @mauve 5%, @mauve 20%, @green 20%, @green 40%, @mauve 40%, @mauve 60%, @green 60%, @green 80%, @mauve 80%, @mauve 95%, @green 95%);
+    background-size: 200% 300%;
+    animation: gradient_f_nh 4s linear infinite;
+}
+
+/*#mpd.stopped {*/
+/*    background-color: #90b1b1;*/
+/*}*/
+
+/*#mpd.paused {*/
+/*    background-color: @base;*/
+/*}*/
+
+#language {
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#tooltip {
+  background: @surface0;
+  border: 2px solid @surface0;
+}
+#tooltip #label {
+  color: @text;
+}
