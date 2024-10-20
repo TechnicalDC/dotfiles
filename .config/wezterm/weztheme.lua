@@ -30,7 +30,7 @@ return {
    -- The default text color
    foreground = colors.base05,
    -- The default background color
-   background = colors.base00,
+   background = "#111111",
 
    -- Overrides the cell background color when the current cell is occupied by the
    -- cursor and the cursor style is set to Block
