@@ -50,13 +50,16 @@
 }
 
 window#waybar {
-    background-color: @base;
+    background-color: rgba(17, 17, 17, 0.9);
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 #workspaces button{
-    background-color: @base;
+    /*background-color: white / 8%;*/
     padding: 6px 12px;
     border-radius: 0px;
+    color: #ffffff;
 }
 
 #workspaces button.empty{
@@ -65,6 +68,10 @@ window#waybar {
 
 #workspaces button.active{
     background-color: @accent;
+    color: @base;
+}
+#workspaces button:hover {
+    background-color: @surface0;
     color: @base;
 }
 
@@ -83,12 +90,10 @@ window#waybar {
 
 #battery.critical:not(.charging) {
    border-color: @red;
-   background-color: @red;
+   color: @red;
 }
 
-label:focus {
-
-}
+label:focus { }
 
 #cpu {
     background-size: 300% 300%;

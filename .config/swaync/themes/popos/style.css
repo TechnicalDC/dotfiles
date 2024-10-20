@@ -13,8 +13,8 @@
 .widget-dnd,
 .widget-volume,
 .widget-backlight {
-   background-color: @surface0;
-   border: 2px solid @surface0;
+   background-color: @mantle;
+   border: 2px solid @mantle;
    padding: 7px 14px;
 }
 
@@ -92,7 +92,7 @@ slider {
    opacity: 0.9;
    border-radius: 10px;
    margin: 15px 15px 0px 0px;
-   background-color: @base;
+   background-color: @background;
    border: 3 solid @surface0;
    padding: 0;
 }
@@ -169,7 +169,7 @@ slider {
    opacity: 0.9;
    margin: 15px;
    border: 1 solid @surface0;
-   background-color: @base;
+   background-color: @background;
    color: @text;
    padding: 15px;
 }

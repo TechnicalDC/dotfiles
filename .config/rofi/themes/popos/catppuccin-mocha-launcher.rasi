@@ -34,7 +34,10 @@ configuration {
    base      : #1e1e2e;
    mantle    : #181825;
    crust     : #11111b;
+
    accent    : #f7e062;
+   background: #111111e0;
+   background-1: #313244e0;
 
     width: 700;
     font: "JetBrainsMono Nerd Font 12";
@@ -46,21 +49,24 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    border: 2px;
-    border-color: @surface0;
-   transparency:                "real";
-    border-radius: 10px;
-    background-color: @base;
-    padding: 10px;
+    border          : 2px;
+    border-color    : @surface0;
+   transparency     : "real";
+    border-radius   : 10px;
+    background-color: @background;
+    padding         : 10px;
+    cursor          : "default";
 }
 
 mainbox {
-    background-color: @base;
+    background-color: transparent;
 }
 
 inputbar {
     children: [entry];
-   background-color: @surface0;
+   background-color: black / 5%;
+   border: 1px;
+   border-color: white / 10%;
     border-radius: 5px;
 }
 
@@ -77,7 +83,7 @@ textbox-prompt-colon {
     expand: false;
     enabled: true;
     str: "󰘳";
-    background-color:            transparent;
+    background-color: transparent;
     padding: 10px;
     border-radius: 5px;
     width: 65px;
@@ -90,7 +96,7 @@ entry {
     text-color: @text;
     vertical-align: 0.5;
     border-radius: 5px;
-    background-color:            transparent;
+    background-color: inherit;
 }
 
 listview {
@@ -98,14 +104,17 @@ listview {
     margin: 10px 0px 0px 0px;
     columns: 1;
     lines: 8;
-    background-color: @base;
+    background-color: transparent;
 }
 
 element {
     padding: 10px;
     border-radius: 5px;
-    background-color: @base;
+    background-color: transparent;
     text-color: @text;
+}
+element-text {
+   background-color: transparent;
 }
 
 element-icon {
@@ -113,8 +122,8 @@ element-icon {
 }
 
 element selected {
-    background-color:  @accent;
-    text-color: @base;
+    background-color:  white / 8%;
+    text-color: @text;
 }
 
 mode-switcher {

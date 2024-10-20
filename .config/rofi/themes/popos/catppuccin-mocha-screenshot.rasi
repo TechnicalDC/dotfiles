@@ -31,7 +31,10 @@ configuration {
    base      : #1e1e2e;
    mantle    : #181825;
    crust     : #11111b;
+
    accent    : #f7e062;
+   background: #111111e0;
+   background-1: #313244e0;
 
     width: 550;
     font: "JetBrainsMono Nerd Font 12";
@@ -43,21 +46,25 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    border: 2px;
-    border-color: @surface0;
-    border-radius: 10px;
-    background-color: @base;
-    padding: 10px;
+    border          : 2px;
+    border-color    : @surface0;
+   transparency     : "real";
+    border-radius   : 10px;
+    background-color: @background;
+    padding         : 10px;
+    cursor          : "default";
 }
 
 mainbox {
-    background-color: @base;
+    background-color: transparent;
 }
 
 inputbar {
     enabled: false;
     children: [textbox-prompt-colon,prompt];
-   background-color: @base;
+   background-color: black / 5%;
+   border: 1px;
+   border-color: white / 10%;
     border-radius: 5px;
 }
 
@@ -74,7 +81,7 @@ textbox-prompt-colon {
     expand: false;
     enabled: true;
     str: "";
-    background-color:            transparent;
+    background-color: transparent;
     padding: 10px;
     border-radius: 5px;
     width: 65px;
@@ -87,7 +94,7 @@ entry {
     text-color: @text;
     vertical-align: 0.5;
     border-radius: 5px;
-    background-color:            transparent;
+    background-color: inherit;
 }
 
 listview {
@@ -116,13 +123,14 @@ listview {
 element {
     padding: 10px;
     border-radius: 5px;
-    background-color: @base;
+    background-color: transparent;
     width: 50px;
     text-color: @text;
 }
 
 element-text {
     font: "JetBrainsMono Nerd Font 25";
+   background-color: transparent;
    padding: 20px 20px 20px 10px;
    vertical-align: 0.5;
    horizontal-align: 0.5;
@@ -133,8 +141,8 @@ element-icon {
 }
 
 element selected {
-    background-color:  @accent;
-    text-color: @base;
+    background-color:  white / 8%;
+    text-color: @text;
 }
 
 mode-switcher {
@@ -156,7 +164,7 @@ button selected {
 }
 
 message {
-    background-color: @base;
+    background-color: transparent;
     margin: 50px;
     padding: 2px;
     border-radius: 5px;
