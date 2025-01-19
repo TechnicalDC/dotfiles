@@ -1,9 +1,8 @@
 configuration{
     modi: "drun,run";
     show-icons: true;
-    terminal: "wezterm";
     drun-display-format: "{icon} {name}";
-    location: 2;
+    location: 0;
     disable-history: false;
     display-drun: " Apps ";
     display-run: " Commands ";
@@ -12,4 +11,4 @@ configuration{
     display-filebrowser: " File Browser ";
     sidebar-mode: false;
 }
-@theme "/home/dilip/.config/rofi/themes/popos/catppuccin-mocha-launcher.rasi"
+@theme "/home/dilip/.config/rofi/themes/pywal/launcher.rasi"

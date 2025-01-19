@@ -1,0 +1,38 @@
+font-family = "JetBrainsMonoNL Nerd Font"
+font-size = 12
+font-feature = +liga
+
+theme = onedarkpro
+shell-integration = fish
+quick-terminal-position =  center
+adw-toolbar-style = flat
+
+adjust-cell-height = 40%
+adjust-cursor-height = 40%
+
+window-decoration = false
+window-theme = ghostty
+window-padding-balance = true
+window-padding-color = background
+window-padding-x = 20
+window-padding-y = 20
+window-padding-balance = false
+window-inherit-working-directory = true
+window-inherit-font-size = true
+
+cursor-style = block
+bold-is-bright = true
+
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+copy-on-select = true
+
+keybind = ctrl+z>r=reload_config
+# keybind = ctrl+z>t=toggle_tab_overview
+# keybind = global:super+t=toggle_quick_terminal
+keybind = ctrl+z>v=new_split:right
+keybind = ctrl+z>h=new_split:down
+# keybind = ctrl+z>c=new_tab
+# keybind = ctrl+z>x=toggle_quick_terminal
+keybind = ctrl+z>z=toggle_split_zoom

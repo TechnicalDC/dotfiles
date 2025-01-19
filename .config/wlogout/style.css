@@ -1,0 +1,50 @@
+/* pywal colors */
+@import url("/home/dilip/.cache/wal/colors-waybar.css");
+
+/* general */
+* {
+   background-image: none;
+   transition: 20ms;
+   box-shadow: none;
+}
+
+window {
+   background-color: transparent;
+}
+
+button {
+   color: #FFFFFF;
+   font-size: 20px;
+   border-radius: 0px;
+   background-color: rgba(17, 17, 17, 0.8);
+   border: 0px solid rgba(17, 17, 17, 0.8);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 20%;
+   outline-style: none;
+   margin: 140px 0px;
+   padding: 20px;
+}
+
+button:hover label {
+   border-radius: 30px;
+   background-color: alpha(@light_black, .5);
+   color: alpha(#FFFFFF, .5);
+}
+
+#lock {
+   border-radius: 50px 0px 0px 50px;
+   background-image: image(url("icons/lock.png"));
+}
+#reboot {
+   border-radius: 0px 50px 50px 0px;
+   background-image: image(url("icons/reboot.png"));
+}
+
+#logout {
+   background-image: image(url("icons/logout.png"));
+}
+
+#shutdown {
+   background-image: image(url("icons/shutdown.png"));
+}

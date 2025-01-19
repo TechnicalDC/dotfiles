@@ -4,7 +4,7 @@ visualizer_in_stereo = yes
 visualizer_type = spectrum
 #visualizer_fps = 60
 #visualizer_autoscale = no
-visualizer_look = ●▮
+visualizer_look = ●|
 visualizer_color = cyan
 visualizer_spectrum_smooth_look = no
 #visualizer_spectrum_dft_size = 2
@@ -155,13 +155,13 @@ header_visibility = no
 statusbar_visibility = yes
 connected_message_on_startup = no
 titles_visibility = no
-header_text_scrolling = no
+header_text_scrolling = yes
 cyclic_scrolling = yes
 
 #lyrics_fetchers = azlyrics, genius, musixmatch, sing365, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
 #follow_now_playing_lyrics = no
-#fetch_lyrics_for_current_song_in_background = no
-#store_lyrics_in_song_dir = no
+fetch_lyrics_for_current_song_in_background = yes
+store_lyrics_in_song_dir = yes
 #allow_for_physical_item_deletion = no
 
 #space_add_mode = add_remove
@@ -171,9 +171,8 @@ startup_screen = playlist
 
 ## Note: You can define startup slave screen by choosing screen from the list
 ## above or an empty value for no slave screen.
-##
-#startup_slave_screen = ""
-#startup_slave_screen_focus = no
+startup_slave_screen = ""
+startup_slave_screen_focus = no
 
 ## Default width of locked screen (in %).  Acceptable values are from 20 to 80.
 #locked_screen_width_part = 50

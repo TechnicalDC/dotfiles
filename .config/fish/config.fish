@@ -3,10 +3,10 @@ set --export SHELL /usr/bin/fish
 set --export ANDROID_HOME $XDG_DATA_HOME/android
 set --export EDITOR "nvim"
 set --export VISUAL "nvim"
-set --export TERMINAL "wezterm"
+set --export TERMINAL "ghostty"
 set --export PAGER "less"
 set --export BROWSER "qutebrowser"
-set --export THEME "popos"
+set --export THEME "catppuccin"
 set --export PATH  $PATH $HOME/.scripts/
 set --export PATH  $PATH $HOME/.local/bin/
 set --export PATH  $PATH $HOME/.cargo/bin/
@@ -19,7 +19,7 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 --prompt=' '
 --pointer='>>'
 --border rounded
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=bg+:#111111,bg:#111111,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a"

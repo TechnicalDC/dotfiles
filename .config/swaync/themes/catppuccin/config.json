@@ -16,14 +16,14 @@
    "notification-body-image-height": 100,
    "notification-body-image-width": 200,
    "notification-window-width": 400,
-   "notification-window-height": 400,
+   "notification-window-height": 200,
    "timeout": 5,
    "timeout-low": 2,
    "timeout-critical": 0,
    "fit-to-screen": true,
    "relative-timestamps": true,
    "control-center-width": 500,
-   "control-center-height": 600,
+   "control-center-height": 900,
    "keyboard-shortcuts": true,
    "image-visibility": "when-available",
    "transition-time": 200,
@@ -49,11 +49,11 @@
       }
    },
    "widgets": [
+      "volume",
+      "backlight",
       "title",
       "dnd",
-      "notifications",
-      "volume",
-      "backlight"
+      "notifications"
    ],
    "widget-config": {
       "volume": {
@@ -68,7 +68,7 @@
       "title": {
          "text": "Notifications",
          "clear-all-button": true,
-         "button-text": "󰎟"
+         "button-text": " "
       },
       "dnd": {
          "text": "Do Not Disturb"
@@ -82,15 +82,40 @@
          "image-radius": 8
       },
       "buttons-grid": {
-         "actions": [
-            {
-               "label": "直",
-               "type": "toggle",
-               "active": true,
-               "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-               "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
-            }
-         ]
+            "actions": [
+               {
+                  "label": "󰍹 ",
+                  "command": "swaync-screenshot --workspace &"
+               },
+               {
+                  "label": " ",
+                  "command": "swaync-screenshot --selection &"
+               },
+               {
+                  "label": " ",
+                  "command": "notify-send 'test' 'SWAYNC_TOGGLE_STATE'"
+               }
+            ]
+      },
+      "menubar#label": {
+         "menu#screenshot": {
+            "label": " ",
+            "position": "left",
+            "actions": [
+               {
+                  "label": "󰍹  Entire screen",
+                  "command": "notify-send 'test' 'SWAYNC_TOGGLE_STATE'"
+               },
+               {
+                  "label": "  Selection    ",
+                  "command": "notify-send 'test' 'SWAYNC_TOGGLE_STATE'"
+               },
+               {
+                  "label": "  Active window",
+                  "command": "notify-send 'test' 'SWAYNC_TOGGLE_STATE'"
+               }
+            ]
+         }
       }
    }
 }

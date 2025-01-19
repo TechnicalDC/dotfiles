@@ -1,28 +1,48 @@
 * {{
-    active-background: {color2};
+   foreground    : {foreground};
+   background    : {background}e6;
+   background-alt : {color8}4d;
+   selected      : {color8}80;
+   cursor        : {cursor};
+   black         : {color0};
+   red           : {color1};
+   green         : {color2};
+   yellow        : {color3};
+   blue          : {color4};
+   magenta       : {color5};
+   cyan          : {color6};
+   grey          : {color7};
+   light-black   : {color8};
+   light-red     : {color9};
+   light-green   : {color10};
+   light-yellow  : {color11};
+   light-blue    : {color12};
+   light-magenta : {color13};
+   light-cyan    : {color14};
+   white         : {color15};
+
+    active-background: transparent;
     active-foreground: @foreground;
-    normal-background: @background;
+    normal-background: transparent;
     normal-foreground: @foreground;
     urgent-background: {color1};
     urgent-foreground: @foreground;
 
-    alternate-active-background: @background;
+    alternate-active-background: transparent;
     alternate-active-foreground: @foreground;
-    alternate-normal-background: @background;
+    alternate-normal-background: transparent;
     alternate-normal-foreground: @foreground;
-    alternate-urgent-background: @background;
+    alternate-urgent-background: transparent;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: {color1};
+    selected-active-background: @selected;
     selected-active-foreground: @foreground;
-    selected-normal-background: {color8};
+    selected-normal-background: @selected;
     selected-normal-foreground: @foreground;
-    selected-urgent-background: {color3};
+    selected-urgent-background: @selected;
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
-    background: {background};
-    foreground: {foreground};
     border-color: @background;
     spacing: 2;
 
@@ -68,56 +88,6 @@
     spacing: 2px;
     scrollbar: true;
     padding: 2px 0px 0px;
-}}
-
-#element {{
-    border: 0;
-    padding: 1px;
-}}
-
-#element.normal.normal {{
-    background-color: @normal-background;
-    text-color: @normal-foreground;
-}}
-
-#element.normal.urgent {{
-    background-color: @urgent-background;
-    text-color: @urgent-foreground;
-}}
-
-#element.normal.active {{
-    background-color: @active-background;
-    text-color: @active-foreground;
-}}
-
-#element.selected.normal {{
-    background-color: @selected-normal-background;
-    text-color: @selected-normal-foreground;
-}}
-
-#element.selected.urgent {{
-    background-color: @selected-urgent-background;
-    text-color: @selected-urgent-foreground;
-}}
-
-#element.selected.active {{
-    background-color: @selected-active-background;
-    text-color: @selected-active-foreground;
-}}
-
-#element.alternate.normal {{
-    background-color: @alternate-normal-background;
-    text-color: @alternate-normal-foreground;
-}}
-
-#element.alternate.urgent {{
-    background-color: @alternate-urgent-background;
-    text-color: @alternate-urgent-foreground;
-}}
-
-#element.alternate.active {{
-    background-color: @alternate-active-background;
-    text-color: @alternate-active-foreground;
 }}
 
 #scrollbar {{
