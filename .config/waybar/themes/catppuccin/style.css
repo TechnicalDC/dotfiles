@@ -2,6 +2,7 @@
 
 * {
     font-family: "JetBrainsMonoNL Nerd Font";
+    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
     font-size: 15px;
     color: @background;
 }
@@ -83,6 +84,7 @@ window#waybar {
 }
 #workspaces button:hover {
    background-color: alpha(@light_black, .6);
+   color: @foreground;
 }
 
 #clock {
@@ -222,7 +224,7 @@ label:focus {
 #tooltip {
    background-color: rgba(17, 17, 17, 0.8);
 }
-#tooltip #label {
+#tooltip label {
   color: @red;
 }
 

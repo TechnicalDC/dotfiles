@@ -50,11 +50,13 @@
    "custom/appmenuicon": {
       "format": "",
       "on-click": "rofi -show drun",
+      "tooltip": false,
       "tooltip-format": "<span color='#abb2bf'>Open the application launcher</span>"
    },
    "custom/powermenuicon": {
       "format": "",
       "on-click": "wlogout -b 4",
+      "tooltip": false,
       "tooltip-format": "<span color='#abb2bf'>Open the power menu</span>"
    },
    "custom/notifications": {
@@ -91,6 +93,7 @@
       "format-disconnected": "Disconnected ",
       "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon} ::   Stopped",
       "unknown-tag": "N/A",
+      "title-len": 30,
       "interval": 5,
       "on-click": "rofi-mpc",
       "consume-icons": {
@@ -113,6 +116,7 @@
          "paused": " ",
          "playing": " "
       },
+      "tooltip": false,
       "tooltip-format": "MPD (connected)",
       "tooltip-format-disconnected": "MPD (disconnected)"
    },
@@ -129,6 +133,7 @@
    },
    "clock": {
        // "timezone": "America/New_York",
+      "tooltip": false,
        "tooltip-format": "<tt>{calendar}</tt>",
        "format" : "{:%d %b | %H:%M}",
        "on-click": "ghostty -e calcurse &",
@@ -199,7 +204,7 @@
    "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
+      "tooltip": false,
       "format-icons": {
          "default": "<span color=\"#e5c07b\"></span>",
          "performance": "<span color=\"#e5c07b\"></span>",
@@ -211,6 +216,7 @@
        // "interface": "wlp2*", // (Optional) To force the use of this interface
        "format-wifi": "a {essid} ({signalStrength}%)",
        "format-ethernet": "{ipaddr}/{cidr} ",
+      "tooltip": false,
        "tooltip-format": "{ifname} via {gwaddr}",
        "format-linked": "  {ifname} (No IP)",
        "format-disconnected": "  Disconnected",
@@ -247,6 +253,7 @@
       "icon-size": 20,
       "icon-theme": "Numix-Circle",
       "markup": true,
+      "tooltip": false,
       "tooltip-format": "<span color='#abb2bf'>{title} ({state}</span>",
       "on-click": "activate",
       "on-click-middle": "close",

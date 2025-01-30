@@ -183,7 +183,7 @@ slider {
 
 .control-center .notification-row .notification-background .notification {
    border-radius: 10px;
-   background-color: alpha(@light_black, .4);
+   background-color: alpha(@light_black, .9);
    color: @foreground;
    margin-top: 10px;
 }
