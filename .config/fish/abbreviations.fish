@@ -37,3 +37,7 @@ alias zf='z $(fd -t d | fzf --preview "ls -l {}")'
 if test -f $(which bat)
    alias cat="bat"
 end
+
+if test -f $(which pokeget)
+   alias ff='pokeget random --hide-name | fastfetch --file-raw -'
+end

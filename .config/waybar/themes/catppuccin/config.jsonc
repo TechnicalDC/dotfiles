@@ -38,8 +38,8 @@
             //"7": "",
             //"8": "",
             //"9": "",
-            "active": "<span color='#111111'></span>",
-            "default": "<span color='#2bbac5'></span>"
+            "active": " ",
+            "default": " "
          },
          "all-outputs": true,
          "persistent-workspaces": {
@@ -129,6 +129,7 @@
    },
    "tray": {
        // "icon-size": 21,
+      "tooltip": false,
        "spacing": 10
    },
    "clock": {
@@ -184,6 +185,7 @@
            "warning": 30,
            "critical": 15
       },
+      "tooltip": false,
       "format": "{icon}  {capacity}%",
       "format-full": "{icon}  {capacity}%",
       "format-charging": "   {capacity}%",

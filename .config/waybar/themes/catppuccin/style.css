@@ -70,17 +70,32 @@ window#waybar {
 #workspaces{
    border-radius: 10px;
    background-color: alpha(@light_black, .4);
-    padding: 5px;
-    margin: 10px;
+   padding: 5px;
+   margin: 10px;
    margin: 10px;
    margin-right: 0px;
 }
 #workspaces button {
-   padding: 2px 10px 2px 6px;
+   background-color: @light_black;
+   border-radius: 8px;
+   padding: 0px;
+   margin: 0px 3px;
+   transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
 }
-#workspaces button.empty{ }
+#workspaces button:first-child {
+   margin: 0px 3px 0px 0px;
+}
+#workspaces button:last-child {
+   margin: 0px 0px 0px 3px;
+}
+#workspaces button.empty{
+   background-color: alpha(@light_black, .4);
+}
 #workspaces button.active{
-   background-color: @yellow;
+   border-radius: 8px;
+   background: @background;
+   background: linear-gradient(135deg , @blue, @cyan,@green);
+   padding: 2px 10px 2px 6px;
 }
 #workspaces button:hover {
    background-color: alpha(@light_black, .6);
@@ -195,7 +210,8 @@ label:focus {
     background-color: @red;
 }
 
-#mpd.playing { }
+#mpd.playing {
+}
 
 #mpd.stopped { }
 
@@ -234,12 +250,14 @@ label:focus {
 }
 #taskbar button {
    padding: 2px 5px;
+   border-radius: 8px;
 }
 #taskbar button:hover {
    background-color: alpha(@light_black, .6);
 }
 #taskbar button.active {
-   background-color: @yellow;
+   background: @background;
+   background: linear-gradient(135deg , @blue, @cyan,@green);
 }
 #taskbar.empty {
    background-color: transparent;
