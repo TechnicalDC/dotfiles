@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
 swww-daemon &
-waybar --config ~/.config/waybar/themes/catppuccin/config.jsonc -s ~/.config/waybar/themes/catppuccin/style.css &
+waybar --config ~/.config/waybar/themes/wal/config.jsonc -s ~/.config/waybar/themes/wal/style.css &
 wally -r &
 mpd &
 nm-applet &
-swaync --config ~/.config/swaync/themes/catppuccin/config.json --style ~/.config/swaync/themes/catppuccin/style.css &
+swaync --config ~/.config/swaync/themes/wal/config.json --style ~/.config/swaync/themes/wal/style.css &
 kdeconnect-indicator &

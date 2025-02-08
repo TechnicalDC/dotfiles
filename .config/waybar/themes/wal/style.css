@@ -41,6 +41,7 @@ window#waybar {
 #mpd {
     border-radius: 10px;
     background-color: alpha(@light_black, .4);
+    border: 2px solid @light_black;
     color: @foreground;
     padding: 10px;
     margin: 10px 0px 10px 10px;
@@ -69,6 +70,7 @@ window#waybar {
 
 #workspaces{
    border-radius: 10px;
+    border: 2px solid @light_black;
    background-color: alpha(@light_black, .4);
    padding: 5px;
    margin: 10px;
@@ -260,5 +262,6 @@ label:focus {
    background: linear-gradient(135deg , @blue, @cyan,@green);
 }
 #taskbar.empty {
-   background-color: transparent;
+    background-color: transparent;
+    border: 2px solid transparent;
 }

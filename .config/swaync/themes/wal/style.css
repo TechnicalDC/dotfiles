@@ -17,6 +17,7 @@
 .widget-volume,
 .widget-backlight {
    border-radius: 10px;
+   border: 2px solid @light_black;
    background-color: alpha(@light_black, .4);
    color: @foreground;
    padding: 7px 14px;
@@ -183,9 +184,15 @@ slider {
 
 .control-center .notification-row .notification-background .notification {
    border-radius: 10px;
-   background-color: alpha(@light_black, .9);
+   border: 2px solid @light_black;
+   background-color: alpha(@light_black, .4);
    color: @foreground;
    margin-top: 10px;
+}
+
+.control-center .notification-row .notification-background .notification:hover {
+   border: 2px solid @cyan;
+   background-color: alpha(@red, .9);
 }
 
 .control-center .notification-row .notification-background .notification.critical {
