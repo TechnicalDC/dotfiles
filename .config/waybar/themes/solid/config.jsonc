@@ -3,23 +3,17 @@
    "layer": "top", // Waybar at top layer
    "position": "top", // Waybar position (top|bottom|left|right)
    "height": 30, // Waybar height (to be removed for auto height)
-   "width": 1884, // Waybar width
+   //"width": 1884, // Waybar width
    "spacing": 0, // Gaps between modules (4px)
    "reload_style_on_change": true,
    "modules-left": [
       "custom/appmenuicon",
-      "hyprland/workspaces",
-      "wlr/taskbar"
+      "hyprland/workspaces"
    ],
-   "modules-center": [
-      "mpd"
-   ],
+   "modules-center": [ ],
    "modules-right": [
       "custom/notifications",
-      //"pulseaudio",
-      //"network",
       "power-profiles-daemon",
-      //"backlight",
       "battery",
       "tray",
       "clock",
@@ -27,23 +21,23 @@
    ],
    // Modules configuration
    "hyprland/workspaces": {
-         "format": "{icon}",
+         "format": "{name}",
          "format-icons": {
-            //"1": "",
-            //"2": "",
-            //"3": "",
-            //"4": "",
-            //"5": "",
-            //"6": "",
-            //"7": "",
-            //"8": "",
-            //"9": "",
-            "active": " ",
-            "default": " "
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": ""
+            //"active": " ",
+            //"default": " "
          },
          "all-outputs": true,
          "persistent-workspaces": {
-            "eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
+            //"eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
          }
    },
    // Rofi Application Launcher
@@ -55,7 +49,7 @@
    },
    "custom/powermenuicon": {
       "format": "",
-      "on-click": "wlogout -b 4",
+      "on-click": "rofi-powermenu",
       "tooltip": false,
       "tooltip-format": "<span color='#abb2bf'>Open the power menu</span>"
    },
@@ -130,7 +124,7 @@
    "tray": {
        // "icon-size": 21,
       "tooltip": false,
-       "spacing": 10
+      "spacing": 10
    },
    "clock": {
        // "timezone": "America/New_York",

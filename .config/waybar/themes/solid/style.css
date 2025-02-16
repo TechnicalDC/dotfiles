@@ -1,4 +1,4 @@
-@import url("/home/dilip/.config/waybar/themes/popos/mocha.css");
+@import url("/home/dilip/.cache/wal/colors-waybar.css");
 
 * {
     font-family: "JetBrainsMonoNL Nerd Font", 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
@@ -29,7 +29,7 @@
 #power-profiles-daemon,
 #mpd {
     padding: 0px 10px;
-    color: @text;
+    color: @foreground;
 }
 
 @keyframes gradient_f_nh {
@@ -42,37 +42,50 @@
 }
 
 #custom-appmenuicon {
+   color: @blue;
+    padding: 6px 12px;
+    padding-right: 17px;
+    margin-right: 0px;
 }
 #custom-powermenuicon {
-    padding-right: 15px;
+    color: @red;
+    padding: 6px 12px;
+    padding-right: 17px;
+    margin-right: 10px;
 }
 #custom-notifications {
+    color: @yellow;
+    padding: 6px 12px;
+    padding-right: 17px;
 }
 
 window#waybar {
-    background-color: rgba(17, 17, 17, 0.9);
+    background-color: @background;
     transition-property: background-color;
     transition-duration: .5s;
+    box-shadow: 1px 0px 5px 5px alpha(@background,0.47);
+}
+
+#workspaces {
+   padding: 5px;
 }
 
 #workspaces button{
-    /*background-color: white / 8%;*/
-    padding: 6px 12px;
-    border-radius: 0px;
-    color: #ffffff;
+   background-color: @light_black;
+   padding: 2px 6px 2px 6px;
+   border-radius: 0px;
+   color: #ffffff;
 }
 
 #workspaces button.empty{
-    background-color: @base;
+    background-color: @background;
 }
 
 #workspaces button.active{
-    background-color: @accent;
-    color: @base;
+    background-color: @cyan;
 }
 #workspaces button:hover {
-    background-color: @surface0;
-    color: @base;
+    background-color: @cyan;
 }
 
 #clock {
