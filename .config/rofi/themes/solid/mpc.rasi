@@ -17,6 +17,7 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       1000px;
+    height:                      500px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -41,7 +42,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.cache/wal/wallpaper.jpg", width);
+    background-image:            url("~/.cache/wal/rofi_background.png", width);
     orientation:                 vertical;
     border-radius:               8;
     children:                    ["dummy"];
@@ -111,7 +112,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       3;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;

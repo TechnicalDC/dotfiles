@@ -1,8 +1,7 @@
 * {{
    foreground    : {foreground};
-   background    : {background}e6;
-   background-alt : {color8}4d;
-   selected      : {color8}80;
+   background    : {background};
+   selected      : {color8};
    cursor        : {cursor};
    black         : {color0};
    red           : {color1};

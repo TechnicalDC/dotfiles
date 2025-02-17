@@ -1,0 +1,183 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "APPS";
+    display-run:                "RUN";
+    display-filebrowser:        "FILES";
+    display-window:             "WINDOW";
+    drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    window-format:              "{w} · {c} · {t}";
+    hide-scrollbar: true;
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1000px;
+    height:                      500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               15px;
+    cursor:                      "default";
+    border-color:                @background;
+    border:                      2px;
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listbox" ];
+}
+
+imagebox {
+    padding:                     20px;
+    background-color:            transparent;
+    background-image:            url("~/.cache/wal/rofi_background.png", width);
+    orientation:                 vertical;
+    border-radius:               8;
+    children:                    ["dummy"];
+}
+
+listbox {
+    padding:                     0px 0px 0px 20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [  "inputbar", "message", "listview" ];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    margin:                      0px 0px 10px 0px;
+    border-color:                @background-alt;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         " ";
+    background-color:            transparent;
+    text-color:                  inherit;
+    padding:                  2px 2px 2px 10px;
+}
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    padding:                     2px;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           inherit;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    spacing:                     20px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+button {
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            @background;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            @yellow;
+    text-color:                  @foreground;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       7;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    border-color:                transparent;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element selected {
+    background-color:            @selected;
+    text-color:                  @foreground;
+    border-color:                @light-black;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     15px;
+    border-radius:               5px;
+    background-color:            @background;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               15px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
