@@ -3,10 +3,10 @@
 configuration {
 	modi:                       "drun";
     show-icons:                 true;
-    display-drun:               "APPS";
-    display-run:                "RUN";
+    display-drun:               "󰘳";
+    display-run:                "";
     display-filebrowser:        "FILES";
-    display-window:             "WINDOW";
+    display-window:             "";
     drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     window-format:              "{w} · {c} · {t}";
     hide-scrollbar: true;
@@ -73,8 +73,8 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @blue;
-    border-radius:               0px;
+    border-color:                @selected;
+    border-radius:               10px;
     border:                      0px 0px 2px 0px;
     background-color:            @background;
     text-color:                  @foreground;
@@ -102,18 +102,20 @@ entry {
 mode-switcher{
     enabled:                     true;
     spacing:                     20px;
+    margin:                      140px 20px;
+    orientation:                 vertical;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 button {
-    padding:                     15px;
+    padding:                     0px 23px 0px 20px;
     border-radius:               10px;
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @yellow;
+    background-color:            @selected;
     text-color:                  @foreground;
 }
 
@@ -141,16 +143,15 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-color:                @background;
-    border-radius:               0px;
-    border:                      0px 0px 0px 2px;
+    border-radius:               10px;
+    border:                      0px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element selected {
-    text-color:                  @cyan;
-    border-color:                @cyan;
+    background-color:            @selected;
+    text-color:                  @foreground;
 }
 element-icon {
     background-color:            transparent;
@@ -169,7 +170,6 @@ element-text {
 /*****----- Message -----*****/
 message {
     background-color:            transparent;
-    border:                      0px;
 }
 textbox {
     padding:                     15px;

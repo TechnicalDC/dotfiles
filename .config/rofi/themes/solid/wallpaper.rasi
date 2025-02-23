@@ -23,10 +23,11 @@ window {
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               15px;
+    padding:                     0px;
+    border-radius:               0px;
     cursor:                      "default";
     border-color:                @background;
-    border:                      2px;
+    border:                      0px;
     background-color:            @background;
 }
 
@@ -34,8 +35,9 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
-    background-color:            transparent;
+    background-color:            @background;
     orientation:                 horizontal;
+    padding:                     10% 20%;
     children:                    [ "listbox" ];
 }
 
@@ -65,16 +67,16 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 20% 5% 20%;
-    border-color:                @background-alt;
+    border-color:                @selected;
     border-radius:               10px;
-    background-color:            @background-alt;
+    border:                      0px 0px 2px 0px;
+    background-color:            @background;
     text-color:                  @foreground;
-    children:                    [ "entry" ];
+    children:                    [ "textbox-prompt-colon", "entry" ];
 }
 textbox-prompt-colon {
     enabled:                     true;
-    expand:                      true;
-    width:                       10px;
+    expand:                      false;
     str:                         " ";
     background-color:            transparent;
     text-color:                  inherit;
@@ -94,18 +96,20 @@ entry {
 mode-switcher{
     enabled:                     true;
     spacing:                     20px;
+    margin:                      140px 20px;
+    orientation:                 vertical;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 button {
-    padding:                     15px;
+    padding:                     0px 23px 0px 20px;
     border-radius:               10px;
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @yellow;
+    background-color:            @selected;
     text-color:                  @foreground;
 }
 
@@ -162,15 +166,14 @@ element-text {
 /*****----- Message -----*****/
 message {
     background-color:            transparent;
-    border:                      0px;
+    border-color:                @selected;
+    border-radius:               10px;
+    border:                      0px 0px 2px 0px;
 }
 textbox {
     padding:                     15px;
-    margin:                      0px 0px 10px 0px;
-    border-color:                @background-alt;
-    border-radius:               10px;
-    background-color:            @background-alt;
-    text-color:                  @foreground;
+    border-radius:               5px;
+    background-color:            @background;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }

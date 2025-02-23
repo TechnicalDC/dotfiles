@@ -1,12 +1,12 @@
 @import "~/.cache/wal/colors-rofi-dark-solid.rasi"
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun";
+   modi:                       "drun,run,window";
     show-icons:                 true;
-    display-drun:               "APPS";
-    display-run:                "RUN";
+    display-drun:               "󰘳";
+    display-run:                "";
     display-filebrowser:        "FILES";
-    display-window:             "WINDOW";
+    display-window:             "";
     drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     window-format:              "{w} · {c} · {t}";
     hide-scrollbar: true;
@@ -22,7 +22,7 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  false;
+    fullscreen:                  true;
     width:                       1000px;
     height:                      500px;
     x-offset:                    0px;
@@ -33,8 +33,7 @@ window {
     padding:                     0px;
     border-radius:               0px;
     cursor:                      "default";
-    border-color:                @blue;
-    border:                      2px;
+    border:                      0px;
     background-color:            @background;
 }
 
@@ -42,18 +41,19 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
+    padding:                     30% 20%;
     background-color:            @background;
     orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
+    children:                    ["mode-switcher", "imagebox", "listbox" ];
 }
 
 imagebox {
     padding:                     0px;
     background-color:            transparent;
     background-image:            url("~/.cache/wal/rofi_background.png", width);
-    orientation:                 vertical;
+    orientation:                 horizontal;
     border-radius:               0;
-    children:                    ["dummy"];
+    children:                    [ "dummy"];
 }
 
 listbox {
@@ -73,8 +73,8 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @blue;
-    border-radius:               0px;
+    border-color:                @selected;
+    border-radius:               10px;
     border:                      0px 0px 2px 0px;
     background-color:            @background;
     text-color:                  @foreground;
@@ -102,18 +102,20 @@ entry {
 mode-switcher{
     enabled:                     true;
     spacing:                     20px;
+    margin:                      120px 20px;
+    orientation:                 vertical;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 button {
-    padding:                     15px;
+    padding:                     0px 23px 0px 20px;
     border-radius:               10px;
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @yellow;
+    background-color:            @selected;
     text-color:                  @foreground;
 }
 
@@ -141,16 +143,14 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-color:                @background;
-    border-radius:               0px;
-    border:                      0px 0px 0px 2px;
+    border-radius:               10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element selected {
-    text-color:                  @cyan;
-    border-color:                @cyan;
+    background-color:            @selected;
+    text-color:                  @foreground;
 }
 element-icon {
     background-color:            transparent;
@@ -169,12 +169,15 @@ element-text {
 /*****----- Message -----*****/
 message {
     background-color:            transparent;
+    border-color:                @selected;
+    border-radius:               10px;
+    border:                      0px 0px 2px 0px;
 }
 textbox {
     padding:                     15px;
     border-radius:               5px;
     background-color:            @background;
-    text-color:                  @foreground;
+
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
