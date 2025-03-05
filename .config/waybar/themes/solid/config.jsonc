@@ -21,7 +21,7 @@
    ],
    // Modules configuration
    "hyprland/workspaces": {
-         "format": "{name}",
+         "format": "<span foreground='#abb2bf'>{name}</span>",
          "format-icons": {
             "1": "",
             "2": "",
@@ -37,7 +37,7 @@
          },
          "all-outputs": true,
          "persistent-workspaces": {
-            //"eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
+            "eDP-1": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] // but only three on HDMI-A-1
          }
    },
    // Rofi Application Launcher
@@ -182,8 +182,8 @@
       "tooltip": false,
       "format": "{icon}  {capacity}%",
       "format-full": "{icon}  {capacity}%",
-      "format-charging": "   {capacity}%",
-      "format-plugged": "  {capacity}%",
+      "format-charging": " {capacity}%",
+      "format-plugged": " {capacity}%",
       "format-alt": "{icon}  {time}",
        // "format-good": "", // An empty format will hide the module
        "format-icons": [

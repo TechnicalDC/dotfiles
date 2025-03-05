@@ -145,9 +145,8 @@ element {
     orientation:                 vertical;
 }
 element selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
-    border-color:                @light-black;
+   background-color:            @cyan;
+   text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;

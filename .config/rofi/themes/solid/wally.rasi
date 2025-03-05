@@ -150,8 +150,8 @@ element {
     cursor:                      pointer;
 }
 element selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
+   background-color:            @cyan;
+   text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;

@@ -71,18 +71,20 @@ window#waybar {
 }
 
 #workspaces button{
-   background-color: @light_black;
+   background-color: @background;
    padding: 2px 6px 2px 6px;
+   border-bottom: 3px solid @light_black;
    border-radius: 0px;
    color: #ffffff;
 }
 
 #workspaces button.empty{
-    background-color: @background;
+    border-color: @background;
 }
 
 #workspaces button.active{
-    background-color: @cyan;
+   border: 0px;
+   border-bottom: 3px solid @cyan;
 }
 #workspaces button:hover {
     background-color: @cyan;

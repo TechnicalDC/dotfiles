@@ -41,7 +41,7 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     30% 20%;
+    padding:                     28% 20%;
     background-color:            @background;
     orientation:                 horizontal;
     children:                    ["mode-switcher", "imagebox", "listbox" ];
@@ -57,7 +57,7 @@ imagebox {
 }
 
 listbox {
-    padding:                     20px;
+    padding:                     0px 0px 0px 20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [  "inputbar", "message", "listview" ];
@@ -73,9 +73,9 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @selected;
+    border-color:                @cyan;
     border-radius:               10px;
-    border:                      0px 0px 2px 0px;
+    border:                      2px;
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -115,8 +115,8 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @cyan;
+    text-color:                  @background;
 }
 
 /*****----- Listview -----*****/
@@ -149,8 +149,8 @@ element {
     cursor:                      pointer;
 }
 element selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @cyan;
+    text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;
