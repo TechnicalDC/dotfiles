@@ -1,5 +1,17 @@
-[plugin]
-deps = [{ use = "yazi-rs/plugins#full-border", commit = "a882e38" }, { use = "yazi-rs/plugins#hide-preview", commit = "a882e38" }]
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "a1b678d"
+hash = "9dce00232a0e0e2502565c7aa2b0ed4e"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "a1b678d"
+hash = "7918aab6a71caf31b58411f789195677"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "a1b678d"
+hash = "dd97eede8e20e59cd2604e8006e470e2"
 
 [flavor]
 deps = []

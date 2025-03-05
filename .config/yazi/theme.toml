@@ -25,7 +25,7 @@ count_cut      = { fg = "#24273a", bg = "#ed8796" }
 count_selected = { fg = "#24273a", bg = "#8aadf4" }
 
 # Border
-border_symbol = " "
+# border_symbol = " "
 border_style  = { fg = "#8087a2" }
 
 # Highlighting
