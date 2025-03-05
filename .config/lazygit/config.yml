@@ -1,4 +1,5 @@
 gui:
+  border: single
   theme:
     activeBorderColor:
       - '#c6a0f6'
