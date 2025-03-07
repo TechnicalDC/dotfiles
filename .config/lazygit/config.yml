@@ -1,15 +1,18 @@
 gui:
   border: rounded
+  showIcons: false
   theme:
     activeBorderColor:
-      - '#c6a0f6'
+      - '#ef596f'
       - bold
     inactiveBorderColor:
-      - '#a5adcb'
+      - '#2bbac5'
     optionsTextColor:
-      - '#8aadf4'
+      - '#61afef'
     selectedLineBgColor:
-      - '#363a4f'
+      - '#2bbac5'
+    selectedLineFgColor:
+      - '#2bbac5'
     cherryPickedCommitBgColor:
       - '#494d64'
     cherryPickedCommitFgColor:
@@ -17,9 +20,18 @@ gui:
     unstagedChangesColor:
       - '#ed8796'
     defaultFgColor:
-      - '#cad3f5'
+      - '#abb2bf'
     searchingActiveBorderColor:
-      - '#eed49f'
+      - '#e5c07b'
 
   authorColors:
     '*': '#b7bdf8'
+
+  spinner:
+    frames:
+      - '|'
+      - /
+      - '-'
+      - \
+git:
+  parseEmoji: true
