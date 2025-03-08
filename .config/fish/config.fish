@@ -4,7 +4,8 @@ set --export ANDROID_HOME $XDG_DATA_HOME/android
 set --export EDITOR "nvim"
 set --export VISUAL "nvim"
 set --export TERMINAL "ghostty"
-set --export PAGER "less"
+set --export PGER "less"
+set --export MANPAGER "nvim +Man!"
 set --export BROWSER "qutebrowser"
 set --export THEME "catppuccin"
 set --export PATH  $PATH $HOME/.scripts/
