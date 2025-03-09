@@ -18,7 +18,6 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 --height=100%
 --prompt=' '
 --pointer=' '
---border rounded
 --color=bg+:#2bbac5,bg:#111111,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#b4befe,fg+:#111111,prompt:#cba6f7,hl+:#f38ba8 \
@@ -29,7 +28,6 @@ set --export _ZO_FZF_OPTS "--layout=reverse
 --height=100%
 --prompt=' '
 --pointer=' '
---border rounded
 --color=bg+:#2bbac5,bg:#111111,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#b4befe,fg+:#111111,prompt:#cba6f7,hl+:#f38ba8 \
