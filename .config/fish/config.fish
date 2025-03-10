@@ -39,6 +39,7 @@ set --export _ZO_FZF_OPTS "--layout=reverse
 --highlight-line
 --ansi
 --preview-label ' preview '
+--preview 'exa -lA --color=always {2}'
 --border rounded
 --border-label=' fzf ' --border-label-pos='0' --preview-window='border-rounded'
 --scrollbar='│'
