@@ -17,21 +17,35 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 --margin=10%
 --height=100%
 --prompt=' '
---pointer=' '
---color=bg+:#2bbac5,bg:#111111,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#111111,prompt:#cba6f7,hl+:#f38ba8 \
---color=selected-bg:#2bbac5,border:#2bbac5"
+--pointer=''
+--info=hidden
+--highlight-line
+--ansi
+--preview-label ' preview '
+--border rounded
+--border-label=' fzf ' --border-label-pos='0' --preview-window='border-rounded'
+--scrollbar='│'
+--color=fg:#d0d0d0,fg+:#111111,bg:-1,bg+:#2bbac5
+--color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#e5c07b
+--color=prompt:#61afef,spinner:#af5fff,pointer:#af5fff,header:#87afaf
+--color=border:#2bbac5,label:#ef596f,query:#d9d9d9"
 
 set --export _ZO_FZF_OPTS "--layout=reverse
 --margin=10%
 --height=100%
 --prompt=' '
---pointer=' '
---color=bg+:#2bbac5,bg:#111111,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#111111,prompt:#cba6f7,hl+:#f38ba8 \
---color=selected-bg:#2bbac5,border:#2bbac5"
+--pointer=''
+--info=hidden
+--highlight-line
+--ansi
+--preview-label ' preview '
+--border rounded
+--border-label=' fzf ' --border-label-pos='0' --preview-window='border-rounded'
+--scrollbar='│'
+--color=fg:#d0d0d0,fg+:#111111,bg:-1,bg+:#2bbac5
+--color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#e5c07b
+--color=prompt:#61afef,spinner:#af5fff,pointer:#af5fff,header:#87afaf
+--color=border:#2bbac5,label:#ef596f,query:#d9d9d9"
 #}}}
 
 set fish_greeting
