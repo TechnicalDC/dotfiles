@@ -7,8 +7,8 @@ shell-integration = fish
 quick-terminal-position =  center
 adw-toolbar-style = flat
 
-adjust-cell-height = 40%
-adjust-cursor-height = 40%
+adjust-cell-height = 20%
+adjust-cursor-height = 20%
 
 window-decoration = false
 window-theme = ghostty
