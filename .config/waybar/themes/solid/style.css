@@ -60,10 +60,15 @@
 }
 
 window#waybar {
-    background-color: @background;
-    transition-property: background-color;
-    transition-duration: .5s;
-    box-shadow: 1px 0px 5px 5px alpha(@background,0.47);
+   background-color: transparent;
+}
+#waybar > box {
+   background-color: @background;
+   transition-property: background-color;
+   transition-duration: .5s;
+   /*border: 2px solid @blue;*/
+   /*margin: 20px;*/
+   box-shadow: 1px 0px 5px 5px alpha(@background,0.6);
 }
 
 #workspaces {
