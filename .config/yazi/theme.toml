@@ -36,9 +36,9 @@ separator_close = ""
 separator_style = { fg = "#494d64", bg = "#494d64" }
 
 # Mode
-mode_normal = { fg = "#24273a", bg = "#8aadf4", bold = true }
-mode_select = { fg = "#24273a", bg = "#a6da95", bold = true }
-mode_unset  = { fg = "#24273a", bg = "#f0c6c6", bold = true }
+mode_normal = { fg = "#24273a", bg = "#111111", bold = true }
+mode_select = { fg = "#24273a", bg = "#111111", bold = true }
+mode_unset  = { fg = "#24273a", bg = "#111111", bold = true }
 
 # Progress
 progress_label  = { fg = "#ffffff", bold = true }
@@ -53,20 +53,20 @@ permissions_x = { fg = "#a6da95" }
 permissions_s = { fg = "#8087a2" }
 
 [input]
-border   = { fg = "#8aadf4" }
-title    = {}
+border   = { fg = "#2bbac5" }
+title   = { fg = "#ef596f" }
 value    = {}
 selected = { reversed = true }
 
 [select]
-border   = { fg = "#8aadf4" }
+border   = { fg = "#2bbac5" }
 active   = { fg = "#f5bde6" }
 inactive = {}
 
 [tasks]
-border  = { fg = "#8aadf4" }
-title   = {}
-hovered = { underline = true }
+border  = { fg = "#2bbac5" }
+title   = { fg = "#ef596f" }
+hovered         = { fg = "#24273a", bg = "#2bbac5" }
 
 [which]
 mask            = { bg = "#363a4f" }
