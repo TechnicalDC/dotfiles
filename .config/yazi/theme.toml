@@ -104,7 +104,7 @@ rules = [
 
 	# Fallback
 	{ name = "*", fg = "#cad3f5" },
-	{ name = "*/", fg = "#8aadf4" }
+	{ name = "*/", fg = "#61afef" }
 ]
 
 [icon]
