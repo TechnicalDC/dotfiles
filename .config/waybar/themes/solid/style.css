@@ -28,8 +28,13 @@
 #custom-dynamic_pill,
 #power-profiles-daemon,
 #mpd {
-    padding: 0px 10px;
-    color: @foreground;
+   background-color: @background;
+   border-radius: 20px;
+   border: 2px solid @blue;
+   box-shadow: 1px 0px 3px 3px alpha(@background,0.5);
+   margin: 10px 5px;
+   padding: 0px 10px;
+   color: @foreground;
 }
 
 @keyframes gradient_f_nh {
@@ -46,12 +51,13 @@
     padding: 6px 12px;
     padding-right: 17px;
     margin-right: 0px;
+    margin-left: 20px;
 }
 #custom-powermenuicon {
     color: @red;
     padding: 6px 12px;
     padding-right: 17px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 #custom-notifications {
     color: @yellow;
@@ -62,25 +68,25 @@
 window#waybar {
    background-color: transparent;
 }
-#waybar > box {
-   background-color: @background;
-   transition-property: background-color;
-   transition-duration: .5s;
-   /*border: 2px solid @blue;*/
-   /*margin: 20px;*/
-   box-shadow: 1px 0px 5px 5px alpha(@background,0.6);
-}
 
 #workspaces {
-   padding: 5px;
+   background-color: transparent;
+   border: 0px;
 }
 
 #workspaces button{
-   background-color: @background;
-   padding: 2px 6px 2px 6px;
-   border-bottom: 3px solid @light_black;
-   border-radius: 0px;
-   color: #ffffff;
+   background: @background;
+   border-radius: 20px;
+   border: 2px solid @background;
+   box-shadow: 1px 0px 3px 3px alpha(@background,0.5);
+   margin: 10px;
+   margin-right: 0px;
+   padding: 0px 10px;
+   color: @foreground;
+}
+
+#workspaces button:last-child{
+   margin-right: 10px;
 }
 
 #workspaces button.empty{
@@ -88,8 +94,8 @@ window#waybar {
 }
 
 #workspaces button.active{
-   border: 0px;
-   border-bottom: 3px solid @cyan;
+   border-radius: 20px;
+   border: 2px solid @blue;
 }
 #workspaces button:hover {
     background-color: @cyan;
