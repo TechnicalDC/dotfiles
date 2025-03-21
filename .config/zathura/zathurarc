@@ -1,3 +1,5 @@
+# NOTE: You can include configuration using `include` option
+
 set default-fg              "#abb2bf"
 set default-bg              "#111111"
 set completion-bg           "#111111"

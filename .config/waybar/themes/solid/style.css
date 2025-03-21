@@ -30,8 +30,8 @@
 #mpd {
    background-color: @background;
    border-radius: 20px;
-   border: 2px solid @blue;
-   box-shadow: 1px 0px 3px 3px alpha(@background,0.5);
+   border: 2px solid @black;
+   /*box-shadow: 1px 0px 3px 3px alpha(@background,0.5);*/
    margin: 10px 5px;
    padding: 0px 10px;
    color: @foreground;
@@ -77,8 +77,8 @@ window#waybar {
 #workspaces button{
    background: @background;
    border-radius: 20px;
-   border: 2px solid @background;
-   box-shadow: 1px 0px 3px 3px alpha(@background,0.5);
+   border: 2px solid @black;
+   /*box-shadow: 1px 0px 3px 3px alpha(@background,0.5);*/
    margin: 10px;
    margin-right: 0px;
    padding: 0px 10px;

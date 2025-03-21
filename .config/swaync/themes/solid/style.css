@@ -87,7 +87,7 @@ slider {
   border-radius: 20px;
   background-color: @background;
   color: @foreground;
-  box-shadow: 0px 0px 5px 5px alpha(@background,0.47);
+  /*box-shadow: 0px 0px 5px 5px alpha(@background,0.47);*/
 }
 
 .floating-notifications.background .notification-row .notification-background .notification {
@@ -164,7 +164,7 @@ slider {
   border: 2px solid @blue;
   background-color: @background;
   color: @foreground;
-  box-shadow: 0px 0px 5px 5px alpha(@background,0.47);
+  /*box-shadow: 0px 0px 5px 5px alpha(@background,0.47);*/
 }
 
 .control-center .widget-title > label {

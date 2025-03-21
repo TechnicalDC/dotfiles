@@ -31,9 +31,9 @@ window {
     /* properties for all widgets */
     enabled:                     true;
     padding:                     0px;
-    border-radius:               0px;
+    border-radius:               20px;
     cursor:                      "default";
-    border-color:                @blue;
+    border-color:                @black;
     border:                      2px;
     background-color:            @background;
 }
@@ -42,6 +42,7 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
+    padding:                     20px ;
     background-color:            @background;
     orientation:                 horizontal;
     children:                    [ "imagebox", "listbox" ];
@@ -52,12 +53,12 @@ imagebox {
     background-color:            transparent;
     background-image:            url("~/.cache/wal/rofi_background.png", width);
     orientation:                 vertical;
-    border-radius:               0;
+    border-radius:               20px;
     children:                    ["dummy"];
 }
 
 listbox {
-    padding:                     20px;
+    padding:                     0px 0px 0px 20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [  "inputbar", "message", "listview" ];
@@ -73,9 +74,9 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @selected;
-    border-radius:               10px;
-    border:                      0px 0px 2px 0px;
+    border-color:                @cyan;
+    border-radius:               20px;
+    border:                      2px;
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -115,8 +116,8 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
+    background-color:            @cyan;
+    text-color:                  @background;
 }
 
 /*****----- Listview -----*****/
@@ -143,8 +144,7 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-radius:               10px;
-    border:                      0px;
+    border-radius:               20px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;

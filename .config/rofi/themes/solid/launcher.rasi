@@ -22,8 +22,8 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  true;
-    width:                       1000px;
+    fullscreen:                  false;
+    width:                       1100px;
     height:                      500px;
     x-offset:                    0px;
     y-offset:                    0px;
@@ -31,9 +31,10 @@ window {
     /* properties for all widgets */
     enabled:                     true;
     padding:                     0px;
-    border-radius:               0px;
+    border-radius:               20px;
     cursor:                      "default";
-    border:                      0px;
+    border-color:                @black;
+    border:                      2px;
     background-color:            @background;
 }
 
@@ -41,7 +42,7 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     28% 20%;
+    padding:                     20px 20px 20px 0px;
     background-color:            @background;
     orientation:                 horizontal;
     children:                    ["mode-switcher", "imagebox", "listbox" ];
@@ -52,7 +53,7 @@ imagebox {
     background-color:            transparent;
     background-image:            url("~/.cache/wal/rofi_background.png", width);
     orientation:                 horizontal;
-    border-radius:               0;
+    border-radius:               20px;
     children:                    [ "dummy"];
 }
 
@@ -74,7 +75,7 @@ inputbar {
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
     border-color:                @cyan;
-    border-radius:               10px;
+    border-radius:               20px;
     border:                      2px;
     background-color:            @background;
     text-color:                  @foreground;
@@ -102,14 +103,14 @@ entry {
 mode-switcher{
     enabled:                     true;
     spacing:                     20px;
-    margin:                      120px 20px;
+    margin:                      130px 20px;
     orientation:                 vertical;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 button {
     padding:                     0px 23px 0px 20px;
-    border-radius:               10px;
+    border-radius:               20px;
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      pointer;
@@ -143,7 +144,7 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-radius:               10px;
+    border-radius:               20px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
