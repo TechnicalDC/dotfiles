@@ -95,6 +95,7 @@ window#waybar {
 
 #workspaces button.active{
    border-radius: 20px;
+   padding: 0px 25px;
    border: 2px solid @blue;
 }
 #workspaces button:hover {

@@ -19,7 +19,7 @@ marker_copied   = { fg = "#b8bb26", bg = "#b8bb26" }
 marker_cut      = { fg = "#fb4934", bg = "#fb4934" }
 
 # Tab
-tab_active   = { fg = "#282828", bg = "#504945" }
+tab_active   = { fg = "#a89984", bg = "#504945" }
 tab_inactive = { fg = "#a89984", bg = "#3c3836" }
 tab_width    = 1
 

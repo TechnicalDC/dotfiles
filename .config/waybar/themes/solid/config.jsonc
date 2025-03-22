@@ -54,15 +54,15 @@
       "tooltip-format": "<span color='#abb2bf'>Open the power menu</span>"
    },
    "custom/notifications": {
-      "format": "{icon}",
+      "format": "{icon} {}",
       "format-icons": {
-         "notification": "<span foreground='#ef596f'></span>",
+         "notification": "",
          "none": "",
-         "dnd-notification": "<span foreground='#ef596f'></span>",
+         "dnd-notification": "",
          "dnd-none": "",
-         "inhibited-notification": "<span foreground='#ef596f'></span>",
+         "inhibited-notification": "",
          "inhibited-none": "",
-         "dnd-inhibited-notification": "<span foreground='#ef596f'></span>",
+         "dnd-inhibited-notification": "",
          "dnd-inhibited-none": ""
       },
       "return-type": "json",
@@ -187,11 +187,11 @@
       "format-alt": "{icon}  {time}",
        // "format-good": "", // An empty format will hide the module
        "format-icons": [
-          "<span color=\"#ef596f\"> </span>",
-          "<span color=\"#ef596f\"> </span>",
-          "<span color=\"#e5c07b\"> </span>",
-          "<span color=\"#89ca78\"> </span>",
-          "<span color=\"#89ca78\"> </span>"
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
        ]
    },
    "battery#bat2": {
