@@ -24,9 +24,6 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       1000px;
-    height:                      500px;
-    x-offset:                    0px;
-    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
@@ -124,7 +121,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       7;
+    lines:                       4;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
