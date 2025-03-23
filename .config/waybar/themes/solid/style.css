@@ -96,10 +96,10 @@ window#waybar {
 #workspaces button.active{
    border-radius: 20px;
    padding: 0px 25px;
-   border: 2px solid @blue;
+   border: 2px solid @light_black;
 }
 #workspaces button:hover {
-    background-color: @cyan;
+    background-color: @light_black;
 }
 
 #clock {
