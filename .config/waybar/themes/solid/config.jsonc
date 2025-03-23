@@ -131,7 +131,7 @@
       "tooltip": false,
        "tooltip-format": "<tt>{calendar}</tt>",
        "format" : "{:%d %b | %H:%M}",
-       "on-click": "ghostty -e calcurse &",
+       "on-click": "kitty -e calcurse &",
        "actions":  {
           "on-click-right": "mode",
           "on-click-forward": "tz_up",
