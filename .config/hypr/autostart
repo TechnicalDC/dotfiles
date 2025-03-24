@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-swww-daemon &
+# swww-daemon &
+hyprpaper &
 waybar --config ~/.config/waybar/themes/solid/config.jsonc -s ~/.config/waybar/themes/solid/style.css &
 wally -r &
 mpd &

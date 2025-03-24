@@ -1,6 +1,7 @@
 configuration{
     modi: "drun,run";
     show-icons: true;
+    icon-theme: "Gruvbox-Plus-Dark";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;

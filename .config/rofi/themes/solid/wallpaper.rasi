@@ -15,7 +15,7 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  true;
+    fullscreen:                  false;
     width:                       1000px;
     x-offset:                    0px;
     y-offset:                    0px;
@@ -24,10 +24,10 @@ window {
     /* properties for all widgets */
     enabled:                     true;
     padding:                     0px;
-    border-radius:               0px;
+    border-radius:               20px;
     cursor:                      "default";
-    border-color:                @background;
-    border:                      0px;
+    border-color:                @black;
+    border:                      2px;
     background-color:            @background;
 }
 
@@ -36,8 +36,9 @@ mainbox {
     enabled:                     true;
     spacing:                     0px;
     background-color:            @background;
+    background-image:            url("~/.cache/wal/rofi_background.png", width);
     orientation:                 horizontal;
-    padding:                     10% 20%;
+    padding:                     20px;
     children:                    [ "listbox" ];
 }
 
@@ -66,10 +67,10 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     padding:                     10px;
-    margin:                      0px 20% 5% 20%;
-    border-color:                @selected;
-    border-radius:               10px;
-    border:                      0px 0px 2px 0px;
+    margin:                      3% 25% 5% 0%;
+    border-color:                @cyan;
+    border-radius:               20px;
+    border:                      2px;
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -78,6 +79,7 @@ textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         " ";
+    width:                       0px;
     background-color:            transparent;
     text-color:                  inherit;
     padding:                  2px 2px 2px 10px;
@@ -117,7 +119,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     5;
-    lines:                       4;
+    lines:                       2;
     cycle:                       true;
     spacing:                     15px;
     dynamic:                     true;
@@ -138,7 +140,7 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-radius:               10px;
+    border-radius:               20px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
@@ -150,6 +152,7 @@ element selected {
 }
 element-icon {
     background-color:            transparent;
+    border-radius:               15px;
     text-color:                  inherit;
     size:                        150px;
     cursor:                      inherit;

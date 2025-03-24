@@ -24,11 +24,7 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 --preview-label ' preview '
 --border rounded
 --border-label=' fzf ' --border-label-pos='0' --preview-window='border-rounded'
---scrollbar='│'
---color=fg:#d0d0d0,fg+:#111111,bg:-1,bg+:#2bbac5
---color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#e5c07b
---color=prompt:#61afef,spinner:#af5fff,pointer:#af5fff,header:#87afaf
---color=border:#2bbac5,label:#ef596f,query:#d9d9d9"
+--scrollbar='│'"
 
 set --export _ZO_FZF_OPTS "--layout=reverse
 --margin=10%
@@ -42,11 +38,7 @@ set --export _ZO_FZF_OPTS "--layout=reverse
 --preview 'exa -lA --color=always {2}'
 --border rounded
 --border-label=' fzf ' --border-label-pos='0' --preview-window='border-rounded'
---scrollbar='│'
---color=fg:#d0d0d0,fg+:#111111,bg:-1,bg+:#2bbac5
---color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#e5c07b
---color=prompt:#61afef,spinner:#af5fff,pointer:#af5fff,header:#87afaf
---color=border:#2bbac5,label:#ef596f,query:#d9d9d9"
+--scrollbar='│'"
 #}}}
 
 set fish_greeting
@@ -54,6 +46,7 @@ set fish_greeting
 fish_vi_key_bindings
 
 source "$HOME/.config/fish/abbreviations.fish"
+source "$HOME/.cache/wal/colors-fzf.fish"
 
 # Custom header
 zoxide init fish | source

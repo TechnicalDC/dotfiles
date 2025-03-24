@@ -21,31 +21,30 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;
+    location:                    east;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       700px;
-    height:                      350px;
+    width:                       200px;
     x-offset:                    0px;
-    y-offset:                    0px;
+    y-offset:                    100px;
 
     /* properties for all widgets */
     enabled:                     true;
-    padding:                     0px;
-    border-radius:               0px;
+    padding:                     20px;
     cursor:                      "default";
-    border-color:                @blue;
-    border:                      2px;
-    background-color:            @background;
+    background-color:            transparent;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
+    border-radius:               20px;
+    border-color:                @black;
+    border:                      2px;
     spacing:                     0px;
     background-color:            @background;
     orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
+    children:                    [ "listbox" ];
 }
 
 imagebox {
@@ -124,7 +123,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       7;
+    lines:                       3;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -143,7 +142,7 @@ listview {
 element {
     enabled:                     true;
     spacing:                     15px;
-    padding:                     10px;
+    padding:                     20px;
     border-radius:               10px;
     border:                      0px;
     background-color:            transparent;
@@ -163,9 +162,10 @@ element-icon {
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
+    font: "JetBrainsMono Nerd Font 36";
     cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+    vertical-align:              0.0;
+    horizontal-align:            0.9;
 }
 
 /*****----- Message -----*****/
