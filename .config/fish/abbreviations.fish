@@ -27,8 +27,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias all='eza -al --color=always -h --icons --tree --level=1'
 alias eza="eza --color=always --icons"
-alias la='eza -a --color=always --icons'
-alias ls="eza --color=always --icons"
+alias la='eza -l --color=always -h --icons --tree --level=1'
+alias ls="eza -l --color=always -h --icons --tree --level=1"
 alias ll='eza -l --color=always -h --icons --tree --level=1'
 alias ll2='eza -l --color=always -h --icons --tree --level=2'
 alias ll3='eza -l --color=always -h --icons --tree --level=3'
