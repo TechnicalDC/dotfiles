@@ -8,6 +8,7 @@ configuration {
     display-filebrowser:        "FILES";
     display-window:             "";
     drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    drun-display-actions:       true;
     window-format:              "{w} · {c} · {t}";
     hide-scrollbar: true;
 }
