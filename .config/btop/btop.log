@@ -1,0 +1,27 @@
+
+2025/03/26 (17:12:13) | ===> btop++ v.1.4.0
+2025/03/26 (17:12:13) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:13) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:15) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:17) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:19) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:21) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:23) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:25) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:25) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:27) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:29) | WARNING: Failed to join _runner thread on exit!
+
+2025/03/26 (17:12:30) | ===> btop++ v.1.4.0
+2025/03/26 (17:12:30) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:30) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:32) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:34) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:36) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:38) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:40) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:42) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:44) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:46) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:48) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/03/26 (17:12:50) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
