@@ -13,3 +13,4 @@
 .config/session
 .config/uv
 .config/ibus/bus
+.config/xsettingsd
