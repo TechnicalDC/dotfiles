@@ -3,6 +3,7 @@ configuration{
     show-icons: true;
     icon-theme: "Gruvbox-Plus-Dark";
     drun-display-format: "{icon} {name}";
+    drun-display-actions: true;
     location: 0;
     disable-history: false;
     display-drun: " Apps ";
