@@ -13,3 +13,5 @@
 .config/session
 .config/uv
 .config/ibus/bus
+.config/xsettingsd
+.config/GIMP/3.0
