@@ -15,3 +15,5 @@
 .config/ibus/bus
 .config/xsettingsd
 .config/GIMP/3.0
+.icons
+.config/systemd/user/default.target.wants
