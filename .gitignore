@@ -17,3 +17,5 @@
 .config/GIMP/3.0
 .icons
 .config/systemd/user/default.target.wants
+.config/go/telemetry/local
+.config/arkrc

@@ -199,6 +199,10 @@ label:focus { }
     color: #2d3436;
 }
 
+#mpd {
+    padding: 6px 12px;
+ }
+
 #mpd.disconnected {
     color: @red;
 }
