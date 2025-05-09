@@ -53,10 +53,10 @@ source "$HOME/.cache/wal/colors-fzf.fish"
 
 # Custom header
 zoxide init fish | source
-# starship init fish | source
 # colorscript -e panes
+
 function fish_prompt
-    set -l bg_color (test $status -eq 0; and echo green; or echo red)
+    set -l bg_color (test $status -eq 0; and echo blue; or echo red)
     set -l fg_color '#32302F'
     set -l color (set_color -b $bg_color $fg_color)
 
