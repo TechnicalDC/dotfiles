@@ -141,7 +141,7 @@ wezterm.on('update-right-status', function(window, pane)
       { Background = { Color = colors.base0D } },
       { Foreground = { Color = colors.base00 } },
       { Text = " " },
-      { Text = " " .. stat },
+      { Text = stat },
       { Text = " " },
       "ResetAttributes",
    }))
@@ -188,7 +188,7 @@ config.show_update_window                          = true
 config.quote_dropped_files                         = "WindowsAlwaysQuoted"
 config.enable_tab_bar                              = true
 config.use_fancy_tab_bar                           = false
-config.hide_tab_bar_if_only_one_tab                = true
+config.hide_tab_bar_if_only_one_tab                = false
 config.prefer_to_spawn_tabs                        = true
 config.tab_bar_at_bottom                           = false
 config.tab_max_width                               = 30
