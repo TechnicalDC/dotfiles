@@ -12,6 +12,9 @@ set --export PATH  $PATH $HOME/.scripts/
 set --export PATH  $PATH $HOME/.local/bin/
 set --export PATH  $PATH $HOME/.cargo/bin/
 set --export PATH  $PATH $HOME/go/bin/
+set --export PATH  $PATH /mnt/c/Progress/OpenEdge/bin/
+set --export JAVA_HOME /usr/lib/jvm/jdk-11.0.26-oracle-x64
+set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic
 set --export FZF_DEFAULT_OPTS "--layout=reverse
 --margin=10%

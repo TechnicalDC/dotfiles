@@ -181,7 +181,6 @@ config.font_size                                   = 12
 config.default_cursor_style                        = 'SteadyBlock'
 config.line_height                                 = 1.4
 config.colors                                      = theme
--- config.color_scheme          = 'Catppuccin Mocha'
 config.scrollback_lines      = 10000
 config.detect_password_input = true
 config.scroll_to_bottom_on_input                   = true
@@ -200,11 +199,11 @@ config.force_reverse_video_cursor                  = false
 config.hide_mouse_cursor_when_typing               = true
 config.window_close_confirmation                   = 'NeverPrompt'
 config.window_decorations                          = "RESIZE"
-config.show_tab_index_in_tab_bar                   = false
+config.show_tab_index_in_tab_bar                   = true
 config.switch_to_last_active_tab_when_closing_tab  = true
 config.hyperlink_rules                             = wezterm.default_hyperlink_rules()
 config.pane_focus_follows_mouse                    = false
-config.default_mux_server_domain                = "local"
+config.default_mux_server_domain                   = "local"
 config.skip_close_confirmation_for_processes_named = {
    'bash',
    'sh',
@@ -217,9 +216,6 @@ config.skip_close_confirmation_for_processes_named = {
    'pwsh.exe',
    'powershell.exe',
 }
--- config.window_background_opacity = 1.0
--- config.window_background_image = "C:\\Users\\Dilip Chauhan\\Pictures\\onedark-wallpapers\\misc\\od_current_blurred.png"
-config.win32_system_backdrop     = 'Acrylic'
 config.command_palette_font_size = config.font_size
 config.char_select_font_size     = config.font_size
 config.inactive_pane_hsb         = {
@@ -241,27 +237,27 @@ config.ssh_backend = "LibSsh"
 
 -- KEYBINDINGS {{{
 config.keys = {
-   { action = action.CopyTo    'Clipboard' 								, mods = 'CTRL|SHIFT', key =     'C' },
-   { action = action.DecreaseFontSize      								, mods =       'CTRL', key =     '-' },
-   { action = action.IncreaseFontSize      								, mods =       'CTRL', key =     '=' },
-   { action = action.Nop                   								, mods =        'ALT', key = 'Enter' },
-   { action = action.PasteFrom 'Clipboard' 								, mods = 'CTRL|SHIFT', key =     'V' },
-   { action = action.ResetFontSize         								, mods =       'CTRL', key =     '0' },
-   { action = action.ActivateCopyMode         							, mods = 'CTRL|SHIFT', key =     'X' },
-   { action = action.TogglePaneZoomState        						, mods = 'CTRL|SHIFT', key =     'Z' },
-   { action = action.ToggleFullScreen      								                     , key =   'F11' },
-   { action = action.SpawnTab "CurrentPaneDomain"						, mods = 'CTRL|SHIFT', key =	   'T' },
-   { action = action.CloseCurrentPane{confirm=true}					, mods = 'CTRL|SHIFT', key =	   'Q' },
-   { action = action.ShowLauncherArgs {flags="FUZZY|DOMAINS", title = " Domains "}     , mods =	'CTRL|SHIFT', key =		'A' },
-   { action = action.ShowLauncherArgs {flags="FUZZY|WORKSPACES", title = " Workspace "}     , mods =	'CTRL|SHIFT', key =		'W' },
-   { action = action.ShowLauncherArgs {flags="FUZZY|LAUNCH_MENU_ITEMS", title = " Launcher "}     , mods =	'CTRL|SHIFT', key =		'?' },
-   { action = action.ShowLauncherArgs {flags="FUZZY|COMMANDS", title = " Commands "}   , mods =	'CTRL|SHIFT', key =		':' },
-   { action = action.SplitHorizontal {domain="CurrentPaneDomain"} , mods = 'CTRL|SHIFT', key =	   '|' },
-   { action = action.SplitVertical {domain="CurrentPaneDomain"}	, mods = 'CTRL|SHIFT', key =		'_' },
-   { action = action.ActivateTabRelative(1)								, mods =			'CTRL', key =	 'Tab' },
-   { action = action.ActivateTabRelative(-1)								, mods =	'CTRL|SHIFT', key =   'Tab' },
-   { action = action.QuickSelect												, mods =	'CTRL|SHIFT', key = 'Space' },
-   { action = action.PaneSelect { mode = "Activate"}					, mods = 'CTRL|SHIFT', key =     's' },
+   { action = action.CopyTo 'Clipboard',                                mods = 'CTRL|SHIFT',    key =     'C' },
+   { action = action.DecreaseFontSize,                                  mods =       'CTRL',    key =     '-' },
+   { action = action.IncreaseFontSize,                                  mods =       'CTRL',    key =     '=' },
+   { action = action.Nop,                                               mods =        'ALT',    key = 'Enter' },
+   { action = action.PasteFrom 'Clipboard',                             mods = 'CTRL|SHIFT',    key =     'V' },
+   { action = action.ResetFontSize,                                     mods =       'CTRL',    key =     '0' },
+   { action = action.ActivateCopyMode,                                  mods = 'CTRL|SHIFT',    key =     'X' },
+   { action = action.TogglePaneZoomState,                               mods = 'CTRL|SHIFT',    key =     'Z' },
+   { action = action.ToggleFullScreen,                                  key =   'F11' },
+   { action = action.SpawnTab "CurrentPaneDomain",                      mods = 'CTRL|SHIFT',    key =	   'T' },
+   { action = action.CloseCurrentPane{confirm=true},                    mods = 'CTRL|SHIFT',    key =	   'Q' },
+   { action = action.ShowLauncherArgs {flags="FUZZY|DOMAINS",           title = " Domains "},   mods =	'CTRL|SHIFT', key =		'A' },
+   { action = action.ShowLauncherArgs {flags="FUZZY|WORKSPACES",        title = " Workspace "}, mods =	'CTRL|SHIFT', key =		'W' },
+   { action = action.ShowLauncherArgs {flags="FUZZY|LAUNCH_MENU_ITEMS", title = " Launcher "},  mods =	'CTRL|SHIFT', key =		'?' },
+   { action = action.ShowLauncherArgs {flags="FUZZY|COMMANDS",          title = " Commands "},  mods =	'CTRL|SHIFT', key =		':' },
+   { action = action.SplitHorizontal {domain="CurrentPaneDomain"},      mods = 'CTRL|SHIFT',    key =	   '|' },
+   { action = action.SplitVertical {domain="CurrentPaneDomain"},        mods = 'CTRL|SHIFT',    key =		'_' },
+   { action = action.ActivateTabRelative(1),                            mods =			'CTRL',  key =	 'Tab' },
+   { action = action.ActivateTabRelative(-1),                           mods =	'CTRL|SHIFT',  key =   'Tab' },
+   { action = action.QuickSelect,                                       mods =	'CTRL|SHIFT',  key = 'Space' },
+   { action = action.PaneSelect { mode = "Activate"},                   mods = 'CTRL|SHIFT',    key =     's' },
    -- Unfortunatelly Yes, using F2 cause the same key used for renaming in Windows
    { action = action.PromptInputLine {
       description = 'Enter new name for current tab',
@@ -281,15 +277,15 @@ config.keys = {
       end),
    }, mods = "CTRL|SHIFT", key = 'F2'},
    -- move between split panes
-   -- split_nav('move', 'h'),
-   -- split_nav('move', 'j'),
-   -- split_nav('move', 'k'),
-   -- split_nav('move', 'l'),
+   split_nav('move', 'h'),
+   split_nav('move', 'j'),
+   split_nav('move', 'k'),
+   split_nav('move', 'l'),
    -- resize panes
-   -- split_nav('resize', 'h'),
-   -- split_nav('resize', 'j'),
-   -- split_nav('resize', 'k'),
-   -- split_nav('resize', 'l'),
+   split_nav('resize', 'h'),
+   split_nav('resize', 'j'),
+   split_nav('resize', 'k'),
+   split_nav('resize', 'l'),
 }
 
 for i = 1, 9 do
