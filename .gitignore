@@ -19,3 +19,4 @@
 .config/systemd/user/default.target.wants
 .config/go/telemetry/local
 .config/arkrc
+.config/fish/fish_plugins

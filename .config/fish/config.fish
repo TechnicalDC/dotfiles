@@ -43,6 +43,14 @@ set --export _ZO_FZF_OPTS "--layout=reverse
 #}}}
 
 set fish_greeting
+# Set the cursor shapes for the different vi modes.
+set fish_cursor_default     block blink
+set fish_cursor_insert      block blink
+set fish_cursor_replace_one block blink
+set fish_cursor_visual      block
+set fish_color_command      brgreen
+set fish_pager_color_prefix brgreen
+set fish_pager_color_selected_background -r
 
 fish_vi_key_bindings
 
@@ -51,5 +59,14 @@ source "$HOME/.cache/wal/colors-fzf.fish"
 
 # Custom header
 zoxide init fish | source
-starship init fish | source
-#colorscript -e panes
+# colorscript -e panes
+
+function fish_prompt
+    set -l bg_color (test $status -eq 0; and echo blue; or echo red)
+    set -l fg_color '#32302F'
+    set -l color (set_color -b $bg_color $fg_color)
+
+    echo -n -s $color ' ' (prompt_pwd) ' ' (set_color normal) ' '
+end
+function fish_mode_prompt
+end
