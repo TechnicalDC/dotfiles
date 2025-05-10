@@ -67,9 +67,10 @@ function fish_prompt
     set -l fg_color '#D4BE98'
     set -l color (set_color -b $bg_color $fg_color)
     set -l indicator_color (set_color -b $bg_color $fg_indicator)
+    set -l branch (fish_git_prompt)
 
     echo ""
-    echo -n -s $indicator_color '█' $color ' ' (basename (prompt_pwd)) ' ' (set_color normal) ' '
+    echo -n -s $indicator_color '█' $color ' ' (basename (prompt_pwd)) $branch ' ' (set_color normal) ' '
 end
 function fish_mode_prompt
 end
