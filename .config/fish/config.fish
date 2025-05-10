@@ -62,12 +62,14 @@ zoxide init fish | source
 # colorscript -e panes
 
 function fish_prompt
-    set -l bg_color (test $status -eq 0; and echo brcyan; or echo red)
-    set -l fg_color '#32302F'
+    set -l fg_indicator (test $status -eq 0; and echo green; or echo red)
+    set -l bg_color '#3A3735'
+    set -l fg_color '#D4BE98'
     set -l color (set_color -b $bg_color $fg_color)
+    set -l indicator_color (set_color -b $bg_color $fg_indicator)
 
     echo ""
-    echo -n -s $color ' ' (basename (prompt_pwd)) ' ' (set_color normal) ' '
+    echo -n -s $indicator_color '█' $color ' ' (basename (prompt_pwd)) ' ' (set_color normal) ' '
 end
 function fish_mode_prompt
 end
