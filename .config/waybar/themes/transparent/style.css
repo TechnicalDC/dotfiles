@@ -1,0 +1,241 @@
+@import url("/home/dilip/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "JetBrainsMonoNL Nerd Font";
+    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
+    font-size: 15px;
+}
+
+window#waybar {
+   background-color: transparent;
+}
+
+#custom-appmenuicon,
+#custom-notifications,
+#custom-powermenuicon,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor,
+#user,
+#taskbar,
+#power-profiles-daemon,
+#mpd {
+    background: transparent;
+    color: @foreground;
+    margin: 10px 0px 10px 10px;
+}
+
+#user {
+    padding: 0px 10px;
+}
+#custom-appmenuicon {
+   color: @blue;
+    padding: 6px 12px;
+    padding-right: 17px;
+    margin-right: 0px;
+}
+#custom-powermenuicon {
+    color: @red;
+    padding: 6px 12px;
+    padding-right: 17px;
+    margin-right: 10px;
+}
+#custom-notifications {
+    color: @yellow;
+    padding: 6px 12px;
+    padding-right: 17px;
+}
+
+#workspaces{
+   border-radius: 10px;
+   background: transparent;
+   padding: 5px;
+   margin: 10px;
+   margin: 10px;
+   margin-right: 0px;
+}
+#workspaces button {
+   color: @foreground;
+   padding: 0px;
+   margin: 0px 12px;
+}
+#workspaces button.empty{
+   color: @light_black;
+}
+#workspaces button.active{
+   color: @yellow;
+}
+#workspaces button:hover {
+   color: @foreground;
+}
+
+#clock {
+    padding: 0px 10px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+#battery {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#battery.critical:not(.charging) {
+   border-color: @red;
+   background-color: @red;
+   color: @background;
+}
+
+label:focus {
+
+}
+
+#cpu {
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#memory {
+    background-color: #cba6f7;
+    font-weight: bolder;
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network{
+}
+
+#network.disabled{
+    background-color: #45475a;
+}
+
+#network.disconnected{
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+   font-weight: bolder;
+   padding-top: 3px;
+   padding-right: 11px;
+}
+
+#network.linked, #network.wifi{
+}
+
+#network.ethernet{
+}
+
+#pulseaudio {
+    font-weight: bolder;
+}
+
+#pulseaudio.muted {
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+}
+
+#temperature {
+}
+
+#temperature.critical {
+    background-color: @red;
+    color: @text;
+}
+
+#tray {
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd { }
+
+#mpd.disconnected {
+    background-color: @red;
+}
+
+#mpd.playing {
+}
+
+#mpd.stopped { }
+
+#mpd.paused { }
+
+#language {
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#tooltip {
+   background-color: rgba(17, 17, 17, 0.8);
+}
+#tooltip label {
+  color: @red;
+}
+
+#taskbar {
+    padding: 5px;
+    margin: 10px;
+}
+#taskbar button {
+   padding: 2px 5px;
+   border-radius: 8px;
+}
+#taskbar button:hover {
+   background-color: alpha(@light_black, .6);
+}
+#taskbar button.active {
+   background: @background;
+   background: linear-gradient(135deg , @blue, @cyan,@green);
+}
+#taskbar.empty {
+    background-color: transparent;
+    border: 2px solid transparent;
+}
