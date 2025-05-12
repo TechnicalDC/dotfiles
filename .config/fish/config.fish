@@ -76,12 +76,12 @@ function fish_prompt
           set fg red
        case insert
           set fg blue
-       # case replace_one
-       #    set fg '#e78a4e'
-       # case visual
-       #    set fg '#7daea3'
-       # case '*'
-       #    set fg '#ffffff'
+       case replace_one
+          set fg bryellow
+       case replace
+          set fg bryellow
+       case visual
+          set fg brpurple
     end
 
     set -l mode (set_color -b $bg $fg)
