@@ -68,14 +68,14 @@ return {
    quick_select_match_fg = { Color = colors.fg },
 
    tab_bar = {
-      background = colors.bg,
+      background = colors.bg1,
 
       -- The active tab is the one that has focus in the window
       active_tab = {
          -- The color of the background area for the tab
-         bg_color = colors.yellow,
+         bg_color = colors.bg1,
          -- The color of the text for the tab
-         fg_color = colors.black,
+         fg_color = colors.yellow,
 
          -- Specify whether you want "Half", "Normal" or "Bold" intensity for the
          -- label shown for this tab.
@@ -98,7 +98,7 @@ return {
 
       -- Inactive tabs are the tabs that do not have focus
       inactive_tab = {
-         bg_color = colors.bg,
+         bg_color = colors.bg1,
          fg_color = colors.fg,
 
          -- The same options that were listed under the `active_tab` section above
@@ -118,7 +118,7 @@ return {
 
       -- The new tab button that let you create new tabs
       new_tab = {
-         bg_color = colors.bg,
+         bg_color = colors.bg1,
          fg_color = '#808080',
 
          -- The same options that were listed under the `active_tab` section above

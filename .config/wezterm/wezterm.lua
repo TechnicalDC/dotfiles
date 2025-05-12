@@ -86,25 +86,28 @@ local function tab_title(tab_info)
 end
 
 wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
-   local title_icon = {
-      cmd = ' ',
-      wezterm = ' ',
-      powershell = '󰨊 ',
-      starship = ' ',
-      nvim = ' ',
-      zoxide = ' 󰘶 ',
-      ssh = '󰒋 ',
-      Debug = ' ',
-      Launcher = ' ',
-      Default = ' ',
-   }
    local title_name = tab_title(tab)
+   local idx = tab.tab_index == 0 and 1 or tab.tab_index
 
    if string.len(title_name) >= 20  then
       title_name = string.sub(title_name, 1, 20) .. '...'
    end
-   return '  ' .. title_name .. ' '
+   return ' ' .. idx .. '.' ..  title_name .. ' '
 end)
+
+-- wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
+--   local zoomed = ''
+--   if tab.active_pane.is_zoomed then
+--     zoomed = '[Z] '
+--   end
+--
+--   local index = ''
+--   if #tabs > 1 then
+--     index = string.format('[%d/%d] ', tab.tab_index + 1, #tabs)
+--   end
+--
+--   return zoomed .. index .. tab.active_pane.title
+-- end)
 -- }}}
 
 -- TAB BAR THEME {{{
@@ -112,34 +115,38 @@ wezterm.on('update-right-status', function(window, pane)
    local time = wezterm.strftime("%H:%M:%S")
    local stat = window:active_workspace()
    local hostname = wezterm.hostname()
-   local battery = ''
+   local date = wezterm.strftime '%Y-%m-%d %H:%M:%S'
+   local battery_icon   = ''
+   local battery_status = ''
+   local charging_status = ''
 
    for _, b in ipairs(wezterm.battery_info()) do
+      battery_status = string.format('%.0f%%', b.state_of_charge * 100)
       if b.state_of_charge * 100 <= 100 and b.state_of_charge * 100 > 75 then
-         battery = '  ' .. string.format('%.0f%%', b.state_of_charge * 100)
+         battery_icon = '  '
       end
       if b.state_of_charge * 100 <= 75 and b.state_of_charge * 100 > 60 then
-         battery = '  ' .. string.format('%.0f%%', b.state_of_charge * 100)
+         battery_icon = '  '
       end
       if b.state_of_charge * 100 <= 60 and b.state_of_charge * 100 > 40 then
-         battery = '  ' .. string.format('%.0f%%', b.state_of_charge * 100)
+         battery_icon = '  '
       end
       if b.state_of_charge * 100 <= 40 and b.state_of_charge * 100 > 15 then
-         battery = '  ' .. string.format('%.0f%%', b.state_of_charge * 100)
+         battery_icon = '  '
       end
       if b.state_of_charge * 100 <= 15 then
-         battery = '  ' .. string.format('%.0f%%', b.state_of_charge * 100)
+         battery_icon = '  '
       end
 
       if b.state == "Charging" then
-         battery = battery .. ' '
+         charging_status = ' '
       end
    end
 
    -- Left status (left of the tab line)
    window:set_left_status(wezterm.format({
-      { Background = { Color = colors.base0D } },
-      { Foreground = { Color = colors.base00 } },
+      { Background = { Color = colors.green } },
+      { Foreground = { Color = colors.bg } },
       { Text = " " },
       { Text = stat },
       { Text = " " },
@@ -147,13 +154,22 @@ wezterm.on('update-right-status', function(window, pane)
    }))
    -- Make it italic and underlined
    window:set_right_status(wezterm.format {
-      { Background = { Color = colors.base0D } },
-      { Foreground = { Color = colors.base00 } },
+      { Background = { Color = colors.bg1 } },
+      { Foreground = { Color = colors.green } },
       { Attribute = { Italic = false } },
-      { Text = " " },
-      { Text = battery },
-      { Text = " " },
-      { Text = '  ' .. time .. ' ' },
+      { Text = battery_icon },
+      "ResetAttributes",
+      { Text = battery_status },
+      { Foreground = { Color = colors.yellow } },
+      { Text = charging_status },
+      { Text = " "  },
+      { Foreground = { Color = colors.blue } },
+      { Text = "  " },
+      "ResetAttributes",
+      { Text = time  },
+      { Text = " "  },
+      { Foreground = { Color = colors.green } },
+      { Text = "█"  },
       "ResetAttributes",
    })
 end)
