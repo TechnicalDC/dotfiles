@@ -63,14 +63,31 @@ zoxide init fish | source
 
 function fish_prompt
     set -l fg_indicator (test $status -eq 0; and echo green; or echo red)
+    set -l bg '#282828'
     set -l bg_color '#3A3735'
     set -l fg_color '#D4BE98'
     set -l color (set_color -b $bg_color $fg_color)
     set -l indicator_color (set_color -b $bg_color $fg_indicator)
     set -l branch (fish_git_prompt)
 
+    # Map vi mode to color and label
+    switch $fish_bind_mode
+       case default
+          set fg red
+       case insert
+          set fg blue
+       # case replace_one
+       #    set fg '#e78a4e'
+       # case visual
+       #    set fg '#7daea3'
+       # case '*'
+       #    set fg '#ffffff'
+    end
+
+    set -l mode (set_color -b $bg $fg)
+
     echo ""
-    echo -n -s $indicator_color '█' $color ' ' (basename (prompt_pwd)) $branch ' ' (set_color normal) ' '
+    echo -n -s $indicator_color '█' $color ' ' (basename (prompt_pwd)) $branch ' ' $mode ' ' (set_color normal) ' '
 end
 function fish_mode_prompt
 end
