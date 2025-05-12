@@ -67,10 +67,17 @@ function fish_prompt
     set -l bg_color '#3A3735'
     set -l fg_color '#D4BE98'
     set -l color (set_color -b $bg_color $fg_color)
+    set -l branch_color (set_color -b $bg_color cyan)
+    set -l dir_color (set_color -b $bg_color blue)
     set -l indicator_color (set_color -b $bg_color $fg_indicator)
-    set -l branch (fish_git_prompt)
+    set -l dir (basename (prompt_pwd))
+    set -l dir_icon '  '
+    set -l branch (fish_git_prompt | sed -e 's/(//' -e 's/)//')
 
-    # Map vi mode to color and label
+    if test -n "$branch"
+       set branch_icon ' 󰘬'
+    end
+
     switch $fish_bind_mode
        case default
           set fg red
@@ -87,7 +94,8 @@ function fish_prompt
     set -l mode (set_color -b $bg $fg)
 
     echo ""
-    echo -n -s $indicator_color '█' $color ' ' (basename (prompt_pwd)) $branch ' ' $mode ' ' (set_color normal) ' '
+    echo -n -s $indicator_color '█' $dir_color $dir_icon $color $dir ' ' $branch_color $branch_icon $color $branch ' ' $mode ' ' (set_color normal) ' '
 end
+
 function fish_mode_prompt
 end
