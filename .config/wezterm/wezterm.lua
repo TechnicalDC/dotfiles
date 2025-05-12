@@ -155,6 +155,11 @@ wezterm.on('update-right-status', function(window, pane)
    -- Make it italic and underlined
    window:set_right_status(wezterm.format {
       { Background = { Color = colors.bg1 } },
+      { Foreground = { Color = colors.purple } },
+      { Text = " 󰍹 " },
+      "ResetAttributes",
+      { Text = hostname },
+      { Text = "  "  },
       { Foreground = { Color = colors.green } },
       { Attribute = { Italic = false } },
       { Text = battery_icon },
