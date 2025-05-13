@@ -94,7 +94,7 @@ function fish_prompt
     set -l mode (set_color -b $bg $fg)
 
     echo ""
-    echo -n -s $indicator_color '█' $dir_color $dir_icon $color $dir ' ' $branch_color $branch_icon $color $branch ' ' $mode ' ' (set_color normal) ' '
+    echo -n -s $indicator_color '█' $dir_color $dir_icon $color $dir $branch_color $branch_icon $color $branch ' ' $mode ' ' (set_color normal) ' '
 end
 
 function fish_mode_prompt
