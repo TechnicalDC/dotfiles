@@ -2,7 +2,7 @@
 
 # swww-daemon &
 hyprpaper &
-waybar --config ~/.config/waybar/themes/transparent/config.jsonc -s ~/.config/waybar/themes/transparent/style.css &
+waybar --config ~/.config/waybar/themes/panel/config.jsonc -s ~/.config/waybar/themes/panel/style.css &
 wally -r &
 mpd &
 nm-applet &
