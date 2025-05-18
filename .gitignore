@@ -20,3 +20,5 @@
 .config/go/telemetry/local
 .config/arkrc
 .config/fish/fish_plugins
+.fonts
+.config/kwalletrc
