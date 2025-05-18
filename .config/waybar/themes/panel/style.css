@@ -58,6 +58,11 @@ window#waybar {
     padding-right: 17px;
 }
 
+#backlight, #pulseaudio {
+    padding: 6px;
+    padding-right: 10px;
+}
+
 #workspaces{
    border-radius: 10px;
    background: transparent;
@@ -94,9 +99,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-   border-color: @red;
-   background-color: @red;
-   color: @background;
+   color: @red;
 }
 
 label:focus {
@@ -140,16 +143,6 @@ label:focus {
 }
 
 #network.ethernet{
-}
-
-#pulseaudio {
-    font-weight: bolder;
-}
-
-#pulseaudio.muted {
-   border-color: @red;
-   background-color: @red;
-   color: @base;
 }
 
 #temperature {

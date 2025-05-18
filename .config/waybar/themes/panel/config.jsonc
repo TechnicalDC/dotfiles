@@ -172,7 +172,8 @@
    "backlight": {
        // "device": "acpi_video1",
        "format": "{icon} {percent}%",
-       "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+       "format-icons": ["󱩏 ", "󱩑 ", "󱩓 ", "󱩕 "]
+       // "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
    },
    "backlight/slider": {
       "min": 10,
