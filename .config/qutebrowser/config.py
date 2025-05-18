@@ -228,13 +228,13 @@ c.colors.tabs.pinned.selected.even.bg = gruvbox_dark["bg2"]
 ################
 # FONT SETTING #
 ################
-c.fonts.default_family   = '16px "JetBrainsMonoNL Nerd Font"'
+c.fonts.default_family   = '16px "Iosevka Nerd Font"'
 c.fonts.default_size     = '16px'
-c.fonts.contextmenu      = '16px "JetBrainsMonoNL Nerd Font"'
-c.fonts.completion.entry = '16px "JetBrainsMonoNL Nerd Font"'    # Font used in the completion widget.
-c.fonts.debug_console    = '16px "JetBrainsMonoNL Nerd Font"'       # Font used for the debugging console.
-c.fonts.prompts          = 'default_size JetBrainsMonoNL Nerd Font'       # Font used for prompts.
-c.fonts.statusbar        = '16px "JetBrainsMonoNL Nerd Font"'           # Font used in the statusbar.
+c.fonts.contextmenu      = '16px "Iosevka Nerd Font"'
+c.fonts.completion.entry = '16px "Iosevka Nerd Font"'    # Font used in the completion widget.
+c.fonts.debug_console    = '16px "Iosevka Nerd Font"'       # Font used for the debugging console.
+c.fonts.prompts          = 'default_size Iosevka Nerd Font'       # Font used for prompts.
+c.fonts.statusbar        = '16px "Iosevka Nerd Font"'           # Font used in the statusbar.
 
 
 ################################
