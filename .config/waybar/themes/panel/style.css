@@ -1,9 +1,10 @@
 @import url("/home/dilip/.cache/wal/colors-waybar.css");
 
 * {
-    font-family: "JetBrainsMonoNL Nerd Font";
+    font-family: "Iosevka Nerd Font";
+    /* font-family: "JetBrainsMonoNL Nerd Font"; */
     font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
-    font-size: 15px;
+    font-size: 16px;
 }
 
 window#waybar {
@@ -57,6 +58,11 @@ window#waybar {
     padding-right: 17px;
 }
 
+#backlight, #pulseaudio {
+    padding: 6px;
+    padding-right: 10px;
+}
+
 #workspaces{
    border-radius: 10px;
    background: transparent;
@@ -93,9 +99,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-   border-color: @red;
-   background-color: @red;
-   color: @background;
+   color: @red;
 }
 
 label:focus {
@@ -139,16 +143,6 @@ label:focus {
 }
 
 #network.ethernet{
-}
-
-#pulseaudio {
-    font-weight: bolder;
-}
-
-#pulseaudio.muted {
-   border-color: @red;
-   background-color: @red;
-   color: @base;
 }
 
 #temperature {

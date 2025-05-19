@@ -16,6 +16,8 @@
    "modules-right": [
       // "backlight/slider",
       // "pulseaudio/slider",
+      "backlight",
+      "pulseaudio",
       "custom/notifications",
       "power-profiles-daemon",
       "battery",
@@ -55,13 +57,13 @@
    "custom/notifications": {
       "format": "{icon}",
       "format-icons": {
-         "notification": "<span foreground='#ef596f'></span>",
+         "notification": "<span foreground='#ea6962'></span>",
          "none": "",
-         "dnd-notification": "<span foreground='#ef596f'></span>",
+         "dnd-notification": "<span foreground='#ea6962'></span>",
          "dnd-none": "",
-         "inhibited-notification": "<span foreground='#ef596f'></span>",
+         "inhibited-notification": "<span foreground='#ea6962'></span>",
          "inhibited-none": "",
-         "dnd-inhibited-notification": "<span foreground='#ef596f'></span>",
+         "dnd-inhibited-notification": "<span foreground='#ea6962'></span>",
          "dnd-inhibited-none": ""
       },
       "return-type": "json",
@@ -144,11 +146,11 @@
           "weeks-pos"     : "left",
           "on-scroll"     : 1,
           "format": {
-             "months":     "<span color='#61afef'><b>{}</b></span>",
-             "days":       "<span color='#abb2bf'><b>{}</b></span>",
-             "weeks":      "<span color='#2bbac5'><b>W{}</b></span>",
-             "weekdays":   "<span color='#e5c07b'><b>{}</b></span>",
-             "today":      "<span color='#ef596f'><b>{}</b></span>"
+             "months":     "<span color='#7daea3'><b>{}</b></span>",
+             "days":       "<span color='#d3869b'><b>{}</b></span>",
+             "weeks":      "<span color='#89b482'><b>W{}</b></span>",
+             "weekdays":   "<span color='#d8a657'><b>{}</b></span>",
+             "today":      "<span color='#ea6962'><b>{}</b></span>"
           }
        }
    },
@@ -170,7 +172,8 @@
    "backlight": {
        // "device": "acpi_video1",
        "format": "{icon} {percent}%",
-       "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+       "format-icons": ["󱩏 ", "󱩑 ", "󱩓 ", "󱩕 "]
+       // "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
    },
    "backlight/slider": {
       "min": 10,
@@ -180,23 +183,23 @@
    },
    "battery": {
       "states": {
-           // "good": 95,
+           "good": 95,
            "warning": 30,
            "critical": 15
       },
       "tooltip": false,
       "format": "{icon}  {capacity}%",
-      "format-full": "{icon}  {capacity}%",
-      "format-charging": "   {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{icon}  {time}",
+      "format-full": "{icon} {capacity}%",
+      "format-charging": "  {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-alt": "{icon} {time}",
        // "format-good": "", // An empty format will hide the module
        "format-icons": [
-          "<span color=\"#ef596f\"> </span>",
-          "<span color=\"#ef596f\"> </span>",
-          "<span color=\"#e5c07b\"> </span>",
-          "<span color=\"#89ca78\"> </span>",
-          "<span color=\"#89ca78\"> </span>"
+          "<span color=\"#ea6962\"> </span>",
+          "<span color=\"#ea6962\"> </span>",
+          "<span color=\"#d8a657\"> </span>",
+          "<span color=\"#a9b665\"> </span>",
+          "<span color=\"#a9b665\"> </span>"
        ]
    },
    "battery#bat2": {
@@ -207,10 +210,10 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": false,
       "format-icons": {
-         "default": "<span color=\"#e5c07b\"></span>",
-         "performance": "<span color=\"#e5c07b\"></span>",
-         "balanced": "<span color=\"#61afef\"> </span>",
-         "power-saver": "<span color=\"#89ca78\"> </span>"
+         "default": "<span color=\"#d8a657\"></span>",
+         "performance": "<span color=\"#d8a657\"></span>",
+         "balanced": "<span color=\"#7daea3\"> </span>",
+         "power-saver": "<span color=\"#a9b665\"> </span>"
       }
    },
    "network": {
@@ -225,11 +228,11 @@
    },
    "pulseaudio": {
        // "scroll-step": 1, // %, can be a float
-       "format": "{volume}% {icon} {format_source}",
-       "format-bluetooth": "{volume}% {icon} {format_source}",
-       "format-bluetooth-muted": " {icon} {format_source}",
+       "format": "{icon} {volume}% {format_source}",
+       "format-bluetooth": "{icon} {volume}%  {format_source}",
+       "format-bluetooth-muted": " {icon} {format_source}",
        "format-muted": " {format_source}",
-       "format-source": "{volume}%  ",
+       "format-source": " {volume}%",
        "format-source-muted": " ",
        "format-icons": {
           "headphone": " ",
