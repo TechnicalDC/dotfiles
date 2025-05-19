@@ -63,8 +63,8 @@ zoxide init fish | source
 
 function fish_prompt
     set -l fg_indicator (test $status -eq 0; and echo green; or echo red)
-    set -l bg '#282828'
-    set -l bg_color '#3A3735'
+    set -l bg '#1d2021'
+    set -l bg_color '#282828'
     set -l fg_color '#D4BE98'
     set -l color (set_color -b $bg_color $fg_color)
     set -l branch_color (set_color -b $bg_color cyan)

@@ -1,4 +1,5 @@
-local colors = require("colors")
+local colorschemes = require("colors")
+local colors = colorschemes.gruvbox_hard
 
 return {
    -- The default text color
