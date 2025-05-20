@@ -32,7 +32,8 @@ if test -f $(which eza)
    alias eza="eza --color=always --icons"
    alias la='eza -l --color=always -h --icons --tree --level=1'
    alias ls="eza --color=always -h --icons"
-   alias ll='eza -l --color=always -h --icons --tree --level=1'
+   alias ll='eza -l --color=always -h --icons'
+   alias ll1='eza -l --color=always -h --icons --tree --level=1'
    alias ll2='eza -l --color=always -h --icons --tree --level=2'
    alias ll3='eza -l --color=always -h --icons --tree --level=3'
 end
