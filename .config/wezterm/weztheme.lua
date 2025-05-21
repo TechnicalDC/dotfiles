@@ -9,9 +9,9 @@ return {
 
    -- Overrides the cell background color when the current cell is occupied by the
    -- cursor and the cursor style is set to Block
-   cursor_bg = colors.cyan,
+   cursor_bg = colors.fg,
    -- Overrides the text color when the current cell is occupied by the cursor
-   cursor_fg = colors.black,
+   cursor_fg = colors.bg,
    -- Specifies the border color of the cursor when the cursor style is set to Block,
    -- or the color of the vertical or horizontal bar when the cursor style is set to
    -- Bar or Underline.

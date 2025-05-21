@@ -1,7 +1,6 @@
-# NOTE: You can include configuration using `include` option
 include  /home/dilip/.cache/wal/colors-zathura
 
-set font "JetBrainsMonoNL Nerd Font 12"
+set font "Iosevka Nerd Font 12"
 
 # settings
 set window-height         700
