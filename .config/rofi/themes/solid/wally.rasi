@@ -30,7 +30,7 @@ window {
     padding:                     0px;
     border-radius:               20px;
     cursor:                      "default";
-    border-color:                @black;
+    border-color:                @light-green;
     border:                      2px;
     background-color:            @background;
 }
@@ -71,7 +71,7 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @cyan;
+    border-color:                @light-green;
     border-radius:               20px;
     border:                      2px;
     background-color:            @background;
@@ -147,8 +147,8 @@ element {
     cursor:                      pointer;
 }
 element selected {
-   background-color:            @cyan;
-   text-color:                  @background;
+   background-color:            @light-yellow;
+   text-color:                  @foreground;
 }
 element-icon {
     background-color:            transparent;

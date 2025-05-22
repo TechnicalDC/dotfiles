@@ -39,7 +39,7 @@ window {
 mainbox {
     enabled:                     true;
     border-radius:               20px;
-    border-color:                @black;
+    border-color:                @light-green;
     border:                      2px;
     spacing:                     0px;
     background-color:            @background;
@@ -150,8 +150,8 @@ element {
     cursor:                      pointer;
 }
 element selected {
-   background-color:            @cyan;
-   text-color:                  @background;
+   background-color:            @light-yellow;
+   text-color:                  @foreground;
 }
 element-icon {
     background-color:            transparent;
