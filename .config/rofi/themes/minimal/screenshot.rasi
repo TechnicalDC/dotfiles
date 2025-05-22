@@ -13,36 +13,38 @@ configuration {
 }
 
 * {
-    font: "Iosevka Nerd Font 12";
+    width: 550;
+    font: "JetBrainsMono Nerd Font 12";
 }
 
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;
+    location:                    east;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       200px;
+    x-offset:                    0px;
+    y-offset:                    100px;
 
     /* properties for all widgets */
     enabled:                     true;
-    padding:                     0px;
-    border-radius:               20px;
+    padding:                     20px;
     cursor:                      "default";
-    border-color:                @light-green;
-    border:                      2px;
-    background-color:            @background;
+    background-color:            transparent;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
+    border-radius:               20px;
+    border-color:                @black;
+    border:                      2px;
     spacing:                     0px;
-    padding:                     20px ;
     background-color:            @background;
     orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
+    children:                    [ "listbox" ];
 }
 
 imagebox {
@@ -50,15 +52,15 @@ imagebox {
     background-color:            transparent;
     background-image:            url("~/.cache/wal/rofi_background.png", width);
     orientation:                 vertical;
-    border-radius:               20px;
+    border-radius:               0;
     children:                    ["dummy"];
 }
 
 listbox {
-    padding:                     0px 0px 0px 20px;
+    padding:                     20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [  "inputbar", "message", "listview" ];
+    children:                    [ "message", "listview" ];
 }
 
 dummy {
@@ -67,13 +69,13 @@ dummy {
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @light-green;
-    border-radius:               20px;
-    border:                      2px;
+    border-color:                @selected;
+    border-radius:               10px;
+    border:                      0px 0px 2px 0px;
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -113,8 +115,8 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @cyan;
-    text-color:                  @background;
+    background-color:            @selected;
+    text-color:                  @foreground;
 }
 
 /*****----- Listview -----*****/
@@ -140,15 +142,16 @@ listview {
 element {
     enabled:                     true;
     spacing:                     15px;
-    padding:                     10px;
-    border-radius:               20px;
+    padding:                     20px;
+    border-radius:               10px;
+    border:                      0px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element selected {
-   background-color:            @light-yellow;
-   text-color:                  @foreground;
+   background-color:            @cyan;
+   text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;
@@ -159,9 +162,10 @@ element-icon {
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
+    font: "JetBrainsMono Nerd Font 36";
     cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+    vertical-align:              0.0;
+    horizontal-align:            0.9;
 }
 
 /*****----- Message -----*****/
@@ -169,6 +173,7 @@ message {
     background-color:            transparent;
     border-color:                @selected;
     border-radius:               10px;
+    margin:                      0px 0px 10px 0px;
     border:                      0px 0px 2px 0px;
 }
 textbox {

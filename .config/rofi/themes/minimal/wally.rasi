@@ -2,7 +2,7 @@
 /*****----- Configuration -----*****/
 configuration {
    modi:                       "drun,run,window";
-    show-icons:                 true;
+    show-icons:                 false;
     display-drun:               "󰘳";
     display-run:                "";
     display-filebrowser:        "FILES";
@@ -19,19 +19,17 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    transparency:                "real";
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       900px;
+    x-offset:                    0px;
+    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
     padding:                     0px;
-    border-radius:               20px;
     cursor:                      "default";
-    border-color:                @light-green;
-    border:                      2px;
     background-color:            @background;
 }
 
@@ -39,57 +37,23 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     20px ;
     background-color:            @background;
-    orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
-}
-
-imagebox {
-    padding:                     20px;
-    background-color:            transparent;
-    background-image:            url("~/.cache/wal/rofi_background.png", width);
-    orientation:                 vertical;
-    border-radius:               20px;
-    children:                    ["dummy"];
-}
-
-listbox {
-    padding:                     0px 0px 0px 20px;
-    background-color:            transparent;
     orientation:                 vertical;
     children:                    [  "inputbar", "message", "listview" ];
-}
-
-dummy {
-    background-color:            transparent;
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     10px;
-    margin:                      0px 0px 10px 0px;
-    border-color:                @light-green;
-    border-radius:               20px;
-    border:                      2px;
     background-color:            @background;
     text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", "entry" ];
-}
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         " ";
-    background-color:            transparent;
-    text-color:                  inherit;
-    padding:                  2px 2px 2px 10px;
+    children:                    [ "entry" ];
 }
 entry {
     enabled:                     true;
     background-color:            transparent;
-    padding:                     2px;
+    padding:                     5px;
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
@@ -127,8 +91,6 @@ listview {
     scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
 
     border-color:                transparent;
     background-color:            transparent;
@@ -139,16 +101,14 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     15px;
-    padding:                     10px;
-    border-radius:               20px;
+    padding:                     5px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element selected {
-   background-color:            @light-yellow;
-   text-color:                  @foreground;
+    background-color:            @light-black;
+   text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;

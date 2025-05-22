@@ -13,7 +13,7 @@ configuration {
 }
 
 * {
-    font: "Iosevka Nerd Font 12";
+    font: "JetBrainsMono Nerd Font 12";
 }
 
 /*****----- Main Window -----*****/
@@ -30,7 +30,7 @@ window {
     padding:                     0px;
     border-radius:               20px;
     cursor:                      "default";
-    border-color:                @light-green;
+    border-color:                @black;
     border:                      2px;
     background-color:            @background;
 }
@@ -58,7 +58,7 @@ listbox {
     padding:                     0px 0px 0px 20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [  "inputbar", "message", "listview" ];
+    children:                    [ "message", "listview" ];
 }
 
 dummy {
@@ -67,11 +67,11 @@ dummy {
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @light-green;
+    border-color:                @cyan;
     border-radius:               20px;
     border:                      2px;
     background-color:            @background;
@@ -121,13 +121,13 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       4;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                true;
+    fixed-height:                false;
     fixed-columns:               true;
 
     border-color:                transparent;
@@ -147,8 +147,8 @@ element {
     cursor:                      pointer;
 }
 element selected {
-   background-color:            @light-yellow;
-   text-color:                  @foreground;
+   background-color:            @cyan;
+   text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;

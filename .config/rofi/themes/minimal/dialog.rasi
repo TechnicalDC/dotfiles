@@ -1,19 +1,12 @@
-@import "~/.cache/wal/colors-rofi-dark-solid.rasi"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
 /*****----- Configuration -----*****/
 configuration {
-   modi:                       "drun,run,window";
-    show-icons:                 true;
-    display-drun:               "󰘳";
-    display-run:                "";
-    display-filebrowser:        "FILES";
-    display-window:             "";
-    drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-    window-format:              "{w} · {c} · {t}";
-    hide-scrollbar: true;
+    show-icons:                 false;
 }
 
 * {
-    font: "Iosevka Nerd Font 12";
+    width: 550;
+    font: "JetBrainsMono Nerd Font 12";
 }
 
 /*****----- Main Window -----*****/
@@ -23,14 +16,16 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       450px;
+    height:                      250px;
+    x-offset:                    0px;
+    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    padding:                     0px;
-    border-radius:               20px;
+    border-radius:               15px;
     cursor:                      "default";
-    border-color:                @light-green;
+    border-color:                @background;
     border:                      2px;
     background-color:            @background;
 }
@@ -39,8 +34,7 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     20px ;
-    background-color:            @background;
+    background-color:            transparent;
     orientation:                 horizontal;
     children:                    [ "imagebox", "listbox" ];
 }
@@ -50,7 +44,7 @@ imagebox {
     background-color:            transparent;
     background-image:            url("~/.cache/wal/rofi_background.png", width);
     orientation:                 vertical;
-    border-radius:               20px;
+    border-radius:               8;
     children:                    ["dummy"];
 }
 
@@ -58,7 +52,7 @@ listbox {
     padding:                     0px 0px 0px 20px;
     background-color:            transparent;
     orientation:                 vertical;
-    children:                    [  "inputbar", "message", "listview" ];
+    children:                    [ "message", "listview" ];
 }
 
 dummy {
@@ -67,14 +61,13 @@ dummy {
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @light-green;
-    border-radius:               20px;
-    border:                      2px;
-    background-color:            @background;
+    border-color:                @background-alt;
+    border-radius:               10px;
+    background-color:            @background-alt;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
@@ -100,28 +93,26 @@ entry {
 mode-switcher{
     enabled:                     true;
     spacing:                     20px;
-    margin:                      140px 20px;
-    orientation:                 vertical;
     background-color:            transparent;
     text-color:                  @foreground;
 }
 button {
-    padding:                     0px 23px 0px 20px;
+    padding:                     15px;
     border-radius:               10px;
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @cyan;
-    text-color:                  @background;
+    background-color:            @yellow;
+    text-color:                  @foreground;
 }
 
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       4;
+    lines:                       7;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -141,14 +132,14 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-radius:               20px;
+    border-radius:               10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element selected {
-   background-color:            @light-yellow;
-   text-color:                  @foreground;
+   background-color:            @cyan;
+   text-color:                  @background;
 }
 element-icon {
     background-color:            transparent;
@@ -167,14 +158,14 @@ element-text {
 /*****----- Message -----*****/
 message {
     background-color:            transparent;
-    border-color:                @selected;
-    border-radius:               10px;
-    border:                      0px 0px 2px 0px;
+    border:                      0px;
 }
 textbox {
     padding:                     15px;
-    border-radius:               5px;
-    background-color:            @background;
+    margin:                      0px 0px 10px 0px;
+    border-color:                @background-alt;
+    border-radius:               10px;
+    background-color:            @background-alt;
     text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.0;

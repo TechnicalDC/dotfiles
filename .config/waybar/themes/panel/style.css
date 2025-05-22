@@ -9,7 +9,7 @@
 
 window#waybar {
    background-color: @background;
-   border-bottom: 2px solid @light_black;
+   border-bottom: 2px solid @light_green;
 }
 
 #custom-appmenuicon,
