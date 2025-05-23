@@ -48,8 +48,8 @@ set fish_cursor_default     block blink
 set fish_cursor_insert      block blink
 set fish_cursor_replace_one block blink
 set fish_cursor_visual      block
-set fish_color_command      brgreen
-set fish_pager_color_prefix brgreen
+set fish_color_command      green
+set fish_pager_color_prefix green
 set fish_pager_color_selected_background -r
 
 fish_vi_key_bindings
@@ -63,20 +63,24 @@ zoxide init fish | source
 
 function fish_prompt
     set -l fg_indicator (test $status -eq 0; and echo green; or echo red)
-    set -l bg0 "#1d2021"
-    set -l bg1 "#282828"
-    set -l bg2 "#32302f"
-    set -l bg3 "#504945"
-    set -l bg_color '#282828'
-    set -l fg_color '#D4BE98'
-    set -l color (set_color -b $bg1 $fg_color)
+    set -l bg0 black
+    set -l bg1 brgreen
+    set -l bg2 bryellow
+    set -l bg3 brblue
+    set -l bg_color black
+    set -l fg_color white
+    set -l color (set_color -b brgreen $fg_color)
     set -l color1 (set_color -b $bg2 $fg_color)
-    set -l indicator_color (set_color -b $bg1 $bg3)
+    set -l indicator_color (set_color -b brgreen $bg3)
     set -l dir (basename (prompt_pwd))
     set -l branch (fish_git_prompt)
 
+	 if test -n "$branch"
+		 set branch $branch ' '
+	 end
+
     echo ""
-    echo -n -s $indicator_color '█ ' $color $dir $color1 $branch_icon $color $branch ' ' (set_color normal) ' '
+    echo -n -s $indicator_color '█ ' $color $dir ' ' $color1 $branch (set_color normal) ' '
 end
 
 function fish_mode_prompt
