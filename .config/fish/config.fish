@@ -63,7 +63,7 @@ zoxide init fish | source
 function fish_prompt
     set -l dir (string trim (basename (prompt_pwd)))
     set -l branch (string trim (fish_git_prompt))
-	 echo (set_color blue) $dir (set_color green)$branch(set_color normal) "󰘧 "
+	 echo (set_color blue)$dir (set_color green)$branch(set_color normal) "󰘧 "
 end
 
 function fish_mode_prompt
