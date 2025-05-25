@@ -3,7 +3,7 @@ set --export SHELL /usr/bin/fish
 set --export ANDROID_HOME $XDG_DATA_HOME/android
 set --export EDITOR "nvim"
 set --export VISUAL "nvim"
-set --export TERMINAL "kitty"
+set --export TERMINAL "wezterm"
 set --export PGER "less"
 set --export MANPAGER "nvim +Man!"
 set --export BROWSER "qutebrowser"
@@ -61,9 +61,9 @@ source "$HOME/.config/nvim/extras/mini.fish"
 zoxide init fish | source
 
 function fish_prompt
-    set -l dir (basename (prompt_pwd))
-    set -l branch (fish_git_prompt)
-	 echo $dir $branch "󰘧 "
+    set -l dir (string trim (basename (prompt_pwd)))
+    set -l branch (string trim (fish_git_prompt))
+	 echo (set_color blue) $dir (set_color green)$branch(set_color normal) "󰘧 "
 end
 
 function fish_mode_prompt
