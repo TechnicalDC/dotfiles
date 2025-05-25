@@ -27,4 +27,3 @@ set render-loading-fg       "{foreground}"
 set highlight-color         "{color6}"
 set highlight-fg            "{background}"
 set highlight-active-color  "{color5}"
-

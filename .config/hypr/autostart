@@ -2,9 +2,9 @@
 
 # swww-daemon &
 hyprpaper &
-waybar --config ~/.config/waybar/themes/panel/config.jsonc -s ~/.config/waybar/themes/panel/style.css &
+waybar --config ~/.config/waybar/themes/minimal/config.jsonc -s ~/.config/waybar/themes/minimal/style.css &
 wally -r &
 mpd &
 nm-applet &
-swaync --config ~/.config/swaync/themes/solid/config.json --style ~/.config/swaync/themes/solid/style.css &
+swaync --config ~/.config/swaync/themes/minimal/config.json --style ~/.config/swaync/themes/minimal/style.css &
 kdeconnect-indicator &

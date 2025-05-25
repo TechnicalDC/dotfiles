@@ -1,0 +1,188 @@
+@import url("/home/dilip/.config/nvim/extras/mini.css");
+
+* {
+    font-family: "Iosevka Nerd Font";
+    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
+    font-size: 16px;
+}
+
+window#waybar {
+   background-color: @bg;
+}
+
+#custom-appmenuicon,
+#custom-notifications,
+#custom-powermenuicon,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#backlight-slider
+#tray,
+#mode,
+#idle_inhibitor,
+#user,
+#taskbar,
+#power-profiles-daemon,
+#mpd {
+    background: transparent;
+    color: @fg;
+}
+
+#custom-notifications {
+    padding: 6px 12px;
+    padding-right: 17px;
+}
+
+#backlight, #pulseaudio {
+    padding: 6px;
+    padding-right: 10px;
+}
+
+#workspaces{
+   background: transparent;
+   padding: 5px;
+   margin-right: 0px;
+}
+#workspaces button {
+   color: @fg_mid2;
+   padding: 0px;
+   margin: 0px 12px;
+}
+#workspaces button.empty{
+   color: @fg;
+}
+#workspaces button.active{
+   color: @fg;
+}
+#workspaces button:hover {
+   color: @foreground;
+}
+
+#clock {
+    padding: 0px 10px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+#battery {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#battery.critical:not(.charging) {
+   color: @red;
+}
+
+label:focus {
+
+}
+
+#cpu {
+    background-size: 300% 300%;
+    animation: gradient 20s ease infinite;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#memory {
+    font-weight: bolder;
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network{
+}
+
+#network.disabled{
+    background-color: @fg_mid2;
+}
+
+#network.disconnected{
+   color: @red;
+   padding-top: 3px;
+   padding-right: 11px;
+}
+
+#network.linked, #network.wifi{
+}
+
+#network.ethernet{
+}
+
+#temperature {
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#tray {
+	margin-right: 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+#idle_inhibitor {
+}
+
+#idle_inhibitor.activated {
+    color: #2d3436;
+}
+
+#mpd { }
+
+#mpd.disconnected {
+    color: @red;
+}
+
+#mpd.playing {
+}
+
+#mpd.stopped { }
+
+#mpd.paused { }
+
+#language {
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#tooltip {
+}
+#tooltip label {
+}
+
