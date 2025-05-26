@@ -5,7 +5,7 @@ local action = wezterm.action
 local mux = wezterm.mux
 local resize_step = 5
 local theme = require("weztheme")
-local colors = require("colors")
+local colors = require("mini")
 
 local direction_keys = {
    Left = 'h',
@@ -145,8 +145,8 @@ wezterm.on('update-right-status', function(window, pane)
 
    -- Left status (left of the tab line)
    window:set_left_status(wezterm.format({
-      { Background = { Color = colors.green } },
-      { Foreground = { Color = colors.bg } },
+      { Background = { Color = colors.bg_mid } },
+      { Foreground = { Color = colors.fg } },
       { Text = " " },
       { Text = stat },
       { Text = " " },
@@ -154,27 +154,9 @@ wezterm.on('update-right-status', function(window, pane)
    }))
    -- Make it italic and underlined
    window:set_right_status(wezterm.format {
-      { Background = { Color = colors.bg1 } },
-      { Foreground = { Color = colors.purple } },
       { Text = " 󰍹 " },
-      "ResetAttributes",
       { Text = hostname },
-      { Text = "  "  },
-      { Foreground = { Color = colors.green } },
-      { Attribute = { Italic = false } },
-      { Text = battery_icon },
-      "ResetAttributes",
-      { Text = battery_status },
-      { Foreground = { Color = colors.yellow } },
-      { Text = charging_status },
       { Text = " "  },
-      { Foreground = { Color = colors.blue } },
-      { Text = "  " },
-      "ResetAttributes",
-      { Text = time  },
-      { Text = " "  },
-      { Foreground = { Color = colors.green } },
-      { Text = "█"  },
       "ResetAttributes",
    })
 end)
