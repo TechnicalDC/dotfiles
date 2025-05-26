@@ -1,16 +1,16 @@
 @import "~/.config/nvim/extras/mini.rasi"
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,window";
+	modi:                       "drun";
 	show-icons:                 false;
-	display-drun:               "󰘳";
-	display-run:                "";
-	display-filebrowser:        "FILES";
-	display-window:             "";
+	display-drun:               "drun";
+	display-run:                "run";
+	display-filebrowser:        "files";
+	display-window:             "window";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	drun-display-actions:       true;
 	window-format:              "{c} · {t}";
-	hide-scrollbar:				 false;
+	hide-scrollbar:				 true;
 }
 
 * {
@@ -20,12 +20,12 @@ configuration {
 /*****----- Main Window -----*****/
 window {
 	/* properties for window widget */
-	location:                    center;
+	location:                    north;
 	anchor:                      center;
 	fullscreen:                  false;
-	width:                       900px;
+	width:                       700px;
 	x-offset:                    0px;
-	y-offset:                    0px;
+	y-offset:                    10px;
 
 	/* properties for all widgets */
 	enabled:                     true;
@@ -37,10 +37,10 @@ window {
 /*****----- Main Box -----*****/
 mainbox {
 	enabled:                     true;
-	spacing:                     0px;
+	spacing:                     20px;
 	background-color:            @background;
 	orientation:                 vertical;
-	children:                    [  "inputbar", "message", "listview" ];
+	children:                    [ "inputbar", "message", "listview" ];
 }
 
 /*****----- Inputbar -----*****/
@@ -49,7 +49,13 @@ inputbar {
 	spacing:                     10px;
 	background-color:            @background;
 	text-color:                  @foreground;
-	children:                    [ "entry" ];
+	children:                    [ "prompt", "entry" ];
+}
+prompt {
+	enabled:                     true;
+	background-color:            @promptbg;
+	padding:                     5px 10px;
+	text-color:                  @foreground;
 }
 entry {
 	enabled:                     true;
@@ -89,9 +95,10 @@ listview {
 	lines:                       10;
 	cycle:                       true;
 	dynamic:                     true;
-	scrollbar:                   true;
+	scrollbar:                   false;
 	layout:                      vertical;
 	reverse:                     false;
+	fixed-height:                false;
 
 	border-color:                transparent;
 	background-color:            transparent;
@@ -102,7 +109,7 @@ listview {
 /*****----- Elements -----*****/
 element {
 	enabled:                     true;
-	padding:                     5px;
+	padding:                     5px 10px;
 	background-color:            transparent;
 	text-color:                  @foreground;
 	cursor:                      pointer;

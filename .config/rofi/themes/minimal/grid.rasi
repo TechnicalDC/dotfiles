@@ -12,12 +12,12 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    location:                    center;
+	location:                    north;
     anchor:                      center;
     fullscreen:                  false;
     width:                       1000px;
     x-offset:                    0px;
-    y-offset:                    0px;
+	y-offset:                    10px;
 
     /* properties for all widgets */
     enabled:                     true;
@@ -29,7 +29,7 @@ window {
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     0px;
+	spacing:                     20px;
     background-color:            @background;
     orientation:                 vertical;
     children:                    [ "inputbar", "message", "listview" ];
@@ -41,7 +41,13 @@ inputbar {
     spacing:                     10px;
     background-color:            @background;
     text-color:                  @foreground;
-    children:                    [ "entry" ];
+	children:                    [ "prompt", "entry" ];
+}
+prompt {
+	enabled:                     true;
+	background-color:            @promptbg;
+	padding:                     5px 10px;
+	text-color:                  @foreground;
 }
 entry {
     enabled:                     true;
