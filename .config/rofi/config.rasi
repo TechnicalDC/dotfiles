@@ -5,6 +5,9 @@ configuration{
     drun-display-format: "{icon} {name}";
     drun-display-actions: true;
     location: 0;
+	 terminal: "wezterm";
+	 ssh-client: "ssh";
+	 ssh-command: "{terminal} -e {ssh-client} [-p {port}]";
     disable-history: false;
     display-drun: " Apps ";
     display-run: " Commands ";
@@ -13,4 +16,4 @@ configuration{
     display-filebrowser: " File Browser ";
     sidebar-mode: false;
 }
-@theme "/home/dilip/.config/rofi/themes/minimal/launcher.rasi"
+@theme "/home/dilip/.config/rofi/themes/minimal/list.rasi"
