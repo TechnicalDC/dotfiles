@@ -1,69 +1,32 @@
-@import "~/.cache/wal/colors-rofi-dark-solid.rasi"
-/*****----- Configuration -----*****/
-configuration {
-	modi:                       "drun";
-    show-icons:                 true;
-    display-drun:               "󰘳";
-    display-run:                "";
-    display-filebrowser:        "FILES";
-    display-window:             "";
-    drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-    window-format:              "{w} · {c} · {t}";
-    hide-scrollbar: true;
-}
+@import "~/.config/nvim/extras/mini.rasi"
 
 * {
-    font: "JetBrainsMono Nerd Font 12";
+    font: "Iosevka Nerd Font 14";
 }
 
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    transparency:                "real";
-    location:                    east;
+    location:                    center;
     /*anchor:                      center;*/
     fullscreen:                  false;
-    width:                       200px;
+    width:                       600px;
     x-offset:                    0px;
-    y-offset:                    100px;
+    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
     padding:                     20px;
     cursor:                      "default";
-    background-color:            transparent;
+    background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    border-radius:               20px;
-    border-color:                @black;
-    border:                      2px;
     spacing:                     0px;
     background-color:            @background;
-    orientation:                 horizontal;
-    children:                    [ "listbox" ];
-}
-
-imagebox {
-    padding:                     20px;
-    background-color:            transparent;
-    background-image:            url("~/.cache/wal/rofi_background.png", width);
-    orientation:                 vertical;
-    border-radius:               0;
-    children:                    ["dummy"];
-}
-
-listbox {
-    padding:                     20px;
-    background-color:            transparent;
-    orientation:                 vertical;
     children:                    [ "message", "listview" ];
-}
-
-dummy {
-    background-color:            transparent;
 }
 
 /*****----- Inputbar -----*****/
@@ -78,23 +41,6 @@ inputbar {
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
-}
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         " ";
-    background-color:            transparent;
-    text-color:                  inherit;
-    padding:                  2px 2px 2px 10px;
-}
-entry {
-    enabled:                     true;
-    background-color:            transparent;
-    padding:                     2px;
-    text-color:                  inherit;
-    cursor:                      text;
-    placeholder:                 "Search";
-    placeholder-color:           inherit;
 }
 
 /*****----- Mode Switcher -----*****/
@@ -128,8 +74,6 @@ listview {
     scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
 
     border-color:                transparent;
     background-color:            transparent;
@@ -140,17 +84,14 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     15px;
-    padding:                     20px;
-    border-radius:               10px;
-    border:                      0px;
+    padding:                     5px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
 element selected {
-   background-color:            @cyan;
-   text-color:                  @background;
+	background-color:            @selected;
+   text-color:                  @foreground;
 }
 element-icon {
     background-color:            transparent;
@@ -161,10 +102,9 @@ element-icon {
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
-    font: "JetBrainsMono Nerd Font 36";
     cursor:                      inherit;
-    vertical-align:              0.0;
-    horizontal-align:            0.9;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
 }
 
 /*****----- Message -----*****/

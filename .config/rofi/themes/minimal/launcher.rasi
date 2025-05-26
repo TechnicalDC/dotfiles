@@ -1,148 +1,156 @@
-@import "~/.cache/wal/colors-rofi-dark-solid.rasi"
+@import "~/.config/nvim/extras/mini.rasi"
 /*****----- Configuration -----*****/
 configuration {
-   modi:                       "drun,run,window";
-    show-icons:                 false;
-    display-drun:               "󰘳";
-    display-run:                "";
-    display-filebrowser:        "FILES";
-    display-window:             "";
-    drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-    drun-display-actions:       true;
-    window-format:              "{w} · {c} · {t}";
-    hide-scrollbar: true;
+	modi:                       "drun,run,window";
+	show-icons:                 false;
+	display-drun:               "󰘳";
+	display-run:                "";
+	display-filebrowser:        "FILES";
+	display-window:             "";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	drun-display-actions:       true;
+	window-format:              "{c} · {t}";
+	hide-scrollbar:				 false;
 }
 
 * {
-    font: "Iosevka Nerd Font 14";
+	font: "Iosevka Nerd Font 14";
 }
 
 /*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
-    location:                    center;
-    anchor:                      center;
-    fullscreen:                  false;
-    width:                       900px;
-    x-offset:                    0px;
-    y-offset:                    0px;
+	/* properties for window widget */
+	location:                    center;
+	anchor:                      center;
+	fullscreen:                  false;
+	width:                       900px;
+	x-offset:                    0px;
+	y-offset:                    0px;
 
-    /* properties for all widgets */
-    enabled:                     true;
-    padding:                     0px;
-    cursor:                      "default";
-    background-color:            @background;
+	/* properties for all widgets */
+	enabled:                     true;
+	padding:                     20px;
+	cursor:                      "default";
+	background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
-    enabled:                     true;
-    spacing:                     0px;
-    background-color:            @background;
-    orientation:                 vertical;
-    children:                    [  "inputbar", "message", "listview" ];
+	enabled:                     true;
+	spacing:                     0px;
+	background-color:            @background;
+	orientation:                 vertical;
+	children:                    [  "inputbar", "message", "listview" ];
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
-    spacing:                     10px;
-    background-color:            @background;
-    text-color:                  @foreground;
-    children:                    [ "entry" ];
+	enabled:                     true;
+	spacing:                     10px;
+	background-color:            @background;
+	text-color:                  @foreground;
+	children:                    [ "entry" ];
 }
 entry {
-    enabled:                     true;
-    background-color:            transparent;
-    padding:                     5px;
-    text-color:                  inherit;
-    cursor:                      text;
-    placeholder:                 "Search";
-    placeholder-color:           inherit;
+	enabled:                     true;
+	background-color:            transparent;
+	padding:                     5px;
+	text-color:                  inherit;
+	cursor:                      text;
+	placeholder:                 "Search";
+	placeholder-color:           inherit;
 }
 
 /*****----- Mode Switcher -----*****/
 mode-switcher{
-    enabled:                     true;
-    spacing:                     20px;
-    margin:                      130px 20px;
-    orientation:                 vertical;
-    background-color:            transparent;
-    text-color:                  @foreground;
+	enabled:                     true;
+	spacing:                     20px;
+	margin:                      130px 20px;
+	orientation:                 vertical;
+	background-color:            transparent;
+	text-color:                  @foreground;
 }
 button {
-    padding:                     0px 23px 0px 20px;
-    border-radius:               20px;
-    background-color:            @background;
-    text-color:                  inherit;
-    cursor:                      pointer;
+	padding:                     0px 23px 0px 20px;
+	border-radius:               20px;
+	background-color:            @background;
+	text-color:                  inherit;
+	cursor:                      pointer;
 }
 button selected {
-    background-color:            @cyan;
-    text-color:                  @background;
+	background-color:            @selected;
+	text-color:                  @background;
 }
 
 /*****----- Listview -----*****/
 listview {
-    enabled:                     true;
-    columns:                     1;
-    lines:                       10;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
+	enabled:                     true;
+	columns:                     1;
+	lines:                       10;
+	cycle:                       true;
+	dynamic:                     true;
+	scrollbar:                   true;
+	layout:                      vertical;
+	reverse:                     false;
 
-    border-color:                transparent;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      "default";
+	border-color:                transparent;
+	background-color:            transparent;
+	text-color:                  @foreground;
+	cursor:                      "default";
 }
 
 /*****----- Elements -----*****/
 element {
-    enabled:                     true;
-    padding:                     5px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      pointer;
+	enabled:                     true;
+	padding:                     5px;
+	background-color:            transparent;
+	text-color:                  @foreground;
+	cursor:                      pointer;
 }
 element selected {
-    background-color:            @light-black;
-    text-color:                  @background;
+	background-color:            @selected;
+	text-color:                  @foreground;
 }
 element-icon {
-    background-color:            transparent;
-    text-color:                  inherit;
-    size:                        32px;
-    cursor:                      inherit;
+	background-color:            transparent;
+	text-color:                  inherit;
+	size:                        32px;
+	cursor:                      inherit;
 }
 element-text {
-    background-color:            transparent;
-    text-color:                  inherit;
-    cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+	background-color:            transparent;
+	text-color:                  inherit;
+	cursor:                      inherit;
+	vertical-align:              0.5;
+	horizontal-align:            0.0;
 }
 
 /*****----- Message -----*****/
 message {
-    background-color:            transparent;
-    border-color:                @selected;
-    border-radius:               10px;
-    border:                      0px 0px 2px 0px;
+	background-color:            transparent;
+	border-color:                @selected;
+	border-radius:               10px;
+	border:                      0px 0px 2px 0px;
 }
 textbox {
-    padding:                     15px;
-    border-radius:               5px;
-    background-color:            @background;
+	padding:                     15px;
+	border-radius:               5px;
+	background-color:            @background;
 
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
+	vertical-align:              0.5;
+	horizontal-align:            0.0;
 }
 error-message {
-    padding:                     15px;
-    border-radius:               15px;
-    background-color:            @background;
-    text-color:                  @foreground;
+	padding:                     15px;
+	border-radius:               15px;
+	background-color:            @background;
+	text-color:                  @foreground;
+}
+
+scrollbar {
+	background-color: @background;
+	handle-width: 10px;
+	handle-color: @selected;
+	border-color: @background;
+	handle-rounded-corners: 0px;
 }

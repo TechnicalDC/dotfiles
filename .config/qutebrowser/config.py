@@ -4,63 +4,9 @@
 # |__   |_____||____|_____||_____|__| |_____|________|_____|_____|__|
 #    |__|
 
-
+from colors import mini
 import os
 import subprocess
-import catppuccin
-
-gruvbox_dark = {
-    "red"       : "#ea6962",
-    "orange"    : "#e78a4e",
-    "yellow"    : "#d8a657",
-    "green"     : "#a9b665",
-    "aqua"      : "#89b482",
-    "blue"      : "#7daea3",
-    "purple"    : "#d3869b",
-    "bg_yellow" : "#d8a657",
-    "bg_red"    : "#ea6962",
-    "bg_green"  : "#a9b665",
-    "grey0"     : "#7c6f64",
-    "grey1"     : "#928374",
-    "grey2"     : "#a89984",
-    "fg0"       : "#d4be98",
-    "fg1"       : "#ddc7a1",
-    "bg0"       : "#282828",
-    "bg1"       : "#32302f",
-    "bg2"       : "#32302f",
-    "bg3"       : "#45403d",
-    "bg4"       : "#45403d",
-    "bg5"       : "#5a524c",
-  }
-
-catppuccin_colors = {
-   "rosewater" : "#f4dbd6",
-   "flamingo"  : "#f0c6c6",
-   "pink"      : "#f5bde6",
-   "mauve"     : "#c6a0f6",
-   "red"       : "#ed8796",
-   "maroon"    : "#ee99a0",
-   "peach"     : "#f5a97f",
-   "yellow"    : "#eed49f",
-   "green"     : "#a6da95",
-   "teal"      : "#8bd5ca",
-   "sky"       : "#91d7e3",
-   "sapphire"  : "#7dc4e4",
-   "blue"      : "#8aadf4",
-   "lavender"  : "#b7bdf8",
-   "text"      : "#cad3f5",
-   "subtext1"  : "#b8c0e0",
-   "subtext0"  : "#a5adcb",
-   "overlay2"  : "#939ab7",
-   "overlay1"  : "#8087a2",
-   "overlay0"  : "#6e738d",
-   "surface2"  : "#5b6078",
-   "surface1"  : "#494d64",
-   "surface0"  : "#363a4f",
-   "base"      : "#24273a",
-   "mantle"    : "#1e2030",
-   "crust"     : "#181926"
-}
 
 #################
 # MAIN SETTINGS #
@@ -68,11 +14,6 @@ catppuccin_colors = {
 
 # load your autoconfig, use this, if the rest of your config is empty!
 config.load_autoconfig()
-
-# set the flavor you'd like to use
-# valid options are 'mocha', 'macchiato', 'frappe', and 'latte'
-# last argument (optional, default is False): enable the plain look for the menu rows
-catppuccin.setup(c, 'macchiato', False)
 
 c.aliases = {
     'q': 'close',
@@ -88,8 +29,8 @@ c.url.searchengines = {
         'yt': 'https://www.youtube.com/results?search_query={}',
         'amz':'https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={}'
 }
-c.url.default_page = '/home/dilip/.config/qutebrowser/fluidity/index.html'
-c.url.start_pages = '/home/dilip/.config/qutebrowser/fluidity/index.html'
+# c.url.default_page = '/home/dilip/.config/qutebrowser/fluidity/index.html'
+# c.url.start_pages = '/home/dilip/.config/qutebrowser/fluidity/index.html'
 c.content.images = True
 c.content.javascript.enabled = True
 c.content.autoplay = False
@@ -149,92 +90,92 @@ c.statusbar.padding = {"bottom":1, "left":1, "right":1, "top":1}
 # config.set("content.user_stylesheets","~/.config/qutebrowser/stylesheets/wal-duckduckgo.com.css")
 
 # --- Webpages ---
-c.colors.webpage.bg = gruvbox_dark["bg0"]
+c.colors.webpage.bg = mini["bg"]
 
 c.colors.webpage.darkmode.enabled = True
 
 # --- Context menu ---
-c.colors.contextmenu.menu.bg     = gruvbox_dark["bg0"]
-c.colors.contextmenu.menu.fg     = gruvbox_dark["fg0"]
-c.colors.contextmenu.selected.bg = gruvbox_dark["bg2"]
-c.colors.contextmenu.selected.fg = gruvbox_dark["fg0"]
+c.colors.contextmenu.menu.bg     = mini["bg_edge"]
+c.colors.contextmenu.menu.fg     = mini["fg"]
+c.colors.contextmenu.selected.bg = mini["bg_mid"]
+c.colors.contextmenu.selected.fg = mini["fg"]
 
 # --- Completions ---
-c.colors.completion.fg                          = gruvbox_dark["fg0"]
-c.colors.completion.odd.bg                      = gruvbox_dark["bg0"]
-c.colors.completion.even.bg                     = gruvbox_dark["bg2"]
-c.colors.completion.category.fg                 = gruvbox_dark["bg0"]
-c.colors.completion.category.bg                 = gruvbox_dark["purple"]
-c.colors.completion.category.border.top         = gruvbox_dark["purple"]
-c.colors.completion.category.border.bottom      = gruvbox_dark["bg0"]
-c.colors.completion.item.selected.fg            = gruvbox_dark["bg0"]
-c.colors.completion.item.selected.bg            = gruvbox_dark["fg0"]
-c.colors.completion.item.selected.border.top    = gruvbox_dark["bg2"]
-c.colors.completion.item.selected.border.bottom = gruvbox_dark["bg2"]
-c.colors.completion.item.selected.match.fg      = gruvbox_dark["bg0"]
-c.colors.completion.match.fg                    = gruvbox_dark["green"]
-c.colors.completion.scrollbar.fg                = gruvbox_dark["bg3"]
-c.colors.completion.scrollbar.bg                = gruvbox_dark["bg0"]
+c.colors.completion.fg                          = mini["fg"]
+c.colors.completion.odd.bg                      = mini["bg_edge"]
+c.colors.completion.even.bg                     = mini["bg_edge"]
+c.colors.completion.category.fg                 = mini["fg"]
+c.colors.completion.category.bg                 = mini["bg_mid2"]
+c.colors.completion.category.border.top         = mini["bg_mid2"]
+c.colors.completion.category.border.bottom      = mini["bg"]
+c.colors.completion.item.selected.fg            = mini["fg"]
+c.colors.completion.item.selected.bg            = mini["bg_mid"]
+c.colors.completion.item.selected.border.top    = mini["bg_mid"]
+c.colors.completion.item.selected.border.bottom = mini["bg_mid"]
+c.colors.completion.item.selected.match.fg      = mini["fg_edge"]
+c.colors.completion.match.fg                    = mini["green"]
+c.colors.completion.scrollbar.fg                = mini["bg_mid2"]
+c.colors.completion.scrollbar.bg                = mini["bg"]
 
 # --- Downloads ---
-c.colors.downloads.bar.bg = gruvbox_dark["bg2"]
-c.colors.downloads.error.bg = gruvbox_dark["red"]
+c.colors.downloads.bar.bg = mini["bg"]
+c.colors.downloads.error.bg = mini["red"]
 
 # --- Hints ---
-c.colors.hints.bg       = gruvbox_dark["yellow"]
-c.colors.hints.fg       = gruvbox_dark["bg0"]
-c.colors.hints.match.fg = gruvbox_dark["red"]
+c.colors.hints.bg       = mini["yellow"]
+c.colors.hints.fg       = mini["bg"]
+c.colors.hints.match.fg = mini["red"]
 
 # --- Messages ---
-c.colors.messages.info.bg    = gruvbox_dark["bg3"]
-c.colors.messages.info.fg    = gruvbox_dark["fg0"]
-c.colors.messages.error.bg   = gruvbox_dark["red"]
-c.colors.messages.error.fg   = gruvbox_dark["bg0"]
-c.colors.messages.warning.bg = gruvbox_dark["orange"]
-c.colors.messages.warning.fg = gruvbox_dark["bg0"]
+c.colors.messages.info.bg    = mini["bg"]
+c.colors.messages.info.fg    = mini["fg"]
+c.colors.messages.error.bg   = mini["red"]
+c.colors.messages.error.fg   = mini["fg"]
+c.colors.messages.warning.bg = mini["orange"]
+c.colors.messages.warning.fg = mini["fg"]
 
 # --- Prompts ---
-c.colors.prompts.bg          = gruvbox_dark["bg0"]
-c.colors.prompts.selected.bg = gruvbox_dark["bg2"]
-c.colors.prompts.fg          = gruvbox_dark["fg0"]
+c.colors.prompts.bg          = mini["bg"]
+c.colors.prompts.selected.bg = mini["bg_mid"]
+c.colors.prompts.fg          = mini["fg"]
 
 # --- Statusbar ---
-c.colors.statusbar.normal.bg          = gruvbox_dark["bg0"]
-c.colors.statusbar.normal.fg          = gruvbox_dark["fg0"]
-c.colors.statusbar.insert.fg          = gruvbox_dark["bg0"]
-c.colors.statusbar.insert.bg          = gruvbox_dark["green"]
-c.colors.statusbar.passthrough.bg     = gruvbox_dark["bg0"]
-c.colors.statusbar.command.bg         = gruvbox_dark["bg2"]
-c.colors.statusbar.command.fg         = gruvbox_dark["fg0"]
-c.colors.statusbar.command.private.bg = gruvbox_dark["bg2"]
-c.colors.statusbar.command.private.fg = gruvbox_dark["fg0"]
-c.colors.statusbar.private.bg         = gruvbox_dark["yellow"]
-c.colors.statusbar.private.fg         = gruvbox_dark["bg0"]
-c.colors.statusbar.url.warn.fg        = gruvbox_dark["orange"]
+c.colors.statusbar.normal.bg          = mini["bg"]
+c.colors.statusbar.normal.fg          = mini["fg"]
+c.colors.statusbar.insert.fg          = mini["bg"]
+c.colors.statusbar.insert.bg          = mini["green"]
+c.colors.statusbar.passthrough.bg     = mini["bg"]
+c.colors.statusbar.command.bg         = mini["bg"]
+c.colors.statusbar.command.fg         = mini["fg"]
+c.colors.statusbar.command.private.bg = mini["bg"]
+c.colors.statusbar.command.private.fg = mini["fg"]
+c.colors.statusbar.private.bg         = mini["yellow"]
+c.colors.statusbar.private.fg         = mini["bg"]
+c.colors.statusbar.url.warn.fg        = mini["orange"]
 
 # --- Tabs ---
-c.colors.tabs.bar.bg                  = gruvbox_dark["bg0"]
-c.colors.tabs.odd.bg                  = gruvbox_dark["bg0"]
-c.colors.tabs.even.bg                 = gruvbox_dark["bg0"]
-c.colors.tabs.selected.odd.bg         = gruvbox_dark["bg2"]
-c.colors.tabs.selected.odd.fg         = gruvbox_dark["fg0"]
-c.colors.tabs.selected.even.bg        = gruvbox_dark["bg2"]
-c.colors.tabs.selected.even.fg        = gruvbox_dark["fg0"]
-c.colors.tabs.pinned.odd.bg           = gruvbox_dark["bg0"]
-c.colors.tabs.pinned.even.bg          = gruvbox_dark["bg0"]
-c.colors.tabs.pinned.selected.odd.bg  = gruvbox_dark["bg2"]
-c.colors.tabs.pinned.selected.even.bg = gruvbox_dark["bg2"]
+c.colors.tabs.bar.bg                  = mini["bg"]
+c.colors.tabs.odd.bg                  = mini["bg"]
+c.colors.tabs.even.bg                 = mini["bg"]
+c.colors.tabs.selected.odd.bg         = mini["bg"]
+c.colors.tabs.selected.odd.fg         = mini["fg"]
+c.colors.tabs.selected.even.bg        = mini["bg"]
+c.colors.tabs.selected.even.fg        = mini["fg"]
+c.colors.tabs.pinned.odd.bg           = mini["bg"]
+c.colors.tabs.pinned.even.bg          = mini["bg"]
+c.colors.tabs.pinned.selected.odd.bg  = mini["bg"]
+c.colors.tabs.pinned.selected.even.bg = mini["bg"]
 
 ################
 # FONT SETTING #
 ################
-c.fonts.default_family   = '16px "Iosevka Nerd Font"'
-c.fonts.default_size     = '16px'
-c.fonts.contextmenu      = '16px "Iosevka Nerd Font"'
-c.fonts.completion.entry = '16px "Iosevka Nerd Font"'    # Font used in the completion widget.
-c.fonts.debug_console    = '16px "Iosevka Nerd Font"'       # Font used for the debugging console.
+c.fonts.default_family   = '20px "Iosevka Nerd Font"'
+c.fonts.default_size     = '20px'
+c.fonts.contextmenu      = '20px "Iosevka Nerd Font"'
+c.fonts.completion.entry = '20px "Iosevka Nerd Font"'    # Font used in the completion widget.
+c.fonts.debug_console    = '20px "Iosevka Nerd Font"'       # Font used for the debugging console.
 c.fonts.prompts          = 'default_size Iosevka Nerd Font'       # Font used for prompts.
-c.fonts.statusbar        = '16px "Iosevka Nerd Font"'           # Font used in the statusbar.
+c.fonts.statusbar        = '20px "Iosevka Nerd Font"'           # Font used in the statusbar.
 
 
 ################################

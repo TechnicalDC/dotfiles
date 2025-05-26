@@ -3,7 +3,7 @@ set --export SHELL /usr/bin/fish
 set --export ANDROID_HOME $XDG_DATA_HOME/android
 set --export EDITOR "nvim"
 set --export VISUAL "nvim"
-set --export TERMINAL "kitty"
+set --export TERMINAL "wezterm"
 set --export PGER "less"
 set --export MANPAGER "nvim +Man!"
 set --export BROWSER "qutebrowser"
@@ -48,35 +48,22 @@ set fish_cursor_default     block blink
 set fish_cursor_insert      block blink
 set fish_cursor_replace_one block blink
 set fish_cursor_visual      block
-set fish_color_command      brgreen
-set fish_pager_color_prefix brgreen
+set fish_color_command      green
+set fish_pager_color_prefix green
 set fish_pager_color_selected_background -r
 
 fish_vi_key_bindings
 
 source "$HOME/.config/fish/abbreviations.fish"
 source "$HOME/.cache/wal/colors-fzf.fish"
+source "$HOME/.config/nvim/extras/mini.fish"
 
-# Custom header
 zoxide init fish | source
-# colorscript -e panes
 
 function fish_prompt
-    set -l fg_indicator (test $status -eq 0; and echo green; or echo red)
-    set -l bg0 "#1d2021"
-    set -l bg1 "#282828"
-    set -l bg2 "#32302f"
-    set -l bg3 "#504945"
-    set -l bg_color '#282828'
-    set -l fg_color '#D4BE98'
-    set -l color (set_color -b $bg1 $fg_color)
-    set -l color1 (set_color -b $bg2 $fg_color)
-    set -l indicator_color (set_color -b $bg1 $bg3)
-    set -l dir (basename (prompt_pwd))
-    set -l branch (fish_git_prompt)
-
-    echo ""
-    echo -n -s $indicator_color '█ ' $color $dir $color1 $branch_icon $color $branch ' ' (set_color normal) ' '
+    set -l dir (string trim (basename (prompt_pwd)))
+    set -l branch (string trim (fish_git_prompt))
+	 echo (set_color blue)$dir (set_color green)$branch(set_color normal) "󰘧 "
 end
 
 function fish_mode_prompt

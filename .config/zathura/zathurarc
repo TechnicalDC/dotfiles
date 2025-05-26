@@ -1,6 +1,6 @@
-include  /home/dilip/.cache/wal/colors-zathura
+include  /home/dilip/.config/nvim/extras/mini-zathura
 
-set font "Iosevka Nerd Font 12"
+set font "Iosevka Nerd Font 14"
 
 # settings
 set window-height         700

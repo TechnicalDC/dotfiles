@@ -68,4 +68,26 @@ colorschemes.gruvbox_hard = {
    light_white  = "#ddc7a1",
 }
 
+colorschemes.minihues = {
+   bg           = "#1d2021",
+   fg           = "#c0c8cc",
+
+   black        = "#1d2021",
+   red          = "#f7b2af",
+   green        = "#9bd7b2",
+   yellow       = "#eabd8f",
+   blue         = "#c7bef7",
+   purple       = "#e9b3da",
+   cyan         = "#85d7dd",
+   white        = "#c0c8cc",
+   grey         = "#060808",
+   light_red    = "#121516",
+   light_green  = "#363a3b",
+   light_yellow = "#515556",
+   light_blue   = "#858c90",
+   light_purple = "#a2aaae",
+   light_cyan   = "#d2dade",
+   light_white  = "#e5eef2",
+}
+
 return colorschemes
