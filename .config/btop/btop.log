@@ -29,3 +29,11 @@
 2025/05/24 (23:51:10) | ===> btop++ v.1.4.0
 2025/05/24 (23:51:10) | WARNING: Intel GPU: Failed to initialize PMU
 2025/05/24 (23:51:44) | WARNING: Failed to join _runner thread on exit!
+
+2025/05/28 (14:46:27) | ===> btop++ v.1.4.0
+2025/05/28 (14:46:27) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/05/28 (14:46:27) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/05/28 (14:46:29) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/05/28 (14:46:31) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/05/28 (14:46:33) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
+2025/05/28 (14:46:35) | WARNING: Error in Mem::collect() : filesystem error: cannot get file time: No such file or directory [/etc/fstab]
