@@ -16,6 +16,7 @@
       "backlight",
       "pulseaudio",
       "custom/notifications",
+		"network",
       "battery",
       "tray"
    ],
@@ -193,13 +194,14 @@
    },
    "network": {
        // "interface": "wlp2*", // (Optional) To force the use of this interface
-       "format-wifi": "a {essid} ({signalStrength}%)",
-       "format-ethernet": "{ipaddr}/{cidr} ",
-      "tooltip": false,
-       "tooltip-format": "{ifname} via {gwaddr}",
-       "format-linked": "  {ifname} (No IP)",
-       "format-disconnected": "  Disconnected",
-       "format-alt": "{ifname}: {ipaddr}/{cidr}"
+		 "format-wifi": "  {essid} ({signalStrength}%)",
+		 "format-ethernet": "{ipaddr}/{cidr} ",
+		 "tooltip": false,
+		 "tooltip-format": "{ifname} via {gwaddr}",
+		 "format-linked": "  {ifname} (No IP)",
+		 "format-disconnected": "  Disconnected",
+		 "format-alt": "{ifname}: {ipaddr}/{cidr}",
+		 "on-click": "rofi-wifi-menu"
    },
    "pulseaudio": {
        // "scroll-step": 1, // %, can be a float

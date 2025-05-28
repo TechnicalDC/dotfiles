@@ -136,16 +136,14 @@ element-text {
 message {
 	background-color:            transparent;
 	border-color:                @selected;
-	border-radius:               10px;
-	border:                      0px 0px 2px 0px;
+	border:                      2px;
 }
 textbox {
-	padding:                     15px;
-	border-radius:               5px;
+	padding:                     5px 10px;
+	text-color:						  @foreground;
 	background-color:            @background;
-
 	vertical-align:              0.5;
-	horizontal-align:            0.0;
+	horizontal-align:            0.5;
 }
 error-message {
 	padding:                     15px;
