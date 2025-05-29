@@ -40,6 +40,7 @@ window#waybar {
 }
 
 #backlight, #pulseaudio {
+	margin-left: 10px;
     padding: 6px;
     padding-right: 10px;
 }
@@ -74,6 +75,7 @@ window#waybar {
 }
 
 #battery {
+	margin-left: 10px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -103,6 +105,7 @@ label:focus {
 }
 
 #network{
+	margin-left: 10px;
 }
 
 #network.disabled{
@@ -148,7 +151,9 @@ label:focus {
     color: #2d3436;
 }
 
-#mpd { }
+#mpd {
+	margin-left: 10px;
+}
 
 #mpd.disconnected {
     color: @red;

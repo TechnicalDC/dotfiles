@@ -21,9 +21,8 @@
 }
 
 .control-center .widget-title button,
-.widget-dnd > switch
-{
-}
+.widget-dnd > switch { }
+
 .control-center .widget-title button {
 	color: @fg;
 }
@@ -47,17 +46,15 @@
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-	border-radius: 10px;
-	border: 2px solid transparent;
 	background-color: transparent;
 	color: @bg;
 	margin: 4px;
-	padding: 4px;
+	padding: 8px;
 }
 
 .notification-group-collapse-button:hover,
 .notification-group-close-all-button:hover {
-	background-color: alpha(@light_black, .4);
+	background-color: @bg_mid;
 }
 
 trough highlight {
@@ -114,6 +111,7 @@ slider {
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
 	margin: 10px;
+	padding: 8px;
 	color: @fg;
 	background-color: transparent;
 }
@@ -164,8 +162,10 @@ slider {
 .control-center .widget-title button:active { }
 
 .control-center .notification-row .notification-background {
-	background-color: @bg_mid;
+	background-color: @bg;
+	border: 2px solid @bg_mid;
 	color: @fg;
+	padding: 10px;
 	margin-top: 10px;
 }
 
@@ -206,6 +206,7 @@ slider {
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
 	margin: 10px;
+	padding: 8px;
 	color: @fg;
 	background-color: transparent;
 }
@@ -254,20 +255,10 @@ slider {
 
 .control-center-dnd {
 	margin-top: 5px;
-	border-radius: 8px;
-	background: #363a4f;
-	border: 1px solid #494d64;
-	box-shadow: none;
 }
 
-.control-center-dnd:checked {
-	background: #363a4f;
-}
-
-.control-center-dnd slider {
-	background: #494d64;
-	border-radius: 8px;
-}
+.control-center-dnd:checked { }
+.control-center-dnd slider { }
 
 .widget-title,
 .widget-dnd,
@@ -284,23 +275,19 @@ slider {
 
 .widget-dnd > switch {
 	font-size: initial;
-	box-shadow: none;
+	background-color: @bg_mid;
 	padding: 2px;
-	border: 2px solid @light_black;
 }
 
 .widget-dnd > switch:checked {
-	border: 2px solid @red;
-	background: transparent
+	background-color: @bg_mid2;
 }
 .widget-dnd > switch:checked label {
 	color: @bg;
 }
 
 .widget-dnd > switch slider {
-	background: @light_black;
-	border-radius: 5px;
-	border: 2px solid @light_black;
+	background: @bg;
 }
 
 /* Mpris widget */

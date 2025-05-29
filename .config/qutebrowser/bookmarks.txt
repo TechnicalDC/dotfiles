@@ -19,3 +19,4 @@ https://github.com/utrodus/utrodus.com
 https://blog.ummit.dev/friends/
 https://github.com/mfontanini/presenterm
 https://mfontanini.github.io/presenterm/install.html
+https://www.qutebrowser.org/doc/help/settings.html

@@ -157,25 +157,35 @@ c.colors.statusbar.url.warn.fg        = mini["orange"]
 c.colors.tabs.bar.bg                  = mini["bg"]
 c.colors.tabs.odd.bg                  = mini["bg"]
 c.colors.tabs.even.bg                 = mini["bg"]
-c.colors.tabs.selected.odd.bg         = mini["bg"]
+c.colors.tabs.selected.odd.bg         = mini["bg_mid2"]
 c.colors.tabs.selected.odd.fg         = mini["fg"]
-c.colors.tabs.selected.even.bg        = mini["bg"]
+c.colors.tabs.selected.even.bg        = mini["bg_mid2"]
 c.colors.tabs.selected.even.fg        = mini["fg"]
 c.colors.tabs.pinned.odd.bg           = mini["bg"]
 c.colors.tabs.pinned.even.bg          = mini["bg"]
-c.colors.tabs.pinned.selected.odd.bg  = mini["bg"]
-c.colors.tabs.pinned.selected.even.bg = mini["bg"]
+c.colors.tabs.pinned.selected.odd.bg  = mini["bg_mid2"]
+c.colors.tabs.pinned.selected.even.bg = mini["bg_mid2"]
 
 ################
 # FONT SETTING #
 ################
-c.fonts.default_family   = '20px "Iosevka Nerd Font"'
+font = '18px "Iosevka Nerd Font"'
+c.fonts.default_family   = font
 c.fonts.default_size     = '20px'
-c.fonts.contextmenu      = '20px "Iosevka Nerd Font"'
-c.fonts.completion.entry = '20px "Iosevka Nerd Font"'    # Font used in the completion widget.
-c.fonts.debug_console    = '20px "Iosevka Nerd Font"'       # Font used for the debugging console.
-c.fonts.prompts          = 'default_size Iosevka Nerd Font'       # Font used for prompts.
-c.fonts.statusbar        = '20px "Iosevka Nerd Font"'           # Font used in the statusbar.
+c.fonts.contextmenu         = font
+c.fonts.completion.category = font
+c.fonts.completion.entry    = font
+c.fonts.debug_console       = font
+c.fonts.prompts             = font
+c.fonts.statusbar           = font
+c.fonts.downloads           = font
+c.fonts.hints               = font
+c.fonts.keyhint             = font
+c.fonts.messages.error      = font
+c.fonts.messages.info       = font
+c.fonts.messages.warning    = font
+c.fonts.tabs.selected        = font
+c.fonts.tabs.unselected      = font
 
 
 ################################
