@@ -70,7 +70,7 @@ c.input.insert_mode.leave_on_load = True
 
 # --- Tabs ---
 c.tabs.show = 'multiple'        # Values: always, never, multiple
-c.tabs.padding = {"bottom":1, "left":5, "right":5, "top":1}
+c.tabs.padding = {"bottom":4, "left":5, "right":5, "top":4}
 c.tabs.favicons.show = 'never'    # valuse: always, never
 
 # --- Scrolling ---
@@ -81,7 +81,7 @@ c.completion.scrollbar.width = 12
 c.completion.scrollbar.padding = 4
 
 # --- Statusbar ---
-c.statusbar.padding = {"bottom":1, "left":1, "right":1, "top":1}
+c.statusbar.padding = {"bottom":4, "left":5, "right":5, "top":4}
 
 ###########################
 # UI COLROS CONFIGURATION #

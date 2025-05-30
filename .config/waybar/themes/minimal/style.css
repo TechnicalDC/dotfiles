@@ -70,9 +70,7 @@ window#waybar {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 
-#battery.charging, #battery.plugged {
-    color: @green;
-}
+#battery.charging, #battery.plugged { }
 
 #battery {
 	margin-left: 10px;
@@ -84,9 +82,7 @@ window#waybar {
    color: @red;
 }
 
-label:focus {
-
-}
+label:focus { }
 
 #cpu {
     background-size: 300% 300%;
@@ -98,11 +94,9 @@ label:focus {
     font-weight: bolder;
 }
 
-#disk {
-}
+#disk { }
 
-#backlight {
-}
+#backlight { }
 
 #network{
 	margin-left: 10px;
@@ -118,14 +112,11 @@ label:focus {
    padding-right: 11px;
 }
 
-#network.linked, #network.wifi{
-}
+#network.linked, #network.wifi{ }
 
-#network.ethernet{
-}
+#network.ethernet{ }
 
-#temperature {
-}
+#temperature { }
 
 #temperature.critical {
     color: @red;
@@ -144,8 +135,7 @@ label:focus {
     background-color: @red;
 }
 
-#idle_inhibitor {
-}
+#idle_inhibitor { }
 
 #idle_inhibitor.activated {
     color: #2d3436;
@@ -159,8 +149,7 @@ label:focus {
     color: @red;
 }
 
-#mpd.playing {
-}
+#mpd.playing { }
 
 #mpd.stopped { }
 
@@ -186,8 +175,6 @@ label:focus {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#tooltip {
-}
-#tooltip label {
-}
+#tooltip { }
+#tooltip label { }
 
