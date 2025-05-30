@@ -7,7 +7,8 @@
    "spacing": 0, // Gaps between modules (4px)
    "reload_style_on_change": true,
    "modules-left": [
-      "clock"
+      "clock",
+		"mpd"
    ],
    "modules-center": [
       "hyprland/workspaces"
@@ -67,9 +68,10 @@
       }
    },
    "mpd": {
-      "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon} ::   {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
-      "format-disconnected": "Disconnected ",
-      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon} ::   Stopped",
+      "format": "  {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
+      // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon} ::   {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
+      "format-disconnected": "Disconnected",
+      "format-stopped": "  Stopped",
       "unknown-tag": "N/A",
       "title-len": 30,
       "interval": 5,

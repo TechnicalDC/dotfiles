@@ -2,8 +2,10 @@
     {
         "data": [
             {
+                "allowSdrSoftwareBrightness": false,
                 "autoRotation": "InTabletMode",
-                "brightness": 1,
+                "brightness": 0.34996614407000365,
+                "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
                 "edidHash": "ef8eb69a4a6a28f43e531602ba28d197",
