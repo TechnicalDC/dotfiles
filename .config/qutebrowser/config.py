@@ -93,6 +93,7 @@ c.statusbar.padding = {"bottom":4, "left":5, "right":5, "top":4}
 c.colors.webpage.bg = mini["bg"]
 
 c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.policy.images = "never"
 
 # --- Context menu ---
 c.colors.contextmenu.menu.bg     = mini["bg_edge"]
@@ -140,14 +141,14 @@ c.colors.prompts.selected.bg = mini["bg_mid"]
 c.colors.prompts.fg          = mini["fg"]
 
 # --- Statusbar ---
-c.colors.statusbar.normal.bg          = mini["bg"]
+c.colors.statusbar.normal.bg          = mini["bg_mid"]
 c.colors.statusbar.normal.fg          = mini["fg"]
 c.colors.statusbar.insert.fg          = mini["bg"]
-c.colors.statusbar.insert.bg          = mini["green"]
-c.colors.statusbar.passthrough.bg     = mini["bg"]
-c.colors.statusbar.command.bg         = mini["bg"]
+c.colors.statusbar.insert.bg          = mini["bg_mid"]
+c.colors.statusbar.passthrough.bg     = mini["bg_mid"]
+c.colors.statusbar.command.bg         = mini["bg_mid"]
 c.colors.statusbar.command.fg         = mini["fg"]
-c.colors.statusbar.command.private.bg = mini["bg"]
+c.colors.statusbar.command.private.bg = mini["bg_mid"]
 c.colors.statusbar.command.private.fg = mini["fg"]
 c.colors.statusbar.private.bg         = mini["yellow"]
 c.colors.statusbar.private.fg         = mini["bg"]
