@@ -98,7 +98,7 @@ listview {
 	scrollbar:                   false;
 	layout:                      vertical;
 	reverse:                     false;
-	fixed-height:                false;
+	fixed-height:                true;
 
 	border-color:                transparent;
 	background-color:            transparent;

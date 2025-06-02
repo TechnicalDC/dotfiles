@@ -29,8 +29,8 @@ c.url.searchengines = {
         'yt': 'https://www.youtube.com/results?search_query={}',
         'amz':'https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords={}'
 }
-# c.url.default_page = '/home/dilip/.config/qutebrowser/fluidity/index.html'
-# c.url.start_pages = '/home/dilip/.config/qutebrowser/fluidity/index.html'
+c.url.default_page = '/home/dilip/.config/qutebrowser/startpage/index.html'
+c.url.start_pages = '/home/dilip/.config/qutebrowser/startpage/index.html'
 c.content.images = True
 c.content.javascript.enabled = True
 c.content.autoplay = False
@@ -70,7 +70,7 @@ c.input.insert_mode.leave_on_load = True
 
 # --- Tabs ---
 c.tabs.show = 'multiple'        # Values: always, never, multiple
-c.tabs.padding = {"bottom":1, "left":5, "right":5, "top":1}
+c.tabs.padding = {"bottom":4, "left":5, "right":5, "top":4}
 c.tabs.favicons.show = 'never'    # valuse: always, never
 
 # --- Scrolling ---
@@ -81,7 +81,7 @@ c.completion.scrollbar.width = 12
 c.completion.scrollbar.padding = 4
 
 # --- Statusbar ---
-c.statusbar.padding = {"bottom":1, "left":1, "right":1, "top":1}
+c.statusbar.padding = {"bottom":4, "left":5, "right":5, "top":4}
 
 ###########################
 # UI COLROS CONFIGURATION #
@@ -93,6 +93,7 @@ c.statusbar.padding = {"bottom":1, "left":1, "right":1, "top":1}
 c.colors.webpage.bg = mini["bg"]
 
 c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.policy.images = "never"
 
 # --- Context menu ---
 c.colors.contextmenu.menu.bg     = mini["bg_edge"]
@@ -140,15 +141,15 @@ c.colors.prompts.selected.bg = mini["bg_mid"]
 c.colors.prompts.fg          = mini["fg"]
 
 # --- Statusbar ---
-c.colors.statusbar.normal.bg          = mini["bg"]
+c.colors.statusbar.normal.bg          = mini["bg_mid"]
 c.colors.statusbar.normal.fg          = mini["fg"]
 c.colors.statusbar.insert.fg          = mini["bg"]
 c.colors.statusbar.insert.bg          = mini["green"]
-c.colors.statusbar.passthrough.bg     = mini["bg"]
-c.colors.statusbar.command.bg         = mini["bg"]
-c.colors.statusbar.command.fg         = mini["fg"]
-c.colors.statusbar.command.private.bg = mini["bg"]
-c.colors.statusbar.command.private.fg = mini["fg"]
+c.colors.statusbar.passthrough.bg     = mini["bg_mid"]
+c.colors.statusbar.command.bg         = mini["orange"]
+c.colors.statusbar.command.fg         = mini["bg"]
+c.colors.statusbar.command.private.bg = mini["orange"]
+c.colors.statusbar.command.private.fg = mini["bg"]
 c.colors.statusbar.private.bg         = mini["yellow"]
 c.colors.statusbar.private.fg         = mini["bg"]
 c.colors.statusbar.url.warn.fg        = mini["orange"]
