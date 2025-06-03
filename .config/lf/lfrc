@@ -1,0 +1,239 @@
+#  _     _____ ____   ____
+# | |   |  ___|  _ \ / ___|
+# | |   | |_  | |_) | |
+# | |___|  _| |  _ <| |___
+# |_____|_|   |_| \_\\____|
+
+# =================================================================
+# BASIC SETTINGS
+# =================================================================
+set shell bash
+set previewer ~/.config/lf/preview
+set preview true
+set icons true
+set ignorecase true
+set smartcase true
+
+# =================================================================
+# CUSTOM FUNCTIONS
+# =================================================================
+cmd open ${{
+	case $(file --mime-type "$f" -bL) in
+		text/*|application/json) $EDITOR "$f";;
+		image/*) sxiv * & ;;
+			  *) xdg-open "$f" & ;;
+	esac
+}}
+
+cmd mkdir ${{
+	clear
+	mkdir $(gum input --prompt="Directory Name: ")
+}}
+
+cmd mkfile ${{
+	clear
+	$EDITOR $(gum input --prompt="File Name: ")
+}}
+
+cmd chmod ${{
+	clear
+  ans=$(gum input --prompt="Mode Bits: ")
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+cmd sudomkfile ${{
+	clear
+	sudo $EDITOR $(gum input --prompt="File Name: ")
+}}
+
+cmd setwallpaper ${{
+	wally -w "$f" &
+}}
+
+cmd fzf_jump ${{
+  res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd broot_jump ${{
+  f=$(mktemp)
+  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
+  rm -f "$f"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+
+# Trash cli bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    # extract the substring from start of string up to delimiter.
+    # this is the first "element" of the string.
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    # if there's only one element left, set `files` to an empty string.
+    # this causes us to exit this `while` loop.
+    # else, we delete the first "element" of the string from files, and move onto the next.
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd clear_trash %trash-empty
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+cmd stripspace %stripspace "$f"
+
+cmd sendfile ${{
+	clear
+	kdeconnect-cli --refresh
+	DEVICE=$(kdeconnect-cli -a --name-only | gum filter --placeholder="Select device")
+	kdeconnect-cli -n $DEVICE --share $fx
+}}
+
+cmd bulk-rename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+# =================================================================
+# INTEGRATED
+# =================================================================
+
+cmd z %{{
+    result="$(zoxide query --exclude "$PWD" "$@" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id cd \"$result\""
+}}
+
+cmd zi ${{
+    result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id cd \"$result\""
+}}
+
+cmd on-cd &{{
+    zoxide add "$PWD"
+}}
+
+# =================================================================
+# BINDINGS
+# =================================================================
+map m
+map t
+map d
+map c
+map c
+
+# Archive Mappings
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au unarchive
+
+# Trash Mappings
+map tt trash
+map tc clear_trash
+map tr restore_trash
+
+# Basic Functions
+map . set hidden!
+map dD delete
+map p paste
+map dd cut
+map yy copy
+map <enter> open
+map mf mkfile
+map mr sudomkfile
+map mdd mkdir
+map ms $mkscript
+map ch chmod
+map sw setwallpaper
+map cw rename
+map H top
+map L bottom
+map R reload
+map C clear
+map u unselect
+
+map xk sendfile
+
+# Navigation
+map gv cd ~/Videos
+map gy cd ~/Youtube
+map gp. cd ~/Pictures
+map gps cd ~/Pictures/screenshots
+map gpp cd ~/project/
+map gw cd ~/Wallpapers
+
+map gD cd ~/Documents
+map gd cd ~/Downloads
+
+map gc cd ~/.config
+map gl cd ~/.local
+map ge cd /etc
+map gu. cd /usr
+map gus cd /usr/share
+
+map gh cd ~
+map gr cd ~/Recordings/
+map gk cd ~/Downloads/kdeconnect/DC/
+map gR cd /
+map gm cd /mnt/NewVolumn/Dilip/
+map gn cd ~/.config/nvim/
