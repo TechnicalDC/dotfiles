@@ -8,11 +8,14 @@
 # BASIC SETTINGS
 # =================================================================
 set shell bash
-set previewer ~/.config/lf/preview
 set preview true
+set previewer ~/.config/lf/preview
 set icons true
 set ignorecase true
 set smartcase true
+set info size
+# set drawbox
+set cursorpreviewfmt ""
 
 # =================================================================
 # CUSTOM FUNCTIONS
@@ -171,6 +174,14 @@ cmd on-cd &{{
     zoxide add "$PWD"
 }}
 
+cmd pager ${{
+	if [ -f "$f" ]; then
+		$PAGER "$f"
+	elif [ -d "$f" ]; then
+		tree "$f" | $PAGER
+	fi
+}}
+
 # =================================================================
 # BINDINGS
 # =================================================================
@@ -179,6 +190,10 @@ map t
 map d
 map c
 map c
+map J :updir; down; open
+map K :updir; up; open
+
+map zi zi
 
 # Archive Mappings
 map az zip
@@ -204,7 +219,7 @@ map mr sudomkfile
 map mdd mkdir
 map ms $mkscript
 map ch chmod
-map sw setwallpaper
+#map sw setwallpaper
 map cw rename
 map H top
 map L bottom
@@ -212,28 +227,21 @@ map R reload
 map C clear
 map u unselect
 
-map xk sendfile
-
 # Navigation
 map gv cd ~/Videos
 map gy cd ~/Youtube
+map gs cd ~/Syncthing/oneplus
 map gp. cd ~/Pictures
 map gps cd ~/Pictures/screenshots
 map gpp cd ~/project/
-map gw cd ~/Wallpapers
-
+map gw cd ~/Pictures/wallpapers
 map gD cd ~/Documents
 map gd cd ~/Downloads
-
 map gc cd ~/.config
 map gl cd ~/.local
 map ge cd /etc
 map gu. cd /usr
 map gus cd /usr/share
-
 map gh cd ~
-map gr cd ~/Recordings/
-map gk cd ~/Downloads/kdeconnect/DC/
 map gR cd /
-map gm cd /mnt/NewVolumn/Dilip/
 map gn cd ~/.config/nvim/
