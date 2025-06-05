@@ -23,3 +23,4 @@ https://www.qutebrowser.org/doc/help/settings.html
 https://web.whatsapp.com/
 http://127.0.0.1:8384/#
 https://karlch.github.io/vimiv-qt/documentation/configuration/style.html
+https://github.com/dunst-project/dunst/issues/826

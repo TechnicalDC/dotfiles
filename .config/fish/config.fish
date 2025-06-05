@@ -18,6 +18,7 @@ set --export JAVA_HOME /usr/lib/jvm/jdk-11.0.26-oracle-x64
 set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic
 set --export FZF_DEFAULT_OPTS "--layout=reverse
+--margin=10%
 --height=100%
 --prompt=' '
 --pointer=''
@@ -28,7 +29,8 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 --list-border rounded"
 
 set --export _ZO_FZF_OPTS "--layout=reverse
---height=40%
+--margin=10%
+--height=100%
 --prompt=' '
 --pointer=''
 --info=hidden
@@ -52,6 +54,7 @@ fish_vi_key_bindings
 
 source "$HOME/.config/fish/abbreviations.fish"
 # source "$HOME/.cache/wal/colors-fzf.fish"
+source "$HOME/.config/nvim/extras/mini-fzf.fish"
 source "$HOME/.config/nvim/extras/mini.fish"
 
 zoxide init fish | source

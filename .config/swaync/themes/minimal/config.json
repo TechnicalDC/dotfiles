@@ -19,7 +19,7 @@
    "timeout": 5,
    "timeout-low": 2,
    "timeout-critical": 0,
-   "fit-to-screen": true,
+   "fit-to-screen": false,
    "relative-timestamps": true,
    "control-center-width": 500,
    "control-center-height": 900,
