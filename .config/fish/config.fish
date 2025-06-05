@@ -24,23 +24,18 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 --info=hidden
 --highlight-line
 --ansi
---preview-label ' preview '
---border rounded
---border-label=' fzf ' --border-label-pos='0' --preview-window='border-rounded'
---scrollbar='│'"
+--input-border
+--list-border rounded"
 
 set --export _ZO_FZF_OPTS "--layout=reverse
---height=100%
+--height=40%
 --prompt=' '
 --pointer=''
 --info=hidden
 --highlight-line
 --ansi
---preview-label ' preview '
---preview 'eza -lA --color=always {2}'
---border rounded
---border-label=' fzf ' --border-label-pos='0' --preview-window='border-rounded'
---scrollbar='│'"
+--input-border
+--list-border rounded"
 #}}}
 
 set fish_greeting
@@ -56,7 +51,7 @@ set fish_pager_color_selected_background -r
 fish_vi_key_bindings
 
 source "$HOME/.config/fish/abbreviations.fish"
-source "$HOME/.cache/wal/colors-fzf.fish"
+# source "$HOME/.cache/wal/colors-fzf.fish"
 source "$HOME/.config/nvim/extras/mini.fish"
 
 zoxide init fish | source
