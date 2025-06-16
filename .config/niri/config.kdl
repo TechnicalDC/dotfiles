@@ -226,6 +226,9 @@ binds {
 	Mod+M hotkey-overlay-title="Open rofi mpc" { spawn "rofi-mpc"; }
 	Mod+B hotkey-overlay-title="Open bookmarks" { spawn "rofi-bookmarks"; }
 	Print hotkey-overlay-title="Open screenshot utility" { spawn "rofi-screenshot"; }
+	Mod+O repeat=false { toggle-overview; }
+	Mod+Q { close-window; }
+	Mod+Shift+Q hotkey-overlay-title="Exit niri" { spawn "rofi-powermenu"; }
 
 	// Example volume keys mappings for PipeWire & WirePlumber.
 	// The allow-when-locked=true property makes them work even when the session is locked.
@@ -235,9 +238,6 @@ binds {
 	XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 	XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "s" "+5%"; }
 	XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "s" "5%-"; }
-
-	Mod+O repeat=false { toggle-overview; }
-	Mod+Q { close-window; }
 
 	Mod+Left  { focus-column-left; }
 	Mod+Down  { focus-window-down; }
