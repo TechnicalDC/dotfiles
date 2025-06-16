@@ -33,3 +33,4 @@ https://www.michaeldorner.de/
 https://gohugo.io/shortcodes/details/
 https://gohugo.io/shortcodes/qr/
 https://www.nerdfonts.com/cheat-sheet
+https://github.com/Alexays/Waybar/wiki/Module:-Niri

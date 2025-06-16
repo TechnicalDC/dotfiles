@@ -166,24 +166,11 @@ hotkey-overlay {
 	skip-at-startup
 }
 
-// Uncomment this line to ask the clients to omit their client-side decorations if possible.
-// If the client will specifically ask for CSD, the request will be honored.
-// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
-// This option will also fix border/focus ring drawing behind some semitransparent windows.
-// After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
-
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
 screenshot-path "~/Pictures/screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-// You can also set this to null to disable saving screenshots to disk.
-// screenshot-path null
-
-// Animation settings.
-// The wiki explains how to configure individual animations:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
 	// Uncomment to turn off all animations.
 	// off
@@ -192,12 +179,6 @@ animations {
 	// slowdown 3.0
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
 window-rule {
 	// This regular expression is intentionally made as specific as possible,
 	// since this is the default config, and we want no false positives.
@@ -240,7 +221,7 @@ binds {
 	// Suggested binds for running programs: terminal, app launcher, screen locker.
 	Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
 	Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
-	Mod+W hotkey-overlay-title="" { spawn "wall.sh"; }
+	Mod+W hotkey-overlay-title="Set wallpaper" { spawn "wall.sh"; }
 	Mod+N hotkey-overlay-title="Open notification center" { spawn "swaync-client" "-t" "-sw"; }
 	Mod+M hotkey-overlay-title="Open rofi mpc" { spawn "rofi-mpc"; }
 	Mod+B hotkey-overlay-title="Open bookmarks" { spawn "rofi-bookmarks"; }
@@ -402,12 +383,12 @@ binds {
 	// * adjust width as a percentage of screen width: "-10%" or "+10%"
 	// Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
 	// set-column-width "100" will make the column occupy 200 physical screen pixels.
-	Mod+Minus { set-column-width "-10%"; }
-	Mod+Equal { set-column-width "+10%"; }
+	Mod+Alt+H { set-column-width "-10%"; }
+	Mod+Alt+L { set-column-width "+10%"; }
 
 	// Finer height adjustments when in column with other windows.
-	Mod+Shift+Minus { set-window-height "-10%"; }
-	Mod+Shift+Equal { set-window-height "+10%"; }
+	Mod+Alt+J { set-window-height "-10%"; }
+	Mod+Alt+K { set-window-height "+10%"; }
 
 	// Move the focused window between the floating and the tiling layout.
 	Mod+S       { toggle-window-floating; }
