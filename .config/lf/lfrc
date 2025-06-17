@@ -22,7 +22,7 @@ set cursorpreviewfmt ""
 # =================================================================
 cmd open ${{
 	case $(file --mime-type "$f" -bL) in
-		text/*|application/json) $EDITOR "$f";;
+		text/*|application/json|application/javascript) $EDITOR "$f";;
 		image/*) vimiv * & ;;
 			  *) xdg-open "$f" & ;;
 	esac
