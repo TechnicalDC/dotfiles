@@ -11,6 +11,7 @@
 		"mpd"
    ],
    "modules-center": [
+		"niri/workspaces",
       "hyprland/workspaces"
    ],
    "modules-right": [
@@ -22,6 +23,20 @@
       "tray"
    ],
    // Modules configuration
+	"niri/workspaces": {
+		"format": "{icon}.{name}",
+		"format-icons": {
+			// Named workspaces
+			// (you need to configure them in niri)
+			"browser": "",
+			"discord": "",
+			"chat": "<b></b>",
+
+			// Icons by state
+			"active": "",
+			"default": ""
+		}
+	},
    "hyprland/workspaces": {
          "format": "{id}.{icon}",
          "format-icons": {
@@ -210,7 +225,7 @@
        "format": "{icon} {volume}% {format_source}",
        "format-bluetooth": "{icon} {volume}%  {format_source}",
        "format-bluetooth-muted": " {icon} {format_source}",
-       "format-muted": " {format_source}",
+       "format-muted": "  {format_source}",
        "format-source": " {volume}%",
        "format-source-muted": " ",
        "format-icons": {

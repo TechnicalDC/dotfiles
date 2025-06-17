@@ -14,7 +14,6 @@ set --export PATH  $PATH $HOME/.local/bin/
 set --export PATH  $PATH $HOME/.cargo/bin/
 set --export PATH  $PATH $HOME/go/bin/
 set --export PATH  $PATH /mnt/c/Progress/OpenEdge/bin/
-# set --export JAVA_HOME /usr/lib/jvm/jdk-11.0.26-oracle-x64
 set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk
 set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic

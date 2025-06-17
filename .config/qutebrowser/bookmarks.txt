@@ -24,3 +24,13 @@ https://web.whatsapp.com/
 http://127.0.0.1:8384/#
 https://karlch.github.io/vimiv-qt/documentation/configuration/style.html
 https://github.com/dunst-project/dunst/issues/826
+https://themes.gohugo.io/themes/typo/
+https://themes.gohugo.io/themes/adritian-free-hugo-theme/
+https://themes.gohugo.io/themes/smigle-hugo-theme/
+https://themes.gohugo.io/themes/ink-free/
+https://mariuskimmina.com/
+https://www.michaeldorner.de/
+https://gohugo.io/shortcodes/details/
+https://gohugo.io/shortcodes/qr/
+https://www.nerdfonts.com/cheat-sheet
+https://github.com/Alexays/Waybar/wiki/Module:-Niri

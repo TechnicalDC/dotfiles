@@ -37,6 +37,7 @@ c.content.autoplay = False
 c.content.notifications.presenter = "auto"
 # c.content.private_browsing = True
 c.completion.web_history.max_items = 15
+c.completion.open_categories = [ "quickmarks", "bookmarks", "history", "searchengines", "filesystem" ]
 
 # Valid values:
 #   - all: Accept all cookies.
@@ -82,6 +83,7 @@ c.completion.scrollbar.padding = 4
 
 # --- Statusbar ---
 c.statusbar.padding = {"bottom":4, "left":5, "right":5, "top":4}
+c.zoom.default = "125%"
 
 ###########################
 # UI COLROS CONFIGURATION #
@@ -131,9 +133,9 @@ c.colors.hints.match.fg = mini["red"]
 c.colors.messages.info.bg    = mini["bg"]
 c.colors.messages.info.fg    = mini["fg"]
 c.colors.messages.error.bg   = mini["red"]
-c.colors.messages.error.fg   = mini["fg"]
+c.colors.messages.error.fg   = mini["bg"]
 c.colors.messages.warning.bg = mini["orange"]
-c.colors.messages.warning.fg = mini["fg"]
+c.colors.messages.warning.fg = mini["bg"]
 
 # --- Prompts ---
 c.colors.prompts.bg          = mini["bg"]

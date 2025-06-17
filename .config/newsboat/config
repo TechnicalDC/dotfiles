@@ -54,10 +54,10 @@ bind-key x pb-delete
 # COLORS
 # color background          white   red
 color listnormal        color8 default
-color listfocus         color0 color15 bold
+color listfocus         color0 color15
 color listnormal_unread white  default bold
 color listfocus_unread  color0 color15 bold
-color info              default color0 bold
+color info              default color0
 color article           white  default
 
 # HIGHLIGHTS
