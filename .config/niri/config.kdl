@@ -127,7 +127,7 @@ layout {
 
 	border {
 		width 5
-		active-color "#11262d"
+		active-color "#2a4047"
 		inactive-color "#11262d"
 		urgent-color "#9b0000"
 		// active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
@@ -143,12 +143,27 @@ layout {
 		color "#0007"
 	}
 
+	tab-indicator {
+		width 10
+		gap 5
+		length total-proportion=0.8
+		position "left"
+		place-within-column
+		hide-when-single-tab
+	}
+
 	struts {
 		// left 64
 		// right 64
 		// top 64
 		// bottom 64
 	}
+}
+
+layer-rule {
+	match namespace="^swww-daemon$"
+
+	place-within-backdrop true
 }
 
 overview {
@@ -220,6 +235,7 @@ binds {
 
 	// Suggested binds for running programs: terminal, app launcher, screen locker.
 	Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+	Mod+Shift+Return hotkey-overlay-title="Open a web browser: qutebrowser" { spawn "qutebrowser"; }
 	Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
 	Mod+W hotkey-overlay-title="Set wallpaper" { spawn "wall.sh"; }
 	Mod+N hotkey-overlay-title="Open notification center" { spawn "swaync-client" "-t" "-sw"; }
@@ -261,8 +277,8 @@ binds {
 	// the first or last window in a column.
 	// Mod+J     { focus-window-or-workspace-down; }
 	// Mod+K     { focus-window-or-workspace-up; }
-	// Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-	// Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+	Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+	Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
 
 	Mod+Home { focus-column-first; }
 	Mod+End  { focus-column-last; }
@@ -278,17 +294,10 @@ binds {
 	Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
 	Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
-	Mod+Page_Down      { focus-workspace-down; }
-	Mod+Page_Up        { focus-workspace-up; }
 	Mod+U              { focus-workspace-down; }
 	Mod+I              { focus-workspace-up; }
-	Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-	Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
 	Mod+Ctrl+U         { move-column-to-workspace-down; }
 	Mod+Ctrl+I         { move-column-to-workspace-up; }
-
-	Mod+Shift+Page_Down { move-workspace-down; }
-	Mod+Shift+Page_Up   { move-workspace-up; }
 	Mod+Shift+U         { move-workspace-down; }
 	Mod+Shift+I         { move-workspace-up; }
 
