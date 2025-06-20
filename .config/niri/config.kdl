@@ -1,4 +1,4 @@
-spawn-at-startup "/home/dilip/.config/hypr/autostart"
+spawn-at-startup "/home/dilip/.config/niri/autostart"
 
 prefer-no-csd
 
@@ -238,7 +238,7 @@ binds {
 	Mod+Shift+Return hotkey-overlay-title="Open a web browser: qutebrowser" { spawn "qutebrowser"; }
 	Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
 	Mod+W hotkey-overlay-title="Set wallpaper" { spawn "wall.sh"; }
-	Mod+N hotkey-overlay-title="Open notification center" { spawn "swaync-client" "-t" "-sw"; }
+	// Mod+N hotkey-overlay-title="Open notification center" { spawn "swaync-client" "-t" "-sw"; }
 	Mod+M hotkey-overlay-title="Open rofi mpc" { spawn "rofi-mpc"; }
 	Mod+B hotkey-overlay-title="Open bookmarks" { spawn "rofi-bookmarks"; }
 	Print hotkey-overlay-title="Open screenshot utility" { spawn "rofi-screenshot"; }
@@ -294,12 +294,12 @@ binds {
 	Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
 	Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
-	Mod+U              { focus-workspace-down; }
-	Mod+I              { focus-workspace-up; }
-	Mod+Ctrl+U         { move-column-to-workspace-down; }
-	Mod+Ctrl+I         { move-column-to-workspace-up; }
-	Mod+Shift+U         { move-workspace-down; }
-	Mod+Shift+I         { move-workspace-up; }
+	Mod+N              { focus-workspace-down; }
+	Mod+P              { focus-workspace-up; }
+	Mod+Shift+N         { move-column-to-workspace-down; }
+	Mod+Shift+P         { move-column-to-workspace-up; }
+	Mod+Ctrl+N         { move-workspace-down; }
+	Mod+Ctrl+P         { move-workspace-up; }
 
 	// You can bind mouse wheel scroll ticks using the following syntax.
 	// These binds will change direction based on the natural-scroll setting.
@@ -432,5 +432,5 @@ binds {
 
 	// Powers off the monitors. To turn them back on, do any input like
 	// moving the mouse or pressing any other key.
-	Mod+Shift+P { power-off-monitors; }
+	// Mod+Shift+P { power-off-monitors; }
 }
