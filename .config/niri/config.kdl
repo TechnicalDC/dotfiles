@@ -126,9 +126,11 @@ layout {
 	}
 
 	border {
-		width 5
-		active-color "#2a4047"
-		inactive-color "#11262d"
+		width 2
+		// active-color "#2a4047"
+		// inactive-color "#11262d"
+		active-color "#363a3b"
+		inactive-color "#1d2021"
 		urgent-color "#9b0000"
 		// active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
 		// inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
