@@ -2,7 +2,7 @@
 
 * {
 	all: unset;
-	font-family: "JetBrainsMonoNL Nerd Font";
+	font-family: "FantasqueSansM Nerd Font";
 	font-size: 15px;
 	transition: 100ms;
 	color: @fg;

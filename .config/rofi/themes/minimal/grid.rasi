@@ -6,7 +6,7 @@ configuration {
 
 * {
     width: 550;
-    font: "Iosevka Nerd Font 14";
+	font: "FantasqueSansM Nerd Font 14";
 }
 
 /*****----- Main Window -----*****/
