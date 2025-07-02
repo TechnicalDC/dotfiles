@@ -98,9 +98,9 @@ input {
 }
 
 layout {
-	gaps 25
+	gaps 10
 	center-focused-column "never"
-	// always-center-single-column
+	always-center-single-column
 
 	preset-column-widths {
 		proportion 0.33333
