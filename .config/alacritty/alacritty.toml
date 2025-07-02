@@ -28,11 +28,11 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 6
+y = 8
 
 [font.glyph_offset]
 x = 0
-y = 4
+y = 5
 
 [[keyboard.bindings]]
 action = "Paste"
