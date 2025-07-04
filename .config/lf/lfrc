@@ -214,9 +214,9 @@ map p paste
 map dd cut
 map yy copy
 map <enter> open
-map mf mkfile
-map mr sudomkfile
-map mdd mkdir
+map af mkfile
+map aF sudomkfile
+map ad mkdir
 map ms $mkscript
 map ch chmod
 #map sw setwallpaper

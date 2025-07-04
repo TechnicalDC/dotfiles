@@ -1,3 +1,4 @@
 theme: 'hacker'
+layout: "horizontal"
 command_palette:
   theme_preview: false
