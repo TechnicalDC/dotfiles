@@ -8,7 +8,7 @@ environment {
 
 	// Remove a variable by using null as the value:
 	// DISPLAY null
-	QT_QPA_PLATFORMTHEME "t5ct" // change to qt6ct if you have that
+	QT_QPA_PLATFORMTHEME "qt5ct" // change to qt6ct if you have that
 }
 
 input {
@@ -114,7 +114,7 @@ layout {
 		proportion 0.66667
 	}
 
-	default-column-width { proportion 0.5; }
+	default-column-width {}
 
 	focus-ring {
 		off
@@ -147,18 +147,27 @@ layout {
 
 	tab-indicator {
 		width 10
-		gap 5
-		length total-proportion=0.8
+		gap 10
+		gaps-between-tabs 10
+		length total-proportion=0.5
 		position "left"
 		place-within-column
 		hide-when-single-tab
+		active-color "#363a3b"
+		inactive-color "#1d2021"
+	}
+
+	insert-hint {
+		// off
+		color "#363a3b"
+		// gradient from="#ffbb6680" to="#ffc88080" angle=45 relative-to="workspace-view"
 	}
 
 	struts {
-		// left 64
-		// right 64
-		// top 64
-		// bottom 64
+		// left   20
+		// right  20
+		// top    20
+		// bottom 20
 	}
 }
 
@@ -196,12 +205,25 @@ animations {
 	// slowdown 3.0
 }
 
+// workspace "MICS"
+// workspace "CHAT"
+// workspace "FUN"
+// workspace "VFX"
+// workspace "SYS"
+// workspace "IMG"
+// workspace "DOC"
+// workspace "WEB"
+// workspace "DEV"
+
 window-rule {
 	// This regular expression is intentionally made as specific as possible,
 	// since this is the default config, and we want no false positives.
 	// You can get away with just app-id="wezterm" if you want.
 	match app-id=r#"^org\.wezfurlong\.wezterm$"#
-	default-column-width {}
+	match app-id="Alacritty"
+	match app-id="Kitty"
+
+	// open-on-workspace 3
 }
 
 // Open the Firefox picture-in-picture player as floating by default.

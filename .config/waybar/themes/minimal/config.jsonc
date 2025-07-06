@@ -24,7 +24,8 @@
    ],
    // Modules configuration
 	"niri/workspaces": {
-		"format": "{value}",
+		// "current-only": true,
+		"format": "{index}",
 		"format-icons": {
 			"browser": "",
 			"discord": "",
