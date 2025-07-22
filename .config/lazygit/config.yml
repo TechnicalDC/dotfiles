@@ -1,5 +1,5 @@
 gui:
-  border: rounded
+  border: double
   showIcons: false
   theme:
     activeBorderColor:
