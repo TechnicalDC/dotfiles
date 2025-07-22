@@ -91,28 +91,28 @@ tag-formats "replied" "GR" \
             "attachment" "GA" \
 
 # FOR STATUS AND PAGER
-set status_format = " %f%?r? %r?   %m %?n?  %n ?  %?d?  %d ?%?t?  %t ?%?F?  %F? %> %?p?   %p ?"
-set pager_format=" %n %zc  %T %s%*  %{!%d %b · %H:%M} %?X?  %X ? %P  "
+set status_format = " %f%?r? %r?  %m %?n?  %n ? %?d?  %d ?%?t?  %t ?%?F?  %F? %> %?p?   %p ?"
+set pager_format=" %n %zc  %T %s%*  %{!%d %b · %H:%M} %?X?  %X ? %P  "
 color status white black
 
 # Powerline status bar hack for status and pager
 color status green black ''
 color status yellow black ''
 color status red black ''
-color status black blue '(.*)' 1
-color status blue black '.*()' 1
-color status black blue '\s* [0-9]+\s*'
-color status blue black '().*$' 1
-color status yellow black '()\s*\s*[0-9]+\s*' 1
-color status black yellow '\s*\s*[0-9]+\s*'
-color status blue yellow '() ([0-9]+%|all|end) \s*' 1
-color status black blue ' ([0-9]+%|all|end) \s*'
-color status yellow black '()\s*' 1
-color status default black ''
+# color status black blue '(.*)' 1
+# color status blue black '.*()' 1
+# color status black blue '\s* [0-9]+\s*'
+# color status blue black '().*$' 1
+# color status yellow black '()\s*\s*[0-9]+\s*' 1
+# color status black yellow '\s*\s*[0-9]+\s*'
+# color status blue yellow '() ([0-9]+%|all|end) \s*' 1
+# color status black blue ' ([0-9]+%|all|end) \s*'
+# color status yellow black '()\s*' 1
+# color status default black ''
 
 # FOR V-FOLDER AND ATTACHMENT
 set vfolder_format = " %N %?n?%3n&   ?  %8m  · %f"
-set attach_format = "%u%D  %T%-75.75d %?T?%&   ? %5s · %m/%M"
+set attach_format = "%u%D  %T%-75.75d %?T?   ? %5s · %m/%M"
 
 # FOR SIDEBAR
 set sidebar_format = '  %D%?Z? [%Z]?%* %?S?%S? '

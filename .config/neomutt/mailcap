@@ -5,10 +5,10 @@ text/html; w3m -I %{charset} -T text/html; copiousoutput;
 # text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump -width=1024 %s; nametemplate=%s.html; copiousoutput;
 # text/html; bash /home/dilip/.scripts/html-render %s; nametemplate=%s.html; copiousoutput;
 
-image/*; openfile %s ;
+image/*; vimiv %s ;
 image/*; sxiv %s;
 video/*; setsid mpv --quiet %s &; copiousoutput
 audio/*; mpv %s ;
-application/pdf; openfile %s ;
+application/pdf; zathura %s ;
 application/pgp-encrypted; gpg -d '%s'; copiousoutput;
 application/pgp-keys; gpg --import '%s'; copiousoutput;

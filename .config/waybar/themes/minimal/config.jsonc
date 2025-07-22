@@ -15,6 +15,7 @@
       "hyprland/workspaces"
    ],
    "modules-right": [
+		"power-profiles-daemon",
       "backlight",
       "pulseaudio",
       "custom/notifications",
