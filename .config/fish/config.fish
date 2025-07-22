@@ -4,7 +4,6 @@ set --export ANDROID_HOME $XDG_DATA_HOME/android
 set --export EDITOR "nvim"
 set --export VISUAL "nvim"
 set --export TERMINAL "alacritty"
-# set --export TERM "alacritty"
 set --export PAGER "less"
 set --export MANPAGER "nvim +Man!"
 set --export BROWSER "qutebrowser"
@@ -53,7 +52,6 @@ set fish_pager_color_selected_background -r
 fish_vi_key_bindings
 
 source "$HOME/.config/fish/abbreviations.fish"
-# source "$HOME/.cache/wal/colors-fzf.fish"
 source "$HOME/.config/nvim/extras/mini-fzf.fish"
 source "$HOME/.config/nvim/extras/mini.fish"
 
@@ -62,7 +60,7 @@ zoxide init fish | source
 function fish_prompt
     set -l dir (string trim (basename (prompt_pwd)))
     set -l branch (string trim (fish_git_prompt))
-	 echo (set_color blue)$dir (set_color green)$branch(set_color normal) "󰘧 "
+	 echo (set_color $foreground)$dir (set_color $comment)$branch(set_color normal) "󰘧 "
 end
 
 function fish_mode_prompt
