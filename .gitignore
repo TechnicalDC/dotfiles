@@ -26,3 +26,4 @@
 .config/fish/fish_plugins
 .fonts
 .config/kwalletrc
+.config/qutebrowser/__pycache__/colors.cpython-313.pyc
