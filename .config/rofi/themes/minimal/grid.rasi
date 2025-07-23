@@ -76,8 +76,8 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
-    text-color:                  @background;
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
 }
 
 /*****----- Listview -----*****/
@@ -109,8 +109,8 @@ element {
     orientation:                 vertical;
 }
 element selected {
-	background-color:            @selected;
-   text-color:                  @foreground;
+	background-color:            @selected-bg;
+   text-color:                  @selected-fg;
 }
 element-icon {
     background-color:            transparent;
@@ -130,7 +130,7 @@ element-text {
 /*****----- Message -----*****/
 message {
     background-color:            transparent;
-    border-color:                @selected;
+    border-color:                @selected-bg;
     border-radius:               10px;
     border:                      0px 0px 2px 0px;
 }

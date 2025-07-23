@@ -84,8 +84,8 @@ button {
 	cursor:                      pointer;
 }
 button selected {
-	background-color:            @selected;
-	text-color:                  @background;
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
 }
 
 /*****----- Listview -----*****/
@@ -115,8 +115,8 @@ element {
 	cursor:                      pointer;
 }
 element selected {
-	background-color:            @selected;
-	text-color:                  @foreground;
+    background-color:            @selected-bg;
+    text-color:                  @selected-fg;
 }
 element-icon {
 	background-color:            transparent;
@@ -135,7 +135,7 @@ element-text {
 /*****----- Message -----*****/
 message {
 	background-color:            transparent;
-	border-color:                @selected;
+	border-color:                @selected-bg;
 	border:                      2px;
 }
 textbox {
@@ -155,7 +155,7 @@ error-message {
 scrollbar {
 	background-color: @background;
 	handle-width: 10px;
-	handle-color: @selected;
+	handle-color: @selected-fg;
 	border-color: @background;
 	handle-rounded-corners: 0px;
 }
