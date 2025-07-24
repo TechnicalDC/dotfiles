@@ -52,15 +52,17 @@ window#waybar {
    margin-right: 0px;
 }
 #workspaces button {
-   color: @fg_mid2;
+   color: @fg;
    padding: 0px;
-   margin: 0px 12px;
+   border-radius: 0px;
+   margin: 0px 0px;
 }
 #workspaces button.empty{
-   color: @fg;
+   color: @fg_mid2;
 }
 #workspaces button.active{
-   color: @fg;
+   color: @bg;
+   background-color: @fg_edge;
 }
 #workspaces button:hover {
    color: @foreground;
