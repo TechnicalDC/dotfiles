@@ -14,7 +14,8 @@ set icons true
 set ignorecase true
 set smartcase true
 set info size
-# set drawbox
+set number
+set relativenumber
 set cursorpreviewfmt ""
 
 # =================================================================
