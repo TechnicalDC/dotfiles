@@ -11,9 +11,10 @@ set FIFO "0F"
 set SOCK "0F"
 set OTHER "02"
 
-set --export NNN_OPTS "dcErx"
+set --export NNN_OPTS "cErx"
 set --export NNN_COLORS '1234'
 set --export NNN_FIFO '/tmp/nnn.fifo'
 set --export NNN_FCOLORS "$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
 set --export NNN_BMS "d:$HOME/Documents;D:$HOME/Downloads/;h:$HOME"
 set --export NNN_PLUG "z:autojump"
+set --export NNN_SSHFS 'sshfs -o reconnect,idmap=user,cache_timeout=3600'
