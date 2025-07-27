@@ -16,3 +16,4 @@ set --export NNN_COLORS '1234'
 set --export NNN_FIFO '/tmp/nnn.fifo'
 set --export NNN_FCOLORS "$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
 set --export NNN_BMS "d:$HOME/Documents;D:$HOME/Downloads/;h:$HOME"
+set --export NNN_PLUG "z:autojump"
