@@ -1,5 +1,6 @@
 [Default Applications]
-image/gif=mpvgif.desktop
+text/plain=nvim.desktop
+image/gif=mpvgif.desktop;
 image/png=vimiv.desktop;
 image/jpeg=vimiv.desktop;
 application/pdf=org.pwmt.zathura.desktop;
