@@ -52,7 +52,6 @@ fish_vi_key_bindings
 source "$HOME/.config/fish/abbreviations.fish"
 source "$HOME/.config/nvim/extras/mini-fzf.fish"
 source "$HOME/.config/nvim/extras/mini.fish"
-source "$HOME/.config/nnn/config.fish"
 
 zoxide init fish | source
 
