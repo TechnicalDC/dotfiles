@@ -48,12 +48,12 @@ window#waybar {
 
 #workspaces{
    background: transparent;
-   padding: 5px;
+   padding: 0px;
    margin-right: 0px;
 }
 #workspaces button {
    color: @fg;
-   padding: 0px;
+   padding: 5px 10px;
    border-radius: 0px;
    margin: 0px 0px;
 }
