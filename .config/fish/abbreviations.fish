@@ -28,14 +28,14 @@ alias cp='cp -i'
 alias zf='z $(fd -t d | fzf --preview "ls -l {}")'
 
 if test -f $(which eza)
-   alias all='eza -al --color=always -h --icons --tree --level=1'
-   alias eza="eza --color=always --icons"
-   alias la='eza -l --color=always -h --icons --tree --level=1'
-   alias ls="eza --color=always -h --icons"
-   alias ll='eza -l --color=always -h --icons'
-   alias ll1='eza -l --color=always -h --icons --tree --level=1'
-   alias ll2='eza -l --color=always -h --icons --tree --level=2'
-   alias ll3='eza -l --color=always -h --icons --tree --level=3'
+   alias all='eza -al --color=always -h --icons --tree --level=1 --group-directories-first'
+   alias eza="eza --color=always --icons --group-directories-first"
+   alias la='eza -l --color=always -h --icons --tree --level=1 --group-directories-first'
+   alias ls="eza --color=always -h --icons --group-directories-first"
+   alias ll='eza -l --color=always -h --icons --group-directories-first'
+   alias ll1='eza -l --color=always -h --icons --tree --level=1 --group-directories-first'
+   alias ll2='eza -l --color=always -h --icons --tree --level=2 --group-directories-first'
+   alias ll3='eza -l --color=always -h --icons --tree --level=3 --group-directories-first'
 end
 
 if test -f $(which bat)
