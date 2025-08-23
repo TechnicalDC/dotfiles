@@ -14,7 +14,7 @@ configuration {
 }
 
 * {
-	font: "FantasqueSansM Nerd Font 14";
+	font: "JetBrainsMono Nerd Font 14";
 }
 
 /*****----- Main Window -----*****/

@@ -1,6 +1,7 @@
 include  /home/dilip/.config/nvim/extras/mini-zathura
 
-set font "FantasqueSansM Nerd Font 14"
+set font "JetBrainsMono Nerd Font 14"
+# set font "FantasqueSansM Nerd Font 14"
 # set font "Iosevka Nerd Font 14"
 
 # settings
