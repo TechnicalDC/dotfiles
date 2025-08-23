@@ -221,7 +221,7 @@ config.skip_close_confirmation_for_processes_named = {
 }
 config.command_palette_font_size = config.font_size
 config.char_select_font_size     = config.font_size
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1.0
 config.inactive_pane_hsb         = {
    saturation = 1.0,
    brightness = 1.0,
