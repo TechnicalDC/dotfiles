@@ -6,7 +6,7 @@ configuration {
 
 * {
     width: 550;
-	font: "FantasqueSansM Nerd Font 14";
+	font: "JetBrainsMono Nerd Font 14";
 }
 
 /*****----- Main Window -----*****/
@@ -17,7 +17,7 @@ window {
     fullscreen:                  false;
     width:                       1000px;
     x-offset:                    0px;
-	y-offset:                    10px;
+	y-offset:                    20px;
 
     /* properties for all widgets */
     enabled:                     true;
@@ -30,7 +30,7 @@ window {
 mainbox {
     enabled:                     true;
 	spacing:                     20px;
-    background-color:            @background;
+    background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "inputbar", "message", "listview" ];
 }
@@ -39,7 +39,7 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    background-color:            @background;
+	background-color:            transparent;
     text-color:                  @foreground;
 	children:                    [ "prompt", "entry" ];
 }

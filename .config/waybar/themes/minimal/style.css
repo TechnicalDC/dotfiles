@@ -1,10 +1,11 @@
 @import url("/home/dilip/.config/nvim/extras/mini.css");
 
 * {
-    font-family: "FantasqueSansM Nerd Font";
+    font-family: "JetBrainsMono Nerd Font";
+    /* font-family: "FantasqueSansM Nerd Font"; */
     /* font-family: "Iosevka Nerd Font"; */
     font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
-    font-size: 18px;
+    font-size: 16px;
 }
 
 window#waybar {
