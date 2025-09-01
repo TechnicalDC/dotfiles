@@ -17,22 +17,18 @@ set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk
 set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic
 set --export FZF_DEFAULT_OPTS "--layout=reverse
---height=60%
---prompt=' '
+--prompt='[search] '
 --pointer=''
 --info=hidden
 --highlight-line
---ansi
---border double"
+--ansi"
 
 set --export _ZO_FZF_OPTS "--layout=reverse
---height=60%
---prompt=' '
+--prompt='[search] '
 --pointer=''
 --info=hidden
 --highlight-line
---ansi
---border double"
+--ansi"
 #}}}
 
 set fish_greeting

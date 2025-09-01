@@ -5,17 +5,9 @@ abbr :x 'exit'
 abbr vim 'nvim'
 abbr vi 'nvim'
 abbr v 'nvim'
-abbr nv "nvim"
 abbr n "nextd"
 abbr p "prevd"
 abbr lg "lazygit"
-
-abbr ga "git add"
-abbr gs "git stage"
-abbr gS "git status -s"
-abbr gc "git commit -m"
-abbr gP "git push"
-abbr gp "git pull"
 
 abbr mv 'mv -i'
 abbr rm 'rm -i'
