@@ -4,8 +4,8 @@ set --export ANDROID_HOME $XDG_DATA_HOME/android
 set --export EDITOR "nvim"
 set --export VISUAL "nvim"
 set --export TERMINAL "alacritty"
-set --export PAGER "less"
-set --export MANPAGER "nvim +Man!"
+set --export PAGER "bat"
+set --export MANPAGER "bat"
 set --export BROWSER "qutebrowser"
 set --export THEME "catppuccin"
 set --export PATH  $PATH $HOME/.scripts/
@@ -17,6 +17,7 @@ set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk
 set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic
 set --export FZF_DEFAULT_OPTS "--layout=reverse
+--margin=20%,30%
 --prompt='[search] '
 --pointer=''
 --info=hidden
@@ -24,6 +25,7 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 --ansi"
 
 set --export _ZO_FZF_OPTS "--layout=reverse
+--margin=20%,30%
 --prompt='[search] '
 --pointer=''
 --info=hidden
@@ -50,9 +52,9 @@ source "$HOME/.config/nvim/extras/mini.fish"
 zoxide init fish | source
 
 function fish_prompt
-    set -l dir (string trim (basename (prompt_pwd)))
-    set -l branch (string trim (fish_git_prompt))
-	 echo (set_color $foreground)$dir (set_color $comment)$branch(set_color normal) "󰘧 "
+   set -l dir (string trim (basename (prompt_pwd)))
+   set -l branch (string trim (fish_git_prompt))
+   echo (set_color $foreground)$dir (set_color $comment)$branch(set_color normal) " "
 end
 
 function fish_mode_prompt
