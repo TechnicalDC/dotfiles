@@ -16,6 +16,12 @@ set --export PATH  $PATH /mnt/c/Progress/OpenEdge/bin/
 set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk
 set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic
+set --export -Ux FZF_DEFAULT_OPTS "
+	--color=fg:#908caa,bg:#191724,hl:#ebbcba
+	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
+	--color=border:#403d52,header:#31748f,gutter:#191724
+	--color=spinner:#f6c177,info:#9ccfd8
+	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 set --export FZF_DEFAULT_OPTS "--layout=reverse
 --margin=20%,30%
 --prompt='[search] '
@@ -46,16 +52,8 @@ set fish_pager_color_selected_background -r
 fish_vi_key_bindings
 
 source "$HOME/.config/fish/abbreviations.fish"
-source "$HOME/.config/nvim/extras/mini-fzf.fish"
-source "$HOME/.config/nvim/extras/mini.fish"
+
+# Applying rose-pine theme
+fish_config theme choose "Rosé Pine"
 
 zoxide init fish | source
-
-function fish_prompt
-   set -l dir (string trim (basename (prompt_pwd)))
-   set -l branch (string trim (fish_git_prompt))
-   echo (set_color $foreground)$dir (set_color $comment)$branch(set_color normal) " "
-end
-
-function fish_mode_prompt
-end
