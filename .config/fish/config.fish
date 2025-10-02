@@ -56,4 +56,10 @@ source "$HOME/.config/fish/abbreviations.fish"
 # Applying rose-pine theme
 fish_config theme choose "Rosé Pine"
 
+function starship_transient_prompt_func
+  starship module character
+end
+
 zoxide init fish | source
+starship init fish | source
+enable_transience
