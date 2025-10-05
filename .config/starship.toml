@@ -1,4 +1,9 @@
-# format = 'AA $fill BB $fill CC'
+format = """
+$directory\
+$fill \
+$git_branch$git_status\
+$time
+$character"""
 
 [character]
 success_symbol = "[❯](purple)"
@@ -6,8 +11,12 @@ error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [fill]
-symbol = '-'
-style = 'bold green'
+symbol = '·'
+style = 'bold black'
+
+[time]
+disabled = false
+time_format = "%R"
 
 [bun]
 format = "via [$symbol]($style)"
