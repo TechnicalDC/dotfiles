@@ -8,31 +8,31 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [font]
-size = 16.0
+size = 14.0
 
 [font.bold]
-family = "FantasqueSansM Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "FantasqueSansM Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "FantasqueSansM Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "FantasqueSansM Nerd Font"
+family = "JetBrainsMonoNL Nerd Font"
 style = "Regular"
 
 [font.offset]
 x = 0
-y = 8
+y = 0
 
 [font.glyph_offset]
 x = 0
-y = 5
+y = 0
 
 [[keyboard.bindings]]
 action = "Paste"
