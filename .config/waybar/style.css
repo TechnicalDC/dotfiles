@@ -36,8 +36,8 @@ window#waybar {
 #power-profiles-daemon,
 #mpd {
     border-radius: 20px;
-    background-color: @light_black;
-    border: 2px solid @light_black;
+    background-color: #232136;
+    border: 2px solid #232136;
     color: @foreground;
     padding: 10px;
     margin: 10px 0px 10px 10px;
@@ -66,18 +66,18 @@ window#waybar {
 
 #workspaces{
    border-radius: 20px;
-   border: 2px solid @light_black;
-   background-color: alpha(@light_black, .4);
+   background-color: #232136;
    padding: 0px;
    margin: 10px;
    margin: 10px;
+   color: white;
    margin-right: 0px;
 }
 #workspaces button {
-   background-color: @light_black;
-   border-radius: 15px;
+   border-radius: 20px;
    padding: 0px;
    margin: 0px 3px;
+   color: white;
    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
 }
 #workspaces button:first-child {
@@ -87,6 +87,7 @@ window#waybar {
    margin: 0px 0px 0px 3px;
 }
 #workspaces button.empty{
+   color: white;
    background-color: alpha(@light_black, .4);
 }
 #workspaces button.active{
