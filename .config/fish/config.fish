@@ -16,16 +16,16 @@ set --export PATH  $PATH /mnt/c/Progress/OpenEdge/bin/
 set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk
 set --export DLC   /mnt/c/Progress/OpenEdge
 set --export QT_QUICK_CONTROLS_STYLE Basic
-set --export -Ux FZF_DEFAULT_OPTS "
+set --export Ux FZF_DEFAULT_OPTS "
 	--color=fg:#908caa,bg:#191724,hl:#ebbcba
 	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba
 	--color=border:#403d52,header:#31748f,gutter:#191724
 	--color=spinner:#f6c177,info:#9ccfd8
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
-set --export FZF_DEFAULT_OPTS "--layout=reverse
+set --export FZF_DEFAULT_OPTS $FZF_DEFAULT_OPTS "--layout=reverse
 --margin=20%,30%
 --prompt='[search] '
---pointer=''
+--pointer='▌'
 --info=hidden
 --highlight-line
 --ansi"
@@ -33,7 +33,7 @@ set --export FZF_DEFAULT_OPTS "--layout=reverse
 set --export _ZO_FZF_OPTS "--layout=reverse
 --margin=20%,30%
 --prompt='[search] '
---pointer=''
+--pointer='▌'
 --info=hidden
 --highlight-line
 --ansi"
