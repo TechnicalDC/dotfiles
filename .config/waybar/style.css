@@ -93,7 +93,9 @@ window#waybar {
 }
 
 #workspaces button.active{
-   color: @rose;
+   color: @base;
+   border-radius: 15px;
+   background-color: @foam;
    padding: 0px 20px;
 }
 
@@ -121,7 +123,8 @@ window#waybar {
    color: @background;
 }
 
-label:focus { }
+label:focus {
+}
 
 #cpu {
    background-size: 300% 300%;
