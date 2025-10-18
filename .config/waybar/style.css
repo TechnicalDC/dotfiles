@@ -6,7 +6,6 @@
     font-family: "IosevkaTermSlab Nerd Font";
     font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
     font-size: 18px;
-    color: @background;
 }
 
 window#waybar {
@@ -29,10 +28,6 @@ window#waybar {
 #tray,
 #mode,
 #idle_inhibitor,
-#custom-expand,
-#custom-cycle_wall,
-#custom-ss,
-#custom-dynamic_pill,
 #user,
 #taskbar,
 #power-profiles-daemon,
@@ -51,27 +46,30 @@ window#waybar {
 #user {
     padding: 0px 10px;
 }
+
 #custom-appmenuicon {
    color: @blue;
     padding: 6px 12px;
     padding-right: 17px;
     margin-right: 0px;
 }
+
 #custom-powermenuicon {
     color: @red;
     padding: 6px 12px;
     padding-right: 17px;
     margin-right: 10px;
 }
+
 #custom-notifications {
     color: @yellow;
     padding: 6px 12px;
-    padding-right: 17px;
+    padding-right: 20px;
 }
 
 #workspaces{
+   background: @base;
    border-radius: 15px;
-   background-color: #232136;
    margin-top: 20px;
    margin-bottom: 0px;
    margin-left: 5px;
@@ -80,26 +78,27 @@ window#waybar {
 }
 #workspaces button {
    border-radius: 40px;
-   color: white;
+   padding: 0px 5px;
+   color: @text;
 }
+
 #workspaces button:first-child {
+   padding-left: 20px;
    margin: 0px 3px 0px 0px;
 }
+
 #workspaces button:last-child {
+   padding-right: 20px;
    margin: 0px 0px 0px 3px;
 }
-#workspaces button.empty{
-   color: white;
-   background-color: alpha(@light_black, .4);
-}
+
 #workspaces button.active{
-   background: @background;
-   color: white;
+   color: @rose;
    padding: 0px 20px;
 }
+
 #workspaces button:hover {
-   background-color: alpha(@light_black, .6);
-   color: @foreground;
+   color: @rose;
 }
 
 #clock {
@@ -122,9 +121,7 @@ window#waybar {
    color: @background;
 }
 
-label:focus {
-
-}
+label:focus { }
 
 #cpu {
    background-size: 300% 300%;
@@ -208,7 +205,7 @@ label:focus {
 #mpd {
    background-color: transparent;
    border: transparent;
-   color: @base;
+   color: @text;
 }
 
 #mpd.disconnected {

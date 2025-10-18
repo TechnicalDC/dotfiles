@@ -82,7 +82,7 @@
       }
    },
    "mpd": {
-      "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon} ::   {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
+      "format": "  {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) :: {volume}%",
       "format-disconnected": "Disconnected ",
       "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon} ::   Stopped",
       "unknown-tag": "N/A",

@@ -15,11 +15,10 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  true;
+    fullscreen:                  false;
     width:                       1000px;
     x-offset:                    0px;
     y-offset:                    0px;
-    padding:                     10% 20%;
 
     /* properties for all widgets */
     enabled:                     true;
@@ -28,6 +27,7 @@ window {
     border-color:                @background;
     border:                      2px;
     background-color:            @background;
+
 }
 
 /*****----- Main Box -----*****/
@@ -35,28 +35,7 @@ mainbox {
     enabled:                     true;
     spacing:                     0px;
     background-color:            transparent;
-    orientation:                 horizontal;
-    children:                    [ "listbox" ];
-}
-
-imagebox {
-    padding:                     20px;
-    background-color:            transparent;
-    background-image:            url("~/.cache/wal/wallpaper.jpg", width);
-    orientation:                 vertical;
-    border-radius:               8;
-    children:                    ["dummy"];
-}
-
-listbox {
-    padding:                     0px 0px 0px 20px;
-    background-color:            transparent;
-    orientation:                 vertical;
     children:                    [ "inputbar", "message", "listview" ];
-}
-
-dummy {
-    background-color:            transparent;
 }
 
 /*****----- Inputbar -----*****/
@@ -64,22 +43,23 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     padding:                     10px;
-    margin:                      0px 20% 5% 20%;
+    margin:                      0px 0px 10px 0px;
     border-color:                @background-alt;
     border-radius:               10px;
     background-color:            @background-alt;
     text-color:                  @foreground;
-    children:                    [ "entry" ];
+    children:                    [ "textbox-prompt-colon", "entry" ];
 }
+
 textbox-prompt-colon {
     enabled:                     true;
-    expand:                      true;
-    width:                       10px;
+    expand:                      false;
     str:                         " ";
     background-color:            transparent;
     text-color:                  inherit;
     padding:                  2px 2px 2px 10px;
 }
+
 entry {
     enabled:                     true;
     background-color:            transparent;
@@ -113,7 +93,7 @@ button selected {
 listview {
     enabled:                     true;
     columns:                     5;
-    lines:                       4;
+    lines:                       3;
     cycle:                       true;
     spacing:                     15px;
     dynamic:                     true;
@@ -149,6 +129,7 @@ element-icon {
     background-color:            transparent;
     text-color:                  inherit;
     size:                        150px;
+    border-radius:               10px;
     cursor:                      inherit;
 }
 element-text {

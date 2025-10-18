@@ -42,28 +42,7 @@ mainbox {
     enabled:                     true;
     spacing:                     0px;
     background-color:            transparent;
-    orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
-}
-
-imagebox {
-    padding:                     20px;
-    background-color:            transparent;
-    background-image:            url("~/.cache/wal/rofi_background.png", width);
-    orientation:                 vertical;
-    border-radius:               8;
-    children:                    ["dummy"];
-}
-
-listbox {
-    padding:                     0px 0px 0px 20px;
-    background-color:            transparent;
-    orientation:                 vertical;
     children:                    [  "inputbar", "message", "listview" ];
-}
-
-dummy {
-    background-color:            transparent;
 }
 
 /*****----- Inputbar -----*****/
@@ -139,15 +118,16 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-radius:               10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
+
 element selected {
     background-color:            @selected;
     text-color:                  @foreground;
-    border-color:                @light-black;
+    border: 0px 0px 0px 10px;
+    border-color:                red;
 }
 element-icon {
     background-color:            transparent;
