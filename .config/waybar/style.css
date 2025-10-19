@@ -84,12 +84,10 @@ window#waybar {
 
 #workspaces button:first-child {
    padding-left: 20px;
-   margin: 0px 3px 0px 0px;
 }
 
 #workspaces button:last-child {
    padding-right: 20px;
-   margin: 0px 0px 0px 3px;
 }
 
 #workspaces button.active{

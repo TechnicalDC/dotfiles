@@ -85,15 +85,15 @@ local function tab_title(tab_info)
    return title
 end
 
-wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
-   local title_name = tab_title(tab)
-   local idx = tab.tab_index == 0 and 1 or tab.tab_index
-
-   if string.len(title_name) >= 20  then
-      title_name = string.sub(title_name, 1, 20) .. '...'
-   end
-   return ' ' .. idx .. '.' ..  title_name .. ' '
-end)
+-- wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+--    local title_name = tab_title(tab)
+--    local idx = tab.tab_index == 0 and 1 or tab.tab_index
+--
+--    if string.len(title_name) >= 20  then
+--       title_name = string.sub(title_name, 1, 20) .. '...'
+--    end
+--    return ' ' .. idx .. '.' ..  title_name .. ' '
+-- end)
 
 -- wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
 --   local zoomed = ''
@@ -111,55 +111,55 @@ end)
 -- }}}
 
 -- TAB BAR THEME {{{
-wezterm.on('update-right-status', function(window, pane)
-   local time = wezterm.strftime("%H:%M:%S")
-   local stat = window:active_workspace()
-   local hostname = wezterm.hostname()
-   local date = wezterm.strftime '%Y-%m-%d %H:%M:%S'
-   local battery_icon   = ''
-   local battery_status = ''
-   local charging_status = ''
-
-   for _, b in ipairs(wezterm.battery_info()) do
-      battery_status = string.format('%.0f%%', b.state_of_charge * 100)
-      if b.state_of_charge * 100 <= 100 and b.state_of_charge * 100 > 75 then
-         battery_icon = '  '
-      end
-      if b.state_of_charge * 100 <= 75 and b.state_of_charge * 100 > 60 then
-         battery_icon = '  '
-      end
-      if b.state_of_charge * 100 <= 60 and b.state_of_charge * 100 > 40 then
-         battery_icon = '  '
-      end
-      if b.state_of_charge * 100 <= 40 and b.state_of_charge * 100 > 15 then
-         battery_icon = '  '
-      end
-      if b.state_of_charge * 100 <= 15 then
-         battery_icon = '  '
-      end
-
-      if b.state == "Charging" then
-         charging_status = ' '
-      end
-   end
-
-   -- Left status (left of the tab line)
-   window:set_left_status(wezterm.format({
-      { Background = { Color = colors.bg_mid } },
-      { Foreground = { Color = colors.fg } },
-      { Text = " " },
-      { Text = stat },
-      { Text = " " },
-      "ResetAttributes",
-   }))
-   -- Make it italic and underlined
-   window:set_right_status(wezterm.format {
-      { Text = " 󰍹 " },
-      { Text = hostname },
-      { Text = " "  },
-      "ResetAttributes",
-   })
-end)
+-- wezterm.on('update-right-status', function(window, pane)
+--    local time = wezterm.strftime("%H:%M:%S")
+--    local stat = window:active_workspace()
+--    local hostname = wezterm.hostname()
+--    local date = wezterm.strftime '%Y-%m-%d %H:%M:%S'
+--    local battery_icon   = ''
+--    local battery_status = ''
+--    local charging_status = ''
+--
+--    for _, b in ipairs(wezterm.battery_info()) do
+--       battery_status = string.format('%.0f%%', b.state_of_charge * 100)
+--       if b.state_of_charge * 100 <= 100 and b.state_of_charge * 100 > 75 then
+--          battery_icon = '  '
+--       end
+--       if b.state_of_charge * 100 <= 75 and b.state_of_charge * 100 > 60 then
+--          battery_icon = '  '
+--       end
+--       if b.state_of_charge * 100 <= 60 and b.state_of_charge * 100 > 40 then
+--          battery_icon = '  '
+--       end
+--       if b.state_of_charge * 100 <= 40 and b.state_of_charge * 100 > 15 then
+--          battery_icon = '  '
+--       end
+--       if b.state_of_charge * 100 <= 15 then
+--          battery_icon = '  '
+--       end
+--
+--       if b.state == "Charging" then
+--          charging_status = ' '
+--       end
+--    end
+--
+--    -- Left status (left of the tab line)
+--    window:set_left_status(wezterm.format({
+--       { Background = { Color = colors.bg_mid } },
+--       { Foreground = { Color = colors.fg } },
+--       { Text = " " },
+--       { Text = stat },
+--       { Text = " " },
+--       "ResetAttributes",
+--    }))
+--    -- Make it italic and underlined
+--    window:set_right_status(wezterm.format {
+--       { Text = " 󰍹 " },
+--       { Text = hostname },
+--       { Text = " "  },
+--       "ResetAttributes",
+--    })
+-- end)
 -- }}}
 
 -- CONFIG {{{
@@ -177,15 +177,14 @@ config.default_cwd                                 = '/home/dilip/'
 config.default_domain                              = "local"
 config.default_workspace                           = "default"
 config.term                                        = "xterm"
--- config.font                                     = wezterm.font "FantasqueSansM Nerd Font"
--- config.font                                     = wezterm.font "JetBrainsMonoNL Nerd Font"
 config.font                                        = wezterm.font 'IosevkaTermSlab Nerd Font'
-config.font_size                                   = 16
+config.font_size                                   = 17
 config.default_cursor_style                        = 'SteadyBlock'
 config.line_height                                 = 1.2
-config.colors                                      = theme
-config.scrollback_lines      = 10000
-config.detect_password_input = true
+-- config.colors                                      = theme
+config.color_scheme                                = 'rose-pine'
+config.scrollback_lines                            = 10000
+config.detect_password_input                       = true
 config.scroll_to_bottom_on_input                   = true
 config.show_update_window                          = true
 config.quote_dropped_files                         = "WindowsAlwaysQuoted"
