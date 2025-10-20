@@ -6,5 +6,5 @@ waybar --config ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css &
 wally -r &
 mpd &
 nm-applet &
-# swaync --config ~/.config/swaync/themes/minimal/config.json --style ~/.config/swaync/themes/minimal/style.css &
+swaync --config ~/.config/swaync/config.json --style ~/.config/swaync/style.css &
 kdeconnect-indicator &

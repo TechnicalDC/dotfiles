@@ -3,13 +3,13 @@
 /* @import "./rose-pine-dawn.css"; */
 
 * {
-    font-family: "IosevkaTermSlab Nerd Font";
-    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
-    font-size: 18px;
+   font-family: "IosevkaTermSlab Nerd Font";
+   font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
+   font-size: 18px;
 }
 
 window#waybar {
-    background-color: transparent;
+   background-color: transparent;
 }
 
 #custom-appmenuicon,
@@ -32,43 +32,43 @@ window#waybar {
 #taskbar,
 #power-profiles-daemon,
 #mpd {
-    border-radius: 15px;
-    background: @base;
-    border: 1px solid @overlay;
-    color: @foreground;
-    padding: 10px 20px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-left: 5px;
-    margin-right: 5px;
+   border-radius: 15px;
+   background: alpha(@base, .95);
+   border: 1px solid @overlay;
+   color: @foreground;
+   padding: 10px 20px;
+   margin-top: 20px;
+   margin-bottom: 0px;
+   margin-left: 5px;
+   margin-right: 5px;
 }
 
 #user {
-    padding: 0px 10px;
+   padding: 0px 10px;
 }
 
 #custom-appmenuicon {
    color: @blue;
-    padding: 6px 12px;
-    padding-right: 17px;
-    margin-right: 0px;
+   padding: 6px 12px;
+   padding-right: 17px;
+   margin-right: 0px;
 }
 
 #custom-powermenuicon {
-    color: @red;
-    padding: 6px 12px;
-    padding-right: 17px;
-    margin-right: 10px;
+   color: @red;
+   padding: 6px 12px;
+   padding-right: 17px;
+   margin-right: 10px;
 }
 
 #custom-notifications {
-    color: @yellow;
-    padding: 6px 12px;
-    padding-right: 20px;
+   color: @yellow;
+   padding: 6px 12px;
+   padding-right: 20px;
 }
 
 #workspaces{
-   background: @base;
+   background: alpha(@base, .95);
    border-radius: 15px;
    margin-top: 20px;
    margin-bottom: 0px;
@@ -77,8 +77,8 @@ window#waybar {
    color: white;
 }
 #workspaces button {
-   border-radius: 40px;
-   padding: 0px 5px;
+   border-radius: 15px;
+   padding: 0px 20px;
    color: @text;
 }
 

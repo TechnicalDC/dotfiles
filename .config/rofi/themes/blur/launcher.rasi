@@ -1,4 +1,4 @@
-@import "~/.cache/wal/colors-rofi-dark.rasi"
+@import "~/.config/rofi/current-theme.rasi"
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun";
@@ -23,8 +23,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
-    height:                      500px;
+    width:                       800px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -32,8 +31,8 @@ window {
     enabled:                     true;
     border-radius:               15px;
     cursor:                      "default";
-    border-color:                @background;
-    border:                      2px;
+    border-color:                @cya;
+    border:                      4px;
     background-color:            @background;
 }
 
@@ -51,9 +50,9 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @background-alt;
+    border-color:                @cur;
     border-radius:               10px;
-    background-color:            @background-alt;
+    background-color:            @cur;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
@@ -90,7 +89,7 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @yellow;
+    background-color:            @selected-background;
     text-color:                  @foreground;
 }
 
@@ -124,14 +123,16 @@ element {
 }
 
 element selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
-    border: 0px 0px 0px 10px;
-    border-color:                red;
+    background-color: @selected-background;
+    text-color:       @foreground;
+    border-radius:    10px;
+    border:           0px 0px 0px 5px;
+    border-color:     @ora;
 }
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
+    margin:                      0px 0px 0px 10px;
     size:                        32px;
     cursor:                      inherit;
 }
@@ -139,6 +140,7 @@ element-text {
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
+    margin:                      0px 0px 0px 10px;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }

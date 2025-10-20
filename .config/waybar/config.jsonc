@@ -10,9 +10,7 @@
       "clock",
       "hyprland/workspaces"
    ],
-   "modules-center": [
-      "mpd"
-   ],
+   "modules-center": [],
    "modules-right": [
       "custom/notifications",
       "pulseaudio",
