@@ -85,7 +85,7 @@ slider {
 .floating-notifications.background .notification-row .notification-background {
   border-radius: 15px;
   margin: 20px 20px 0px 0px;
-  border: 2px solid @foam;
+  border: 4px solid @foam;
   background-color: @base;
   color: @text;
 }

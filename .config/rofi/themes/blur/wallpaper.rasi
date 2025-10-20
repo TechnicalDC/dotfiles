@@ -5,8 +5,7 @@ configuration {
 }
 
 * {
-    width: 550;
-    font: "JetBrainsMono Nerd Font 12";
+    font: "IosevkaTermSlab Nerd Font 16";
 }
 
 /*****----- Main Window -----*****/

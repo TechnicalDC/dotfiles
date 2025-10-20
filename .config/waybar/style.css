@@ -34,9 +34,9 @@ window#waybar {
 #mpd {
    border-radius: 15px;
    background: alpha(@base, .95);
-   border: 1px solid @overlay;
+   border: 4px solid @overlay;
    color: @foreground;
-   padding: 10px 20px;
+   padding: 6px 16px;
    margin-top: 20px;
    margin-bottom: 0px;
    margin-left: 5px;
@@ -69,6 +69,7 @@ window#waybar {
 
 #workspaces{
    background: alpha(@base, .95);
+   border: 4px solid @overlay;
    border-radius: 15px;
    margin-top: 20px;
    margin-bottom: 0px;
@@ -77,8 +78,8 @@ window#waybar {
    color: white;
 }
 #workspaces button {
-   border-radius: 15px;
-   padding: 0px 20px;
+   border-radius: 10px;
+   padding: 0px 16px;
    color: @text;
 }
 
@@ -92,9 +93,7 @@ window#waybar {
 
 #workspaces button.active{
    color: @base;
-   border-radius: 15px;
    background-color: @foam;
-   padding: 0px 20px;
 }
 
 #workspaces button:hover {
@@ -107,7 +106,7 @@ window#waybar {
 }
 
 #battery.charging, #battery.plugged {
-   color: @green;
+   border: 4px solid @foam;
 }
 
 #battery {
@@ -116,9 +115,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-   border-color: @red;
-   background-color: @red;
-   color: @background;
+   border-color: @love;
 }
 
 label:focus {
@@ -168,9 +165,7 @@ label:focus {
 }
 
 #pulseaudio.muted {
-   border-color: @red;
-   background-color: @red;
-   color: @base;
+   border-color: @love;
 }
 
 #temperature {

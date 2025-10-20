@@ -1,12 +1,11 @@
-@import "~/.cache/wal/colors-rofi-dark.rasi"
+@import "~/.config/rofi/current-theme.rasi"
 /*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
 }
 
 * {
-    width: 550;
-    font: "JetBrainsMono Nerd Font 12";
+    font: "IosevkaTermSlab Nerd Font 16";
 }
 
 /*****----- Main Window -----*****/
@@ -25,8 +24,8 @@ window {
     enabled:                     true;
     border-radius:               15px;
     cursor:                      "default";
-    border-color:                @background;
-    border:                      2px;
+    border-color:                @cya;
+    border:                      4px;
     background-color:            @background;
 }
 
