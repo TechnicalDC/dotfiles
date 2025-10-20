@@ -173,8 +173,7 @@ c.colors.tabs.pinned.selected.even.bg = mini["bg_mid2"]
 ################
 # FONT SETTING #
 ################
-# font = '20px "FantasqueSansM Nerd Font"'
-font = '18px "JetBrainsMonoNL Nerd Font"'
+font = '18px "IosevkaTermSlab Nerd Font"'
 c.fonts.default_family   = font
 c.fonts.default_size     = '20px'
 c.fonts.contextmenu         = font
