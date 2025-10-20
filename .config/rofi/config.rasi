@@ -1,7 +1,7 @@
 configuration{
     modi: "drun,run";
     show-icons: true;
-    icon-theme: "Gruvbox-Plus-Dark";
+    icon-theme: "rose-pine-icons";
     drun-display-format: "{icon} {name}";
     drun-display-actions: true;
     location: 0;
