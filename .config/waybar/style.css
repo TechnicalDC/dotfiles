@@ -33,7 +33,7 @@ window#waybar {
 #power-profiles-daemon,
 #mpd {
    border-radius: 15px;
-   background: alpha(@base, .95);
+   background: alpha(@base, .8);
    border: 4px solid @overlay;
    color: @foreground;
    padding: 6px 16px;
@@ -68,7 +68,7 @@ window#waybar {
 }
 
 #workspaces{
-   background: alpha(@base, .95);
+   background: alpha(@base, .8);
    border: 4px solid @overlay;
    border-radius: 15px;
    margin-top: 20px;

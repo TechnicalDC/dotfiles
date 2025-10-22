@@ -85,15 +85,21 @@ local function tab_title(tab_info)
    return title
 end
 
--- wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
---    local title_name = tab_title(tab)
---    local idx = tab.tab_index == 0 and 1 or tab.tab_index
---
---    if string.len(title_name) >= 20  then
---       title_name = string.sub(title_name, 1, 20) .. '...'
---    end
---    return ' ' .. idx .. '.' ..  title_name .. ' '
--- end)
+wezterm.on( 'format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+   local title_name = tab_title(tab)
+   local idx = tab.tab_index == 0 and 1 or tab.tab_index
+
+   for i in string.gmatch(title_name, "%S+") do
+      title_name = i
+      break
+   end
+
+   -- if string.len(title_name) >= 20  then
+   --    title_name = string.sub(title_name, 1, 20) .. '...'
+   -- end
+
+   return ' ' .. idx .. '.' ..  title_name .. ' '
+end)
 
 -- wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
 --   local zoomed = ''

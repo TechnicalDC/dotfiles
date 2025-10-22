@@ -1,8 +1,8 @@
 @import "default"
 
 * {
-	bg: #191724;
-	cur: #1f1d2e;
+	bg: #191724cc;
+	cur: #1f1d2ecc;
 	fgd: #e0def4;
 	cmt: #6e6a86;
 	cya: #9ccfd8;
@@ -11,8 +11,6 @@
 	pur: #c4a7e7;
 	red: #eb6f92;
 	yel: #f6c177;
-
-	font: "Cartograph CF 12";
 
 	foreground: @fgd;
 	background: @bg;
@@ -56,42 +54,7 @@
 #element {
 	border:  0;
 	padding: 1px ;
-}
-#element.normal.normal {
-	background-color: @background;
-	text-color:       @foreground;
-}
-#element.normal.urgent {
-	background-color: @urgent-background;
-	text-color:       @urgent-foreground;
-}
-#element.normal.active {
-	background-color: @active-background;
-	text-color:       @background;
-}
-#element.selected.normal {
-	background-color: @selected-background;
-	text-color:       @foreground;
-}
-#element.selected.urgent {
-	background-color: @selected-urgent-background;
-	text-color:       @foreground;
-}
-#element.selected.active {
-	background-color: @selected-active-background;
-	text-color:       @background;
-}
-#element.alternate.normal {
-	background-color: @background;
-	text-color:       @foreground;
-}
-#element.alternate.urgent {
-	background-color: @urgent-background;
-	text-color:       @foreground;
-}
-#element.alternate.active {
-	background-color: @active-background;
-	text-color:       @foreground;
+   background-color: transparent;
 }
 #scrollbar {
 	width:        2px ;

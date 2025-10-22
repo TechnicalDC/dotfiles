@@ -191,7 +191,6 @@ c.fonts.messages.warning    = font
 c.fonts.tabs.selected        = font
 c.fonts.tabs.unselected      = font
 
-
 ################################
 # KEY BINDINGS FOR NORMAL MODE #
 ################################
@@ -202,6 +201,7 @@ config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('D', 'tab-only')
 config.bind('ww', 'open -w')
+config.bind('wp', 'open -p')
 config.bind('r', 'reload')
 config.bind('R', 'config-source')
 

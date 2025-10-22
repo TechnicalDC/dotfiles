@@ -2,6 +2,13 @@
 /*****----- Configuration -----*****/
 configuration {
     show-icons:                 true;
+    display-drun:               "APPS";
+    display-run:                "RUN";
+    display-filebrowser:        "FILES";
+    display-window:             "WINDOW";
+    drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    window-format:              "{w} · {c} · {t}";
+    hide-scrollbar: true;
 }
 
 * {
@@ -45,7 +52,7 @@ inputbar {
     margin:                      0px 0px 10px 0px;
     border-color:                @cur;
     border-radius:               10px;
-    background-color:            @cur;
+    background-color:            transparent;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
@@ -119,6 +126,32 @@ element {
     cursor:                      pointer;
     orientation:                 vertical;
 }
+
+element normal normal {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element normal urgent {
+   background-color: transparent;
+	text-color:       @urgent-foreground;
+}
+element normal active {
+   background-color: transparent;
+	text-color:       @background;
+}
+element alternate normal {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element alternate urgent {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element alternate active {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+
 element selected {
     background-color: @selected-background;
     text-color:       @foreground;
@@ -144,12 +177,11 @@ element-text {
 /*****----- Message -----*****/
 message {
     background-color:            transparent;
-    border:                      0px;
 }
 textbox {
     padding:                     15px;
-    margin:                      0px 0px 10px 0px;
-    border-radius:               10px;
+    border-radius:               5px;
+    background-color:            @background;
     text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.0;

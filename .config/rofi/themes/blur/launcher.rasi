@@ -52,10 +52,11 @@ inputbar {
     margin:                      0px 0px 10px 0px;
     border-color:                @cur;
     border-radius:               10px;
-    background-color:            @cur;
+    background-color:            transparent;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
+
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
@@ -122,6 +123,36 @@ element {
     cursor:                      pointer;
 }
 
+element normal normal {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element normal urgent {
+   background-color: transparent;
+	text-color:       @urgent-foreground;
+}
+element normal active {
+   background-color: transparent;
+	text-color:       @background;
+}
+element alternate normal {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element alternate urgent {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element alternate active {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+
+element selected urgent {
+   background-color: transparent;
+	text-color:       @urgent-foreground;
+}
+
 element selected {
     background-color: @selected-background;
     text-color:       @foreground;
@@ -152,7 +183,7 @@ message {
 textbox {
     padding:                     15px;
     border-radius:               5px;
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.0;
