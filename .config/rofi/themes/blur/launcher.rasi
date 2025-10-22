@@ -154,9 +154,8 @@ element selected urgent {
 }
 
 element selected {
-    background-color: @selected-background;
+    background-color: inherit;
     text-color:       @foreground;
-    border-radius:    10px;
     border:           0px 0px 0px 5px;
     border-color:     @ora;
 }
@@ -178,7 +177,8 @@ element-text {
 
 /*****----- Message -----*****/
 message {
-    background-color:            transparent;
+    background-color: transparent;
+    border-color:     transparent;
 }
 textbox {
     padding:                     15px;

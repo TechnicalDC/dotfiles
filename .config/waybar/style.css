@@ -79,20 +79,21 @@ window#waybar {
 }
 #workspaces button {
    border-radius: 10px;
-   padding: 0px 16px;
+   padding: 0px 10px;
    color: @text;
 }
 
-#workspaces button:first-child {
-   padding-left: 20px;
-}
-
-#workspaces button:last-child {
-   padding-right: 20px;
-}
+/* #workspaces button:first-child { */
+/*    padding-left: 20px; */
+/* } */
+/**/
+/* #workspaces button:last-child { */
+/*    padding-right: 20px; */
+/* } */
 
 #workspaces button.active{
    color: @base;
+   padding: 0px 10px;
    background-color: @foam;
 }
 

@@ -155,7 +155,7 @@ element alternate active {
 element selected {
     background-color: @selected-background;
     text-color:       @foreground;
-    border-radius:    10px;
+    border-radius:    0px;
     border:           0px 0px 0px 5px;
     border-color:     @ora;
 }

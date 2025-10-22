@@ -125,7 +125,7 @@
        // "timezone": "America/New_York",
        "tooltip": false,
        "tooltip-format": "<tt>{calendar}</tt>",
-       "format" : "{:%d %b | %H:%M}",
+       "format" : "{:%d | %H:%M}",
        "on-click": "ghostty -e calcurse &",
        "actions":  {
           "on-click-right": "mode",
