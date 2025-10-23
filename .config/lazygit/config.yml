@@ -1,5 +1,5 @@
 gui:
-  border: double
+  border: rounded
   authorColors: {}
   branchColors: {}
   branchColorPatterns: {}
