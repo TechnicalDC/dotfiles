@@ -1,4 +1,4 @@
-@import "~/.cache/wal/colors-rofi-dark.rasi"
+@import "~/.config/rofi/current-theme.rasi"
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun";
@@ -13,7 +13,7 @@ configuration {
 }
 
 * {
-    font: "JetBrainsMono Nerd Font 12";
+    font: "IosevkaTermSlab Nerd Font 16";
 }
 
 /*****----- Main Window -----*****/
@@ -23,8 +23,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
-    height:                      500px;
+    width:                       800px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -32,8 +31,8 @@ window {
     enabled:                     true;
     border-radius:               15px;
     cursor:                      "default";
-    border-color:                @background;
-    border:                      2px;
+    border-color:                @cya;
+    border:                      4px;
     background-color:            @background;
 }
 
@@ -42,28 +41,7 @@ mainbox {
     enabled:                     true;
     spacing:                     0px;
     background-color:            transparent;
-    orientation:                 horizontal;
-    children:                    [ "imagebox", "listbox" ];
-}
-
-imagebox {
-    padding:                     20px;
-    background-color:            transparent;
-    background-image:            url("~/.cache/wal/rofi_background.png", width);
-    orientation:                 vertical;
-    border-radius:               8;
-    children:                    ["dummy"];
-}
-
-listbox {
-    padding:                     0px 0px 0px 20px;
-    background-color:            transparent;
-    orientation:                 vertical;
     children:                    [  "inputbar", "message", "listview" ];
-}
-
-dummy {
-    background-color:            transparent;
 }
 
 /*****----- Inputbar -----*****/
@@ -72,12 +50,13 @@ inputbar {
     spacing:                     10px;
     padding:                     10px;
     margin:                      0px 0px 10px 0px;
-    border-color:                @background-alt;
+    border-color:                @cur;
     border-radius:               10px;
-    background-color:            @background-alt;
+    background-color:            transparent;
     text-color:                  @foreground;
     children:                    [ "textbox-prompt-colon", "entry" ];
 }
+
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
@@ -111,7 +90,7 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @yellow;
+    background-color:            @selected-background;
     text-color:                  @foreground;
 }
 
@@ -139,19 +118,51 @@ element {
     enabled:                     true;
     spacing:                     15px;
     padding:                     10px;
-    border-radius:               10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
+
+element normal normal {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element normal urgent {
+   background-color: transparent;
+	text-color:       @urgent-foreground;
+}
+element normal active {
+   background-color: transparent;
+	text-color:       @background;
+}
+element alternate normal {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element alternate urgent {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+element alternate active {
+   background-color: transparent;
+	text-color:       @foreground;
+}
+
+element selected urgent {
+   background-color: transparent;
+	text-color:       @urgent-foreground;
+}
+
 element selected {
-    background-color:            @selected;
-    text-color:                  @foreground;
-    border-color:                @light-black;
+    background-color: inherit;
+    text-color:       @foreground;
+    border:           0px 0px 0px 5px;
+    border-color:     @ora;
 }
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
+    margin:                      0px 0px 0px 10px;
     size:                        32px;
     cursor:                      inherit;
 }
@@ -159,18 +170,20 @@ element-text {
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
+    margin:                      0px 0px 0px 10px;
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
 
 /*****----- Message -----*****/
 message {
-    background-color:            transparent;
+    background-color: transparent;
+    border-color:     transparent;
 }
 textbox {
     padding:                     15px;
     border-radius:               5px;
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.0;

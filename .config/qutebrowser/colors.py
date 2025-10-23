@@ -28,4 +28,3 @@ mini = {
 	"yellow"    : "#c7caac",
 	"yellow_bg" : "#202109"
 }
-	

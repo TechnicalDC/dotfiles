@@ -1,0 +1,264 @@
+@import "./themes/rose-pine.css";
+/* @import "./rose-pine-moon.css"; */
+/* @import "./rose-pine-dawn.css"; */
+
+* {
+   font-family: "IosevkaTermSlab Nerd Font";
+   font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
+   font-size: 18px;
+}
+
+window#waybar {
+   background-color: transparent;
+}
+
+#custom-appmenuicon,
+#custom-notifications,
+#custom-powermenuicon,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#user,
+#taskbar,
+#power-profiles-daemon,
+#mpd {
+   border-radius: 15px;
+   background: alpha(@base, .8);
+   border: 4px solid @overlay;
+   color: @foreground;
+   padding: 6px 16px;
+   margin-top: 20px;
+   margin-bottom: 0px;
+   margin-left: 5px;
+   margin-right: 5px;
+}
+
+#user {
+   padding: 0px 10px;
+}
+
+#custom-appmenuicon {
+   color: @blue;
+   padding: 6px 12px;
+   padding-right: 17px;
+   margin-right: 0px;
+}
+
+#custom-powermenuicon {
+   color: @red;
+   padding: 6px 12px;
+   padding-right: 17px;
+   margin-right: 10px;
+}
+
+#custom-notifications {
+   color: @yellow;
+   padding: 6px 12px;
+   padding-right: 20px;
+}
+
+#workspaces{
+   background: alpha(@base, .8);
+   border: 4px solid @overlay;
+   border-radius: 15px;
+   margin-top: 20px;
+   margin-bottom: 0px;
+   margin-left: 5px;
+   margin-right: 5px;
+   color: white;
+}
+#workspaces button {
+   border-radius: 10px;
+   padding: 0px 10px;
+   color: @text;
+}
+
+/* #workspaces button:first-child { */
+/*    padding-left: 20px; */
+/* } */
+/**/
+/* #workspaces button:last-child { */
+/*    padding-right: 20px; */
+/* } */
+
+#workspaces button.active{
+   color: @base;
+   padding: 0px 10px;
+   background-color: @foam;
+}
+
+#workspaces button:hover {
+   color: @rose;
+}
+
+#clock {
+   margin-left: 20px;
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#battery.charging, #battery.plugged {
+   border: 4px solid @foam;
+}
+
+#battery {
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+#battery.critical:not(.charging) {
+   border-color: @love;
+}
+
+label:focus {
+}
+
+#cpu {
+   background-size: 300% 300%;
+   animation: gradient 20s ease infinite;
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#memory {
+   background-color: #cba6f7;
+   font-weight: bolder;
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network{
+}
+
+#network.disabled{
+   background-color: #45475a;
+}
+
+#network.disconnected{
+   border-color: @red;
+   background-color: @red;
+   color: @base;
+   font-weight: bolder;
+   padding-top: 3px;
+   padding-right: 11px;
+}
+
+#network.linked, #network.wifi{
+}
+
+#network.ethernet{
+}
+
+#pulseaudio {
+   font-weight: bolder;
+}
+
+#pulseaudio.muted {
+   border-color: @love;
+}
+
+#temperature {
+}
+
+#temperature.critical {
+   background-color: @red;
+   color: @text;
+}
+
+#tray {
+   margin-right: 20px;
+}
+
+#tray > .passive {
+   -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+   -gtk-icon-effect: highlight;
+   background-color: @red;
+}
+
+#idle_inhibitor {
+   background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+   background-color: #ecf0f1;
+   color: #2d3436;
+}
+
+#mpd {
+   background-color: transparent;
+   border: transparent;
+   color: @text;
+}
+
+#mpd.disconnected {
+   color: @rose;
+}
+
+#mpd.playing {
+}
+
+#mpd.stopped { }
+
+#mpd.paused { }
+
+#language {
+   padding: 0 5px;
+   margin: 0 5px;
+   min-width: 16px;
+}
+
+#keyboard-state {
+   padding: 0 0px;
+   margin: 0 5px;
+   min-width: 16px;
+}
+
+#keyboard-state > label {
+   padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+   background: rgba(0, 0, 0, 0.2);
+}
+
+#tooltip {
+   background-color: rgba(17, 17, 17, 0.8);
+}
+#tooltip label {
+   color: @red;
+}
+
+#taskbar {
+   padding: 5px;
+   margin: 10px;
+}
+#taskbar button {
+   padding: 2px 5px;
+   border-radius: 30px;
+}
+#taskbar button:hover {
+   background-color: alpha(@light_black, .6);
+}
+#taskbar button.active {
+   background: @background;
+   background: linear-gradient(135deg , @blue, @cyan,@green);
+}
+#taskbar.empty {
+   background-color: transparent;
+   border: 2px solid transparent;
+}

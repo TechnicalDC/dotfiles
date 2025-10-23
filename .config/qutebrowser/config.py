@@ -70,7 +70,8 @@ c.input.insert_mode.auto_enter = True
 c.input.insert_mode.leave_on_load = True
 
 # --- Tabs ---
-c.tabs.show = 'always'        # Values: always, never, multiple
+c.tabs.show = 'multiple'        # Values: always, never, multiple
+c.tabs.position = 'left'
 c.tabs.padding = {"bottom":4, "left":5, "right":5, "top":4}
 c.tabs.favicons.show = 'never'    # valuse: always, never
 
@@ -172,8 +173,7 @@ c.colors.tabs.pinned.selected.even.bg = mini["bg_mid2"]
 ################
 # FONT SETTING #
 ################
-# font = '20px "FantasqueSansM Nerd Font"'
-font = '18px "JetBrainsMonoNL Nerd Font"'
+font = '18px "IosevkaTermSlab Nerd Font"'
 c.fonts.default_family   = font
 c.fonts.default_size     = '20px'
 c.fonts.contextmenu         = font
@@ -191,7 +191,6 @@ c.fonts.messages.warning    = font
 c.fonts.tabs.selected        = font
 c.fonts.tabs.unselected      = font
 
-
 ################################
 # KEY BINDINGS FOR NORMAL MODE #
 ################################
@@ -202,6 +201,7 @@ config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('D', 'tab-only')
 config.bind('ww', 'open -w')
+config.bind('wp', 'open -p')
 config.bind('r', 'reload')
 config.bind('R', 'config-source')
 

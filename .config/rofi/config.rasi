@@ -1,7 +1,7 @@
 configuration{
     modi: "drun,run";
     show-icons: true;
-    icon-theme: "Gruvbox-Plus-Dark";
+    icon-theme: "rose-pine-icons";
     drun-display-format: "{icon} {name}";
     drun-display-actions: true;
     location: 0;
@@ -16,4 +16,4 @@ configuration{
     display-filebrowser: " File Browser ";
     sidebar-mode: false;
 }
-@theme "/home/dilip/.config/rofi/themes/minimal/list.rasi"
+@theme "/home/dilip/.config/rofi/themes/blur/launcher.rasi"
