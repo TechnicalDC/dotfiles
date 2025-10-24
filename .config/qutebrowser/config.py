@@ -14,7 +14,7 @@ import subprocess
 
 # load your autoconfig, use this, if the rest of your config is empty!
 config.load_autoconfig()
-rosepine.setup(c, 'rose-pine-moon', True)
+rosepine.setup(c, 'rose-pine', True)
 
 c.aliases = {
     'q': 'close',
@@ -174,7 +174,7 @@ c.zoom.default = "125%"
 ################
 # FONT SETTING #
 ################
-font = '18px "IosevkaTermSlab Nerd Font"'
+font = '20px "IosevkaTermSlab Nerd Font"'
 c.fonts.default_family   = font
 c.fonts.default_size     = '20px'
 c.fonts.contextmenu         = font

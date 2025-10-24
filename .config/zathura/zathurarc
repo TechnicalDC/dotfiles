@@ -1,4 +1,4 @@
-include ~/.config/zathura/themes/rose-pine
+include /home/dilip/.config/zathura/themes/rose-pine
 
 set font "IosevkaTermSlab Nerd Font 14"
 
