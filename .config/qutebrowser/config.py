@@ -4,7 +4,7 @@
 # |__   |_____||____|_____||_____|__| |_____|________|_____|_____|__|
 #    |__|
 
-from colors import mini
+import rosepine
 import os
 import subprocess
 
@@ -14,6 +14,7 @@ import subprocess
 
 # load your autoconfig, use this, if the rest of your config is empty!
 config.load_autoconfig()
+rosepine.setup(c, 'rose-pine-moon', True)
 
 c.aliases = {
     'q': 'close',
@@ -93,82 +94,82 @@ c.zoom.default = "125%"
 # config.set("content.user_stylesheets","~/.config/qutebrowser/stylesheets/wal-duckduckgo.com.css")
 
 # --- Webpages ---
-c.colors.webpage.bg = mini["bg"]
+# c.colors.webpage.bg = mini["bg"]
 
-c.colors.webpage.darkmode.enabled = True
-c.colors.webpage.darkmode.policy.images = "never"
+# c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.policy.images = "never"
 
 # --- Context menu ---
-c.colors.contextmenu.menu.bg     = mini["bg_edge"]
-c.colors.contextmenu.menu.fg     = mini["fg"]
-c.colors.contextmenu.selected.bg = mini["bg_mid"]
-c.colors.contextmenu.selected.fg = mini["fg"]
+# c.colors.contextmenu.menu.bg     = mini["bg_edge"]
+# c.colors.contextmenu.menu.fg     = mini["fg"]
+# c.colors.contextmenu.selected.bg = mini["bg_mid"]
+# c.colors.contextmenu.selected.fg = mini["fg"]
 
 # --- Completions ---
-c.colors.completion.fg                          = mini["fg"]
-c.colors.completion.odd.bg                      = mini["bg_edge"]
-c.colors.completion.even.bg                     = mini["bg_edge"]
-c.colors.completion.category.fg                 = mini["fg"]
-c.colors.completion.category.bg                 = mini["bg_mid2"]
-c.colors.completion.category.border.top         = mini["bg_mid2"]
-c.colors.completion.category.border.bottom      = mini["bg"]
-c.colors.completion.item.selected.fg            = mini["bg"]
-c.colors.completion.item.selected.bg            = mini["fg_edge"]
-c.colors.completion.item.selected.border.top    = mini["fg_edge"]
-c.colors.completion.item.selected.border.bottom = mini["fg_edge"]
-c.colors.completion.item.selected.match.fg      = mini["bg_edge"]
-c.colors.completion.match.fg                    = mini["green"]
-c.colors.completion.scrollbar.fg                = mini["bg_mid2"]
-c.colors.completion.scrollbar.bg                = mini["bg"]
-
+# c.colors.completion.fg                          = mini["fg"]
+# c.colors.completion.odd.bg                      = mini["bg_edge"]
+# c.colors.completion.even.bg                     = mini["bg_edge"]
+# c.colors.completion.category.fg                 = mini["fg"]
+# c.colors.completion.category.bg                 = mini["bg_mid2"]
+# c.colors.completion.category.border.top         = mini["bg_mid2"]
+# c.colors.completion.category.border.bottom      = mini["bg"]
+# c.colors.completion.item.selected.fg            = mini["bg"]
+# c.colors.completion.item.selected.bg            = mini["fg_edge"]
+# c.colors.completion.item.selected.border.top    = mini["fg_edge"]
+# c.colors.completion.item.selected.border.bottom = mini["fg_edge"]
+# c.colors.completion.item.selected.match.fg      = mini["bg_edge"]
+# c.colors.completion.match.fg                    = mini["green"]
+# c.colors.completion.scrollbar.fg                = mini["bg_mid2"]
+# c.colors.completion.scrollbar.bg                = mini["bg"]
+#
 # --- Downloads ---
-c.colors.downloads.bar.bg = mini["bg"]
-c.colors.downloads.error.bg = mini["red"]
-
+# c.colors.downloads.bar.bg = mini["bg"]
+# c.colors.downloads.error.bg = mini["red"]
+#
 # --- Hints ---
-c.colors.hints.bg       = mini["yellow"]
-c.colors.hints.fg       = mini["bg"]
-c.colors.hints.match.fg = mini["red"]
-
+# c.colors.hints.bg       = mini["yellow"]
+# c.colors.hints.fg       = mini["bg"]
+# c.colors.hints.match.fg = mini["red"]
+#
 # --- Messages ---
-c.colors.messages.info.bg    = mini["bg"]
-c.colors.messages.info.fg    = mini["fg"]
-c.colors.messages.error.bg   = mini["red"]
-c.colors.messages.error.fg   = mini["bg"]
-c.colors.messages.warning.bg = mini["orange"]
-c.colors.messages.warning.fg = mini["bg"]
-
+# c.colors.messages.info.bg    = mini["bg"]
+# c.colors.messages.info.fg    = mini["fg"]
+# c.colors.messages.error.bg   = mini["red"]
+# c.colors.messages.error.fg   = mini["bg"]
+# c.colors.messages.warning.bg = mini["orange"]
+# c.colors.messages.warning.fg = mini["bg"]
+#
 # --- Prompts ---
-c.colors.prompts.bg          = mini["bg"]
-c.colors.prompts.selected.bg = mini["bg_mid"]
-c.colors.prompts.fg          = mini["fg"]
-
+# c.colors.prompts.bg          = mini["bg"]
+# c.colors.prompts.selected.bg = mini["bg_mid"]
+# c.colors.prompts.fg          = mini["fg"]
+#
 # --- Statusbar ---
-c.colors.statusbar.normal.bg          = mini["bg_mid"]
-c.colors.statusbar.normal.fg          = mini["fg"]
-c.colors.statusbar.insert.fg          = mini["bg"]
-c.colors.statusbar.insert.bg          = mini["green"]
-c.colors.statusbar.passthrough.bg     = mini["bg_mid"]
-c.colors.statusbar.command.bg         = mini["orange"]
-c.colors.statusbar.command.fg         = mini["bg"]
-c.colors.statusbar.command.private.bg = mini["orange"]
-c.colors.statusbar.command.private.fg = mini["bg"]
-c.colors.statusbar.private.bg         = mini["yellow"]
-c.colors.statusbar.private.fg         = mini["bg"]
-c.colors.statusbar.url.warn.fg        = mini["orange"]
+# c.colors.statusbar.normal.bg          = mini["bg_mid"]
+# c.colors.statusbar.normal.fg          = mini["fg"]
+# c.colors.statusbar.insert.fg          = mini["bg"]
+# c.colors.statusbar.insert.bg          = mini["green"]
+# c.colors.statusbar.passthrough.bg     = mini["bg_mid"]
+# c.colors.statusbar.command.bg         = mini["orange"]
+# c.colors.statusbar.command.fg         = mini["bg"]
+# c.colors.statusbar.command.private.bg = mini["orange"]
+# c.colors.statusbar.command.private.fg = mini["bg"]
+# c.colors.statusbar.private.bg         = mini["yellow"]
+# c.colors.statusbar.private.fg         = mini["bg"]
+# c.colors.statusbar.url.warn.fg        = mini["orange"]
 
 # --- Tabs ---
-c.colors.tabs.bar.bg                  = mini["bg"]
-c.colors.tabs.odd.bg                  = mini["bg"]
-c.colors.tabs.even.bg                 = mini["bg"]
-c.colors.tabs.selected.odd.bg         = mini["bg_mid2"]
-c.colors.tabs.selected.odd.fg         = mini["fg"]
-c.colors.tabs.selected.even.bg        = mini["bg_mid2"]
-c.colors.tabs.selected.even.fg        = mini["fg"]
-c.colors.tabs.pinned.odd.bg           = mini["bg"]
-c.colors.tabs.pinned.even.bg          = mini["bg"]
-c.colors.tabs.pinned.selected.odd.bg  = mini["bg_mid2"]
-c.colors.tabs.pinned.selected.even.bg = mini["bg_mid2"]
+# c.colors.tabs.bar.bg                  = mini["bg"]
+# c.colors.tabs.odd.bg                  = mini["bg"]
+# c.colors.tabs.even.bg                 = mini["bg"]
+# c.colors.tabs.selected.odd.bg         = mini["bg_mid2"]
+# c.colors.tabs.selected.odd.fg         = mini["fg"]
+# c.colors.tabs.selected.even.bg        = mini["bg_mid2"]
+# c.colors.tabs.selected.even.fg        = mini["fg"]
+# c.colors.tabs.pinned.odd.bg           = mini["bg"]
+# c.colors.tabs.pinned.even.bg          = mini["bg"]
+# c.colors.tabs.pinned.selected.odd.bg  = mini["bg_mid2"]
+# c.colors.tabs.pinned.selected.even.bg = mini["bg_mid2"]
 
 ################
 # FONT SETTING #
