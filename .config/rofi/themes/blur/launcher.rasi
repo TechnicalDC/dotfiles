@@ -154,10 +154,11 @@ element selected urgent {
 }
 
 element selected {
-    background-color: inherit;
+    background-color: @selected-background;
     text-color:       @foreground;
-    border:           0px 0px 0px 5px;
-    border-color:     @ora;
+    border:           2px;
+    border-color:     @red;
+    border-radius:    10px;
 }
 element-icon {
     background-color:            transparent;
@@ -166,6 +167,7 @@ element-icon {
     size:                        32px;
     cursor:                      inherit;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;

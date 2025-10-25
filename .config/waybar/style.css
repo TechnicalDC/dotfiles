@@ -99,7 +99,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
-   color: @rose;
+   color: @text;
+   background-color: @muted;
 }
 
 #clock {

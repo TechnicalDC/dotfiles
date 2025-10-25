@@ -36,3 +36,4 @@ https://www.nerdfonts.com/cheat-sheet
 https://github.com/Alexays/Waybar/wiki/Module:-Niri
 https://chatgpt.com/
 https://github.com/OXY2DEV/bars.nvim
+https://cascade.moe/en/posts/hyprland-with-multi-monitors/
