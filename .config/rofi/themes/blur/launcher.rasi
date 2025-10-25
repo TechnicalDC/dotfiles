@@ -13,7 +13,7 @@ configuration {
 }
 
 * {
-    font: "IosevkaTermSlab Nerd Font 16";
+    font: "Iosevka Nerd Font Propo 15";
 }
 
 /*****----- Main Window -----*****/

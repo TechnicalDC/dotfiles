@@ -23,15 +23,15 @@
    "hyprland/workspaces": {
       "format": "{icon}",
       "format-icons": {
-         "1": "I",
-         "2": "II",
-         "3": "III",
-         "4": "IV",
-         "5": "V",
-         "6": "VI",
-         "7": "VII",
-         "8": "VIII",
-         "9": "IX"
+         "1": "1",
+         "2": "2",
+         "3": "3",
+         "4": "3",
+         "5": "4",
+         "6": "6",
+         "7": "7",
+         "8": "8",
+         "9": "9"
       }
    },
    // Rofi Application Launcher
@@ -174,18 +174,18 @@
            "critical": 15
       },
       "tooltip": false,
-      "format": "{icon}  {capacity}%",
-      "format-full": "{icon}  {capacity}%",
-      "format-charging": "   {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{icon}  {time}",
+      "format": "{icon} {capacity}%",
+      "format-full": "{icon} {capacity}%",
+      "format-charging": "  {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-alt": "{icon} {time}",
        // "format-good": "", // An empty format will hide the module
        "format-icons": [
-          "<span color=\"#ef596f\"> </span>",
-          "<span color=\"#ef596f\"> </span>",
-          "<span color=\"#e5c07b\"> </span>",
-          "<span color=\"#89ca78\"> </span>",
-          "<span color=\"#89ca78\"> </span>"
+          "<span color=\"#ef596f\"></span>",
+          "<span color=\"#ef596f\"></span>",
+          "<span color=\"#e5c07b\"></span>",
+          "<span color=\"#89ca78\"></span>",
+          "<span color=\"#89ca78\"></span>"
        ]
    },
    "battery#bat2": {
@@ -198,13 +198,13 @@
       "format-icons": {
          "default": "<span color=\"#e5c07b\"></span>",
          "performance": "<span color=\"#e5c07b\"></span>",
-         "balanced": "<span color=\"#61afef\"> </span>",
-         "power-saver": "<span color=\"#89ca78\"> </span>"
+         "balanced": "<span color=\"#61afef\"></span>",
+         "power-saver": "<span color=\"#89ca78\"></span>"
       }
    },
    "network": {
        // "interface": "wlp2*", // (Optional) To force the use of this interface
-       "format-wifi": "a {essid} ({signalStrength}%)",
+       "format-wifi": " {essid} ({signalStrength}%)",
        "format-ethernet": "{ipaddr}/{cidr} ",
        "tooltip": false,
        "tooltip-format": "{ifname} via {gwaddr}",
@@ -227,7 +227,7 @@
           "phone": " ",
           "portable": " ",
           "car": " ",
-          "default": [" ", " ", " "]
+          "default": ["", "", ""]
        },
        "on-click": "pavucontrol"
    },

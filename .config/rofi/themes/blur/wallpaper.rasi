@@ -12,7 +12,7 @@ configuration {
 }
 
 * {
-    font: "IosevkaTermSlab Nerd Font 16";
+    font: "Iosevka Nerd Font Propo 15";
 }
 
 /*****----- Main Window -----*****/
@@ -155,9 +155,9 @@ element alternate active {
 element selected {
     background-color: @selected-background;
     text-color:       @foreground;
-    border-radius:    0px;
-    border:           0px 0px 0px 5px;
-    border-color:     @ora;
+    border:           2px;
+    border-color:     @red;
+    border-radius:    10px;
 }
 element-icon {
     background-color:            transparent;

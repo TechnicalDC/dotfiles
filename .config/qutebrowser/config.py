@@ -174,7 +174,7 @@ c.zoom.default = "125%"
 ################
 # FONT SETTING #
 ################
-font = '20px "IosevkaTermSlab Nerd Font"'
+font = '20px "Iosevka Nerd Font"'
 c.fonts.default_family   = font
 c.fonts.default_size     = '20px'
 c.fonts.contextmenu         = font
