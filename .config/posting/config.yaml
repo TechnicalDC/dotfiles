@@ -1,4 +1,4 @@
-theme: 'hacker'
+theme: 'rose-pine'
 layout: "horizontal"
 command_palette:
   theme_preview: false
