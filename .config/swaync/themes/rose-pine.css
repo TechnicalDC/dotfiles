@@ -1,6 +1,6 @@
 * {
   all: unset;
-  font-family: IosevkaTermSlab Nerd Font;
+  font-family: Iosevka Nerd Font;
   transition: 0.3s;
   font-size: 1.2rem;
 }
@@ -11,9 +11,9 @@
 
 .floating-notifications.background .notification-row .notification-background {
   border-radius: 0.5rem;
-  background-color: #191724;
+  background-color: #191724cc;
   color: #e0def4;
-  border: 1px solid #6e6a86;
+  border: 4px solid #6e6a86;
 }
 
 .floating-notifications.background
@@ -120,12 +120,12 @@
 }
 
 .control-center {
-  border-radius: 0.5rem;
+  border-radius: 15px;
   margin: 1rem;
-  background-color: #191724;
+  background-color: #191724cc;
   color: #e0def4;
   padding: 1rem;
-  border: 1px solid #6e6a86;
+  border: 4px solid #9ccfd8;
 }
 
 .control-center .widget-title {
@@ -310,4 +310,32 @@ trough {
   background: #6e6a86;
   border-radius: 0.5rem;
   margin: 0.25rem;
+}
+
+.widget-volume,
+.widget-backlight {
+   border-radius: 10px;
+   background-color: transparent;
+   /* color: @foreground; */
+   padding: 7px 14px;
+}
+
+.widget-volume label {
+  font-size: 1.5rem;
+  color: @magenta;
+}
+.widget-backlight label {
+  font-size: 1.5rem;
+  /* color: @yellow; */
+}
+.widget-volume trough,
+.widget-backlight trough {
+  background: #908caa;
+  border-radius: 5px;
+}
+
+.widget-volume trough highlight,
+.widget-backlight trough highlight {
+  background: #908caa;
+  border-radius: 5px;
 }
