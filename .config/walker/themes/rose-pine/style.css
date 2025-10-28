@@ -1,0 +1,189 @@
+@define-color base            #191724;
+@define-color surface         #1f1d2e;
+@define-color overlay         #26233a;
+
+@define-color muted           #6e6a86;
+@define-color subtle          #908caa;
+@define-color text            #e0def4;
+
+@define-color love            #eb6f92;
+@define-color gold            #f6c177;
+@define-color rose            #ebbcba;
+@define-color pine            #31748f;
+@define-color foam            #9ccfd8;
+@define-color iris            #c4a7e7;
+
+@define-color highlightLow    #21202e;
+@define-color highlightMed    #403d52;
+@define-color highlightHigh   #524f67;
+
+* {
+  all: unset;
+}
+
+.normal-icons {
+  -gtk-icon-size: 16px;
+}
+
+.large-icons {
+  -gtk-icon-size: 32px;
+}
+
+scrollbar {
+  opacity: 0;
+}
+
+.box-wrapper {
+  background: alpha(@base, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  border: 4px solid @foam;
+}
+
+.preview-box,
+.elephant-hint,
+.placeholder {
+  color: @subtle;
+}
+
+.box {
+}
+
+.search-container {
+  background-color: transparent;
+}
+
+.input placeholder {
+  opacity: 0.5;
+}
+
+.input {
+  background: transparent;
+  padding: 10px;
+  color: @on_surface;
+}
+
+.input:focus,
+.input:active {
+}
+
+.content-container {
+}
+
+.placeholder {
+}
+
+.scroll {
+}
+
+.list {
+  color: @text;
+}
+
+child {
+}
+
+.item-box {
+  border-radius: 10px;
+  padding: 10px;
+  color: @text;
+}
+
+.item-quick-activation {
+  margin-left: 10px;
+  background: alpha(@text, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+child:hover .item-box,
+child:selected .item-box {
+  background: @pine;
+  color: @text;
+}
+
+.item-text-box {
+}
+
+.item-text {
+}
+
+.item-subtext {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.item-image,
+.item-image-text {
+  margin-right: 10px;
+}
+
+.item-image-text {
+  font-size: 28px;
+}
+
+.preview {
+  border: 1px solid alpha(@subtle, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  color: @text;
+}
+
+.calc .item-text {
+  font-size: 24px;
+}
+
+.calc .item-subtext {
+}
+
+.symbols .item-image {
+  font-size: 24px;
+}
+
+.todo.done .item-text-box {
+  opacity: 0.25;
+}
+
+.todo.urgent {
+  font-size: 24px;
+}
+
+.todo.active {
+  font-weight: bold;
+}
+
+.bluetooth.disconnected {
+  opacity: 0.5;
+}
+
+.preview .large-icons {
+  -gtk-icon-size: 64px;
+}
+
+.keybinds-wrapper {
+  border-top: 0px solid lighter(@overlay);
+  font-size: 16px;
+  opacity: 0.5;
+  color: @text;
+}
+
+.keybinds {
+}
+
+.keybind {
+}
+
+.keybind-bind {
+  color: @text;
+  font-weight: bold;
+}
+
+.keybind-label {
+  color: @subtle;
+}
+
+.error {
+  padding: 10px;
+  background: @base;
+  color: @rose;
+}
