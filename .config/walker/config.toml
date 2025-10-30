@@ -16,6 +16,7 @@ anchor_right = true
 
 [placeholders]
 "default" = { input = "Search", list = "No Results" } # placeholders for input and empty list, key is the providers name, so f.e. "desktopapplications" or "menus:other"
+"desktopapplications" = { input = "Search", list = "No Application" }
 
 [keybinds]
 close = ["Escape"]
@@ -24,6 +25,7 @@ previous = ["Up"]
 toggle_exact = ["ctrl e"]
 resume_last_query = ["ctrl r"]
 quick_activate = []
+# quick_activate = ["1" "2" "3" "4"]
 
 [providers]
 default = [

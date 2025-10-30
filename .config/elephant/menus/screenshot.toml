@@ -1,0 +1,25 @@
+name = "screenshots"
+name_pretty = "Screenshots"
+icon = "camera-photo"
+global_search = true
+
+[[entries]]
+text = "View"
+actions = { "view" = "vimiv ~/Pictures/" }
+
+[[entries]]
+text = "Annotate"
+actions = { "annotate" = "wl-paste | satty -f -" }
+
+[[entries]]
+text = "Toggle Record"
+actions = { "record" = "record" }
+
+[[entries]]
+text = "Screenshot Region"
+actions = { "region" = "wayfreeze --hide-cursor --after-freeze-cmd 'IMG=~/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png && grim -g \"$(slurp)\" $IMG && wl-copy < $IMG; killall wayfreeze'" }
+
+[[entries]]
+text = "Screenshot Window"
+actions = { "window" = "wayfreeze --after-freeze-cmd 'IMG=~/Pictures/$(date +%Y-%m-%d_%H-%M-%S).png && grim $IMG && wl-copy < $IMG; killall wayfreeze'" }
+
