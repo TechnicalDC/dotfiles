@@ -25,15 +25,14 @@ previous = ["Up"]
 toggle_exact = ["ctrl e"]
 resume_last_query = ["ctrl r"]
 quick_activate = []
-# quick_activate = ["1" "2" "3" "4"]
 
 [providers]
 default = [
   "desktopapplications",
-  "calc",
-  "runner",
-  "menus",
-  "websearch",
+  # "calc",
+  # "runner",
+  # "menus",
+  # "websearch",
 ] # providers to be queried by default
 empty = ["desktopapplications"] # providers to be queried when query is empty
 
