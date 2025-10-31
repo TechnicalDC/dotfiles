@@ -160,8 +160,6 @@ label:focus {
 }
 
 #pulseaudio {
-   font-weight: bolder;
-
 }
 
 #pulseaudio.muted {
@@ -260,4 +258,16 @@ label:focus {
 #taskbar.empty {
    background-color: transparent;
    border: 2px solid transparent;
+}
+
+#power-profiles-daemon.balanced {
+   border: 4px solid @gold;
+}
+
+#power-profiles-daemon.performance {
+   border: 4px solid @love;
+}
+
+#power-profiles-daemon.power-saver {
+   border: 4px solid @foam;
 }

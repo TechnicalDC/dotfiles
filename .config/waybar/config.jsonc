@@ -196,10 +196,10 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": false,
       "format-icons": {
-         "default": "<span color=\"#e5c07b\"></span>",
-         "performance": "<span color=\"#e5c07b\"></span>",
-         "balanced": "<span color=\"#61afef\"></span>",
-         "power-saver": "<span color=\"#89ca78\"></span>"
+         "default": "",
+         "performance": "",
+         "balanced": "",
+         "power-saver": ""
       }
    },
    "network": {
