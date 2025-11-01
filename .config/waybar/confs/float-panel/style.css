@@ -84,7 +84,6 @@ window#waybar {
 
 #workspaces button.active{
    color: @base;
-   padding: 0px 10px;
    background-color: @foam;
 }
 
