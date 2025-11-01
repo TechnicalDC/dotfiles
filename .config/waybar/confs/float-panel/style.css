@@ -45,6 +45,10 @@ window#waybar {
    margin-right: 4px;
 }
 
+/* .controls-items { */
+/*    border: 2px solid @love; */
+/* } */
+
 #user {
    padding: 0px 10px;
 }
@@ -159,7 +163,6 @@ label:focus {
 }
 
 #tray {
-   margin-right: 20px;
 }
 
 #tray > .passive {
