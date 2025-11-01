@@ -12,7 +12,7 @@
 window#waybar {
    background-color: alpha(@base, .8);
    border-radius: 8px;
-   border: 4px solid @overlay;
+   border: 4px solid @base;
 }
 
 #custom-appmenuicon,

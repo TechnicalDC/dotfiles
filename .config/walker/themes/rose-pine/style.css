@@ -84,8 +84,9 @@ child {
 }
 
 .item-box {
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 8px;
   color: @text;
 }
 
@@ -98,8 +99,10 @@ child {
 
 child:hover .item-box,
 child:selected .item-box {
-  background: @pine;
+  background: alpha(@pine, .2);
+  border: 2px solid alpha(@pine, .5);
   color: @text;
+  font-weight: bold;
 }
 
 .item-text-box {
