@@ -1,12 +1,3 @@
-Name = "wallpaper"
-NamePretty = "Wallpaper"
-Icon = "applications-other"
-Cache = true
-Action = "notify-send %VALUE%"
-HideFromProviderlist = false
-Description = "Wallpaper Provider"
-SearchName = true
-
 function GetEntries()
     local entries = {}
     local wallpaper_dir = "/home/dilip/Pictures/wallpapers/"

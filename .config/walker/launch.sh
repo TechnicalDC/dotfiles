@@ -12,7 +12,7 @@ else
 fi
 
 # Check if elephant is running
-if pgrep "walker --gapplication-service" > /dev/null
+if pgrep -f "walker --gapplication-service" > /dev/null
 then
     # Send this diagnostic message to Standard Error (2>&1)
     echo ":: Walker GApplication Service is running. ::" >&2

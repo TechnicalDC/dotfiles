@@ -1,0 +1,6 @@
+name = "wallpapers"
+name_pretty = "Wallpapers"
+icon = "applications-other"
+lua = "wallpapers"
+lua_cache = true
+action = "notify-send %VALUE%"
