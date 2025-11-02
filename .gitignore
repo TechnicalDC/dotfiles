@@ -27,3 +27,5 @@
 .fonts
 .config/kwalletrc
 .config/qutebrowser/__pycache__/colors.cpython-313.pyc
+.config/xfce4/xfconf/xfce-perchannel-xml
+.config/Thunar
