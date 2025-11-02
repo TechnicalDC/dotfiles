@@ -15,13 +15,15 @@
    "modules-left": [
       "custom/appmenuicon",
       "clock",
-      "hyprland/workspaces"
+      "hyprland/workspaces",
+      "wlr/taskbar"
    ],
    "modules-center": [],
    "modules-right": [
       "group/controls",
       "power-profiles-daemon",
       "network",
-      "battery"
+      "battery",
+      "custom/powermenuicon"
    ]
 }

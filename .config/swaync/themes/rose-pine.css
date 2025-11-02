@@ -43,17 +43,22 @@
    padding: 7px 14px;
 }
 
+.notification-group-collapse-button,
+.notification-group-close-all-button,
 .control-center .widget-title button,
 .widget-dnd > switch
 {
-   border-radius: 20px;
-   background-color: transparent;
+   border-radius: 5px;
+   background-color: alpha(@muted, .4);
    color: @text;
 }
+
+.notification-group-collapse-button,
+.notification-group-close-all-button,
 .control-center .widget-title button {
-   border: 4px solid @rose;
-   color: @text;
-   background-color: transparent;
+   padding: 5px 10px;
+   margin-left: 4px;
+   margin-right: 4px;
 }
 .control-center .widget-title button:hover {
    background-color: alpha(@rose, .6);
@@ -62,6 +67,7 @@
 /* Notifications expanded-group */
 .notification-group { }
 .notification-group-headers {
+   margin: 10px 0px;
 }
 .notification-group-headers label {
   color: @text;
@@ -75,12 +81,7 @@
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-   border-radius: 10px;
-   border: 2px solid transparent;
-   background-color: transparent;
-  color: @background;
-  margin: 4px;
-  padding: 4px;
+   padding: 10px;
 }
 
 .notification-group-collapse-button:hover,
@@ -104,7 +105,7 @@ slider {
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 15px 15px 0px 0px;
   border: 4px solid @foam;
   background-color: alpha(@base, .8);
@@ -112,8 +113,7 @@ slider {
 }
 
 .floating-notifications.background .notification-row .notification-background .notification {
-  padding: 20px;
-  border-radius: 10px;
+  padding: 10px;
 }
 
 /*.floating-notifications.background .notification-row .notification-background,*/
@@ -122,12 +122,12 @@ slider {
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content {
-   padding: 15px;
+   padding: 10px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
-   font-weight: 800;
-  color: @blue;
+   font-weight: bold;
+   color: @text;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .time {
@@ -136,7 +136,7 @@ slider {
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
    font-weight: 600;
-  color: @text;
+  color: @subtle;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * {
@@ -144,10 +144,13 @@ slider {
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  margin: 10px;
-  border-radius: 5px;
-  color: @text;
-  background-color: transparent;
+   background-color: alpha(@muted, .4);
+   border-radius: 5px;
+   padding: 5px 10px;
+   color: @foreground;
+   margin: 8px;
+   margin-left: 4px;
+   margin-right: 4px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
@@ -162,18 +165,18 @@ slider {
 
 .floating-notifications.background .notification-row .notification-background .close-button {
   padding: 10px;
-  border-radius: 0px 10px;
-  color: @background;
+  border-radius: 0px 5px;
+  color: @base;
   background-color: @love;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:hover {
-  color: @background;
+  color: @base;
   background-color: @love;
 }
 
 .floating-notifications.background .notification-row .notification-background .close-button:active {
-  color: @background;
+  color: @base;
   background-color: @love;
 }
 
@@ -201,14 +204,16 @@ slider {
 
 .control-center .widget-title button:active { }
 
-.control-center .notification-row .notification-background { }
+.control-center .notification-row .notification-background:hover {
+   background-color: transparent;
+}
 
 .control-center .notification-row .notification-background .notification {
    border-radius: 10px;
    border: 2px solid @highlightMed;
-   background-color: alpha(@highlightMed, .4);
+   background-color: transparent;
    color: @text;
-   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .control-center .notification-row .notification-background .notification:hover {
@@ -244,10 +249,13 @@ slider {
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  margin: 10px;
-  border-radius: 5px;
-  color: @text;
-  background-color: transparent;
+   background-color: alpha(@muted, .4);
+   border-radius: 5px;
+   padding: 5px 10px;
+   color: @foreground;
+   margin: 8px;
+   margin-left: 4px;
+   margin-right: 4px;
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
@@ -261,10 +269,9 @@ slider {
 }
 
 .control-center .notification-row .notification-background .close-button {
-  margin: 10px 0px;
   padding: 10px;
-  border-radius: 0px 10px;
-  color: @background;
+  border-radius: 0px 5px;
+  color: @base;
   background-color: @love;
 }
 
@@ -321,18 +328,16 @@ slider {
 }
 
 .widget-dnd {
+  margin-bottom: 10px;
 }
 
 .widget-dnd > switch {
-  box-shadow: none;
-  padding: 5px;
-  border: 4px solid @rose;
+  padding: 10px;
 }
 .widget-dnd > switch label {
    color: @rose;
 }
 .widget-dnd > switch:checked {
-  border: 4px solid @rose;
   background: @rose
 }
 .widget-dnd > switch:checked label {
@@ -341,7 +346,7 @@ slider {
 
 .widget-dnd > switch slider {
   background: @rose;
-  border-radius: 8px;
+  border-radius: 5px;
   border: 4px solid @rose;
 }
 .widget-dnd > switch:checked slider {

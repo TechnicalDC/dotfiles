@@ -11,7 +11,7 @@
 
 window#waybar {
    background-color: alpha(@base, .8);
-   border-radius: 8px;
+   border-radius: 10px;
    border: 4px solid @base;
 }
 
@@ -60,10 +60,8 @@ window#waybar {
 }
 
 #custom-powermenuicon {
-   color: @red;
-   padding: 6px 12px;
-   padding-right: 17px;
-   margin-right: 10px;
+   color: @love;
+   margin-right: 8px;
 }
 
 #custom-notifications {
@@ -99,7 +97,6 @@ window#waybar {
 }
 
 #battery {
-   margin-right: 8px;
 }
 
 #battery.critical:not(.charging) {
@@ -217,30 +214,30 @@ label:focus {
 }
 
 #tooltip {
-   background-color: rgba(17, 17, 17, 0.8);
 }
 #tooltip label {
-   color: @red;
+   background-color: alpha(@base, .8);
+   border-radius: 8px;
+   border: 4px solid @base;
 }
 
 #taskbar {
-   padding: 5px;
-   margin: 10px;
+   padding: 0px;
 }
+
 #taskbar button {
-   padding: 2px 5px;
-   border-radius: 30px;
+   border-radius: 5px;
+   padding: 5px 10px;
 }
+
 #taskbar button:hover {
-   background-color: alpha(@light_black, .6);
+   background-color: @muted;
 }
 #taskbar button.active {
-   background: @background;
-   background: linear-gradient(135deg , @blue, @cyan,@green);
+   background-color: @foam;
 }
 #taskbar.empty {
-   background-color: transparent;
-   border: 2px solid transparent;
+   background: transparent;
 }
 
 #power-profiles-daemon.balanced {
