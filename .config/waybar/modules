@@ -14,10 +14,13 @@
          "9": "9"
       }
    },
-   // Rofi Application Launcher
+   "custom/drawer1": {
+      "format": ""
+   },
+   // Application Launcher
    "custom/appmenuicon": {
       "format": "",
-      "on-click": "rofi -show drun",
+      "on-click": "/home/dilip/.config/walker/launch.sh -m desktopapplications",
       "tooltip": false,
       "tooltip-format": "<span color='#abb2bf'>Open the application launcher</span>"
    },
@@ -149,7 +152,7 @@
    },
    "battery": {
       "states": {
-           // "good": 95,
+           "good": 95,
            "warning": 30,
            "critical": 15
       },
@@ -267,6 +270,7 @@
          "transition-left-to-right": false
       },
       "modules": [
+         "custom/drawer1",
          "tray",
          "pulseaudio",
          "custom/notifications",

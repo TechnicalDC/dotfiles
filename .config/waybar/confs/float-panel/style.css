@@ -15,6 +15,7 @@ window#waybar {
    border: 4px solid @base;
 }
 
+#custom-drawer1,
 #custom-appmenuicon,
 #custom-notifications,
 #custom-powermenuicon,
@@ -54,10 +55,8 @@ window#waybar {
 }
 
 #custom-appmenuicon {
-   color: @blue;
-   padding: 6px 12px;
-   padding-right: 17px;
-   margin-right: 0px;
+   color: @foam;
+   margin-left: 8px;
 }
 
 #custom-powermenuicon {
@@ -92,12 +91,11 @@ window#waybar {
 }
 
 #clock {
-   margin-left: 8px;
    text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
 }
 
 #battery.charging, #battery.plugged {
-   border: 4px solid @foam;
+   background-color: @pine;
 }
 
 #battery {
@@ -105,7 +103,7 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-   border-color: @love;
+   background-color: @love;
 }
 
 label:focus {
