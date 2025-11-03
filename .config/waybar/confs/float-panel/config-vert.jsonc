@@ -1,0 +1,27 @@
+// -*- mode: jsonc -*-
+{
+   "layer": "top", // Waybar at top layer
+   "position": "left", // Waybar position (top|bottom|left|right)
+   // "height": 20, // Waybar height (to be removed for auto height)
+   "width": 30, // Waybar width
+   // "spacing": 0, // Gaps between modules (4px)
+   "margin-left": 20,
+   // "margin-right": 100,
+   "margin-top": 20,
+   "margin-bottom": 20,
+   "fixed-center": true,
+   "reload_style_on_change": true,
+   "include": ["~/.config/waybar/modules-vert"],
+   "modules-left": [
+      "clock",
+      "hyprland/workspaces"
+   ],
+   "modules-center": [],
+   "modules-right": [
+      "group/controls",
+      "group/group-pulseaudio",
+      "group/group-backlight",
+      "network",
+      "battery"
+   ]
+}

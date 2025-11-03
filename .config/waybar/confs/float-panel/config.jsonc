@@ -15,8 +15,7 @@
    "modules-left": [
       "custom/appmenuicon",
       "clock",
-      "hyprland/workspaces",
-      "wlr/taskbar"
+      "hyprland/workspaces"
    ],
    "modules-center": [],
    "modules-right": [

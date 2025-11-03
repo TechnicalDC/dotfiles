@@ -1,0 +1,284 @@
+@import "../../themes/rose-pine.css";
+/* @import "./rose-pine-moon.css"; */
+/* @import "./rose-pine-dawn.css"; */
+
+* {
+   font-family: "Iosevka Nerd Font Propo";
+   font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
+   font-weight: bold;
+   font-size: 16px;
+   border-radius: 0px;
+   border: none;
+   /* text-align: center; */
+}
+
+window#waybar {
+   background-color: alpha(@base, .8);
+   border-radius: 10px;
+   border: 4px solid @foam;
+}
+
+#custom-drawer1,
+#custom-appmenuicon,
+#custom-notifications,
+#custom-powermenuicon,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#user,
+#taskbar,
+#power-profiles-daemon,
+#workspaces,
+#mpd {
+   background: alpha(@muted, .4);
+   border-radius: 5px;
+   padding: 10px 5px;
+   color: @foreground;
+   margin: 10px;
+   margin-top: 3px;
+   margin-bottom: 3px;
+}
+
+/* .controls-items { */
+/*    border: 2px solid @love; */
+/* } */
+
+#user {
+   padding: 0px 10px;
+}
+
+#custom-appmenuicon {
+   color: @foam;
+}
+
+#custom-powermenuicon {
+   color: @love;
+}
+
+#custom-notifications {
+}
+
+#workspaces{
+   padding: 0px;
+}
+
+#workspaces button {
+   border-radius: 5px;
+   padding: 10px 5px;
+   color: @text;
+}
+
+#workspaces button.active{
+   color: @base;
+   background-color: @foam;
+}
+
+#workspaces button:hover {
+   color: @text;
+   background-color: @muted;
+}
+
+#clock {
+   font-size: 25px;
+   font-weight: bold;
+   margin-top: 10px;
+}
+
+#battery.charging, #battery.plugged {
+   background-color: @pine;
+}
+
+#battery {
+   margin-bottom: 10px;
+}
+
+#battery.critical:not(.charging) {
+   background-color: @love;
+}
+
+label:focus {
+}
+
+#cpu {
+   background-size: 300% 300%;
+   animation: gradient 20s ease infinite;
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.377);
+}
+
+#memory {
+   background-color: #cba6f7;
+   font-weight: bolder;
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#pulseaudio-slider,
+#backlight-slider {
+  min-height: 100px;
+}
+
+#pulseaudio-slider slider,
+#backlight-slider slider {
+  background: transparent;
+}
+
+#pulseaudio-slider trough,
+#backlight-slider trough {
+  min-width: 10px;
+  background: @muted;
+  margin: 10px 0px;
+  border-radius: 10px;
+}
+
+#pulseaudio-slider highlight,
+#backlight-slider highlight {
+  min-width: 10px;
+  border-radius: 10px;
+  background: @foam;
+}
+
+#network{
+}
+
+#network.disabled{
+   background-color: #45475a;
+}
+
+#network.disconnected{
+   border-color: @love;
+}
+
+#network.linked, #network.wifi{
+}
+
+#network.ethernet{
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+   border-color: @love;
+}
+
+#temperature {
+}
+
+#temperature.critical {
+   background-color: @red;
+   color: @text;
+}
+
+#tray {
+}
+
+#tray > .passive {
+   -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+   -gtk-icon-effect: highlight;
+   background-color: @red;
+}
+
+#idle_inhibitor {
+   background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+   background-color: #ecf0f1;
+   color: #2d3436;
+}
+
+#mpd {
+   background-color: transparent;
+   border: transparent;
+   color: @text;
+}
+
+#mpd.disconnected {
+   color: @rose;
+}
+
+#mpd.playing {
+}
+
+#mpd.stopped { }
+
+#mpd.paused { }
+
+#language {
+   padding: 0 5px;
+   margin: 0 5px;
+   min-width: 16px;
+}
+
+#keyboard-state {
+   padding: 0 0px;
+   margin: 0 5px;
+   min-width: 16px;
+}
+
+#keyboard-state > label {
+   padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+   background: rgba(0, 0, 0, 0.2);
+}
+
+#tooltip {
+}
+#tooltip label {
+   background-color: alpha(@base, .8);
+   border-radius: 8px;
+   border: 4px solid @base;
+}
+
+#taskbar {
+   padding: 0px;
+}
+
+#taskbar button {
+   border-radius: 5px;
+   padding: 5px 10px;
+}
+
+#taskbar button:hover {
+   background-color: @muted;
+}
+#taskbar button.active {
+   background-color: @foam;
+}
+#taskbar.empty {
+   background: transparent;
+}
+
+#power-profiles-daemon.balanced {
+   background-color: @gold;
+   color: @base;
+}
+
+#power-profiles-daemon.performance {
+   background-color: @love;
+   color: @base;
+}
+
+#power-profiles-daemon.power-saver {
+   background-color: @foam;
+   color: @base;
+}
