@@ -107,7 +107,7 @@
    "clock": {
        // "timezone": "America/New_York",
        "tooltip": true,
-       "tooltip-format": "{:%H:%M}",
+       "tooltip-format": "{:%d %B %Y}",
        "format" : "{:%H
 %M}",
        "on-click": "ghostty -e calcurse &"
