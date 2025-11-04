@@ -6,7 +6,7 @@
    font-family: "Iosevka Nerd Font Propo";
    font-feature-settings: '"zero", "tnum", "ss01", "ss02", "ss03", "cv01"';
    font-weight: bold;
-   font-size: 16px;
+   font-size: 20px;
    border-radius: 0px;
    border: none;
    /* text-align: center; */
@@ -49,6 +49,9 @@ window#waybar {
    margin-bottom: 3px;
 }
 
+/* #custom-drawer1 { */
+/*    background-color: transparent; */
+/* } */
 /* .controls-items { */
 /*    border: 2px solid @love; */
 /* } */

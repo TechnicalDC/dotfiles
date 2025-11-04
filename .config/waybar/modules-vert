@@ -195,7 +195,7 @@
        "tooltip": true,
        "tooltip-format": "{essid} via {ifname}",
        "format-linked": "  {ifname} (No IP)",
-       "format-disconnected": "󰤭 Disconnected",
+       "format-disconnected": "󰤭",
        "format-icons":[
           "󰤯",
           "󰤟",
