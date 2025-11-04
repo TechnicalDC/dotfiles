@@ -49,8 +49,6 @@
       }
    },
    "widgets": [
-      "volume",
-      "backlight",
       "title",
       "dnd",
       "notifications"

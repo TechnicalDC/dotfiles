@@ -144,7 +144,7 @@
        ]
    },
    "backlight/slider": {
-      "min": 0,
+      "min": 1,
       "max": 100,
       "orientation": "vertical",
       "device": "intel_backlight"
@@ -214,7 +214,7 @@
        "format": "{icon}",
        "format-bluetooth": "{volume}% {icon} {format_source}",
        "format-bluetooth-muted": " {icon} {format_source}",
-       "format-muted": " muted",
+       "format-muted": "",
        "format-source": " {volume}%",
        "format-source-muted": " ",
        "format-icons": {
