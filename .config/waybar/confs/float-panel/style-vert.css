@@ -92,6 +92,7 @@ window#waybar {
 }
 
 #clock {
+   font-family: "Bebas Neue";
    font-size: 25px;
    font-weight: bold;
    margin-top: 10px;
