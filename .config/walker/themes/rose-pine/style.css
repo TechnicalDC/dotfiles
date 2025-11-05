@@ -99,8 +99,8 @@ child {
 
 child:hover .item-box,
 child:selected .item-box {
-  background: alpha(@pine, .2);
-  border: 2px solid alpha(@pine, .5);
+  background: alpha(@foam, .2);
+  border: 2px solid alpha(@foam, .5);
   color: @text;
   font-weight: bold;
 }
