@@ -24,7 +24,7 @@
 
 * {
   all: unset;
-  font-family: "Iosevka Nerd Font";
+  font-family: "JetBrainsMono Nerd Font Propo";
   transition: 100ms;
   color: @text;
 }
