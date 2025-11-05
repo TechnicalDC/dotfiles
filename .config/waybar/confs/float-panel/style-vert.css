@@ -72,22 +72,25 @@ window#waybar {
 }
 
 #workspaces{
-   padding: 0px;
 }
 
 #workspaces button {
+   color: transparent;
    border-radius: 5px;
-   padding: 10px 5px;
-   color: @text;
+   padding: 0;
+   background-color: @muted;
+   margin: 5px 0px;
+   min-width: 1px;
 }
 
 #workspaces button.active{
    color: @base;
    background-color: @foam;
+   padding: 10px 0px;
 }
 
 #workspaces button:hover {
-   color: @text;
+   color: transparent;
    background-color: @muted;
 }
 
