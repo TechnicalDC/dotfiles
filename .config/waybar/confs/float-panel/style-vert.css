@@ -72,6 +72,8 @@ window#waybar {
 }
 
 #workspaces{
+   margin-top: 0px;
+   background: transparent;
 }
 
 #workspaces button {
@@ -99,6 +101,7 @@ window#waybar {
    font-size: 25px;
    font-weight: bold;
    margin-top: 10px;
+   margin-bottom: 0px;
 }
 
 #battery.charging, #battery.plugged {
